@@ -32,43 +32,59 @@
 <br/>
 
 <!-- SOBRE MÍ CON DISEÑO MEJORADO -->
-<img align="right" alt="Coding" width="400" src="https://raw.githubusercontent.com/abhisheknaiidu/abhisheknaiidu/master/code.gif">
-
 ## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/People%20with%20professions/Man%20Technologist%20Light%20Skin%20Tone.png" width="35"/> Sobre Mí
+
+<table>
+  <tr>
+    <td width="50%" valign="top">
 
 ```typescript
 const jeremiAlexander: Developer = {
     nombre: "Jeremi Alexander",
     rol: "Frontend Developer",
     ubicación: "Lima, Perú 🇵🇪",
-    educación: "Ingeniería de Sistemas e Informática",
+    educación: "Ing. Sistemas",
     
     especialidades: [
-        "Desarrollo de interfaces modernas",
-        "Experiencia de usuario (UX)",
-        "Aplicaciones web escalables"
+        "Interfaces modernas",
+        "UX Design",
+        "Apps escalables"
     ],
     
-    aprendizaje_actual: ["Next.js 14", "Testing (Jest & RTL)", "Design Systems"],
+    aprendiendo: [
+        "Next.js 14", 
+        "Testing", 
+        "Design Systems"
+    ],
     
-    objetivo_2025: "Contribuir activamente a proyectos Open Source",
+    objetivo_2025: 
+        "Open Source 🚀",
     
-    hobbies: ["Coding 💻", "Tech Blogs 📚", "Gaming 🎮"],
-    
-    motto: "Code with passion, design with purpose ✨"
+    motto: 
+        "Code with passion ✨"
 };
 ```
 
-<br clear="right"/>
+</td>
+<td width="50%" valign="top">
 
 ### 🎯 Datos Rápidos
 
-- 🔭 Actualmente trabajando en **proyectos innovadores con React & TypeScript**
-- 🌱 Aprendiendo **Next.js 14, Testing avanzado y UI/UX Design**
-- 👯 Buscando colaborar en **proyectos Open Source**
-- 💬 Pregúntame sobre **React, Angular, TypeScript, Frontend Architecture**
-- 📫 Contáctame: **TU_CORREO@EJEMPLO.COM**
-- ⚡ Dato curioso: **Me encanta resolver problemas complejos con soluciones simples**
+🔭 **Actualmente:** Proyectos con React & TypeScript
+
+🌱 **Aprendiendo:** Next.js 14, Testing, UI/UX
+
+👯 **Colaboración:** Proyectos Open Source
+
+💬 **Pregúntame:** React, Angular, TypeScript
+
+📫 **Email:** TU_CORREO@EJEMPLO.COM
+
+⚡ **Fun fact:** ¡Resolver problemas con elegancia!
+
+</td>
+  </tr>
+</table>
 
 <br/>
 
@@ -100,12 +116,20 @@ const jeremiAlexander: Developer = {
 ## 📊 GitHub Stats
 
 <div align="center">
-  <img width="49%" src="https://github-readme-stats.vercel.app/api?username=TU_USERNAME&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=3B82F6&icon_color=3B82F6&text_color=FFFFFF" alt="GitHub Stats"/>
-  <img width="49%" src="https://github-readme-streak-stats.herokuapp.com/?user=TU_USERNAME&theme=tokyonight&hide_border=true&background=0D1117&stroke=3B82F6&ring=3B82F6&fire=F59E0B&currStreakLabel=FFFFFF" alt="GitHub Streak"/>
-</div>
+  
+<table>
+  <tr>
+    <td>
+      <img height="180em" src="https://github-readme-stats.vercel.app/api?username=TU_USERNAME&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=3B82F6&icon_color=3B82F6&text_color=FFFFFF" alt="GitHub Stats"/>
+    </td>
+    <td>
+      <img height="180em" src="https://github-readme-streak-stats.herokuapp.com/?user=TU_USERNAME&theme=tokyonight&hide_border=true&background=0D1117&stroke=3B82F6&ring=3B82F6&fire=F59E0B&currStreakLabel=FFFFFF" alt="GitHub Streak"/>
+    </td>
+  </tr>
+</table>
 
-<div align="center">
-  <img width="60%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=TU_USERNAME&layout=compact&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=3B82F6&text_color=FFFFFF&langs_count=10" alt="Top Languages"/>
+<img width="55%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=TU_USERNAME&layout=compact&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=3B82F6&text_color=FFFFFF&langs_count=8" alt="Top Languages"/>
+
 </div>
 
 <br/>
@@ -123,14 +147,21 @@ const jeremiAlexander: Developer = {
 ## 🌟 Proyectos Destacados
 
 <div align="center">
-  
-  <a href="https://github.com/TU_USERNAME/PROYECTO-1">
-    <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=TU_USERNAME&repo=PROYECTO-1&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=3B82F6&icon_color=3B82F6" />
-  </a>
-  
-  <a href="https://github.com/TU_USERNAME/PROYECTO-2">
-    <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=TU_USERNAME&repo=PROYECTO-2&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=3B82F6&icon_color=3B82F6" />
-  </a>
+
+<table>
+  <tr>
+    <td width="50%">
+      <a href="https://github.com/TU_USERNAME/PROYECTO-1">
+        <img width="100%" src="https://github-readme-stats.vercel.app/api/pin/?username=TU_USERNAME&repo=PROYECTO-1&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=3B82F6&icon_color=3B82F6" />
+      </a>
+    </td>
+    <td width="50%">
+      <a href="https://github.com/TU_USERNAME/PROYECTO-2">
+        <img width="100%" src="https://github-readme-stats.vercel.app/api/pin/?username=TU_USERNAME&repo=PROYECTO-2&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=3B82F6&icon_color=3B82F6" />
+      </a>
+    </td>
+  </tr>
+</table>
 
 </div>
 
