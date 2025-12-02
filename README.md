@@ -1,163 +1,188 @@
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:FF6B6B,25:4ECDC4,50:45B7D1,75:96C93D,100:DDA0DD&height=200&section=header&text=Jeremi%20Alexander&fontSize=50&fontColor=ffffff&animation=twinkling&fontAlignY=35&desc=Frontend%20Developer%20%7C%20Systems%20Engineering%20Student&descSize=18&descAlignY=55"/>
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:667eea,100:764ba2&height=180&section=header&text=Jeremi%20Alexander&fontSize=48&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Frontend%20Developer%20%7C%20Systems%20Engineering%20Student&descSize=16&descAlignY=58"/>
 
 <div align="center">
   
   <a href="https://git.io/typing-svg">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=22&duration=3000&pause=1000&color=4ECDC4&center=true&vCenter=true&repeat=true&width=500&lines=%F0%9F%9A%80+Creando+experiencias+web+incre%C3%ADbles;%E2%9C%A8+React+%7C+Angular+%7C+TypeScript;%F0%9F%8E%AF+Transformando+ideas+en+c%C3%B3digo" alt="Typing SVG"/>
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=20&duration=3000&pause=1000&color=667EEA&center=true&vCenter=true&repeat=true&width=480&lines=Building+modern+web+experiences;React+%7C+Angular+%7C+TypeScript;Passionate+about+clean+code" alt="Typing SVG"/>
   </a>
 
   <br/><br/>
 
   <a href="mailto:TU_CORREO@EJEMPLO.COM">
-    <img src="https://img.shields.io/badge/Gmail-FF6B6B?style=for-the-badge&logo=gmail&logoColor=white"/>
+    <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/>
   </a>
-  &nbsp;&nbsp;
+  &nbsp;
   <a href="https://www.linkedin.com/in/TU_PERFIL">
-    <img src="https://img.shields.io/badge/LinkedIn-4ECDC4?style=for-the-badge&logo=linkedin&logoColor=white"/>
+    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
   </a>
-  &nbsp;&nbsp;
+  &nbsp;
   <a href="https://TU_PORTAFOLIO.com">
-    <img src="https://img.shields.io/badge/Portafolio-45B7D1?style=for-the-badge&logo=safari&logoColor=white"/>
+    <img src="https://img.shields.io/badge/Portfolio-667EEA?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Portfolio"/>
   </a>
 
   <br/><br/>
 
-  <img src="https://komarev.com/ghpvc/?username=TU_USERNAME&style=for-the-badge&color=FF6B6B&label=VISITAS"/>
+  <img src="https://komarev.com/ghpvc/?username=TU_USERNAME&style=flat-square&color=667eea&label=Profile+Views"/>
 
 </div>
 
 <br/>
 
-<!-- SOBRE MÍ -->
-## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/People%20with%20professions/Man%20Technologist%20Light%20Skin%20Tone.png" width="30"/> &nbsp;Sobre Mí
+## 👨‍💻 About Me
 
 <table>
   <tr>
-    <td width="55%">
+    <td width="60%">
 
-```javascript
-const jeremiAlexander = {
-    rol: "Frontend Developer",
-    ubicación: "Perú 🇵🇪",
-    educación: "Ing. Sistemas e Informática",
-    enfoque: "Interfaces modernas & UX",
-    aprendiendo: ["Next.js", "Testing", "UI/UX"],
-    meta2025: "Contribuir a Open Source"
+```typescript
+const developer = {
+    name: "Jeremi Alexander",
+    role: "Frontend Developer",
+    location: "Peru 🇵🇪",
+    education: "Systems & IT Engineering",
+    
+    currentFocus: [
+        "Building scalable web applications",
+        "Modern UI/UX implementation",
+        "Clean code practices"
+    ],
+    
+    learning: ["Next.js", "Testing (Jest/Vitest)", "Advanced TypeScript"],
+    
+    goal2025: "Contribute to Open Source projects",
+    
+    interests: ["Web Performance", "Accessibility", "Design Systems"]
 };
 ```
 
 </td>
-    <td width="45%" align="center">
-      <img src="https://raw.githubusercontent.com/abhisheknaiidu/abhisheknaiidu/master/code.gif" width="320"/>
+    <td width="40%" align="center">
+      <img src="https://raw.githubusercontent.com/abhisheknaiidu/abhisheknaiidu/master/code.gif" width="300" alt="Coding"/>
     </td>
   </tr>
 </table>
 
 <br/>
 
-<!-- TECH STACK -->
-## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Rocket.png" width="30"/> &nbsp;Tech Stack
+## 🛠️ Technology Stack
+
+### Core Technologies
 
 <div align="center">
 
 <table>
   <tr>
-    <td align="center" width="110" height="90">
+    <td align="center" width="100" height="100">
       <a href="https://www.java.com/">
-        <img src="https://techstack-generator.vercel.app/java-icon.svg" width="55" height="55" alt="Java"/>
+        <img src="https://techstack-generator.vercel.app/java-icon.svg" width="50" height="50" alt="Java"/>
       </a>
-      <br/><b>Java</b>
+      <br/><sub><b>Java</b></sub>
     </td>
-    <td align="center" width="110" height="90">
+    <td align="center" width="100" height="100">
       <a href="https://developer.mozilla.org/es/docs/Web/JavaScript">
-        <img src="https://techstack-generator.vercel.app/js-icon.svg" width="55" height="55" alt="JavaScript"/>
+        <img src="https://techstack-generator.vercel.app/js-icon.svg" width="50" height="50" alt="JavaScript"/>
       </a>
-      <br/><b>JavaScript</b>
+      <br/><sub><b>JavaScript</b></sub>
     </td>
-    <td align="center" width="110" height="90">
+    <td align="center" width="100" height="100">
       <a href="https://www.typescriptlang.org/">
-        <img src="https://techstack-generator.vercel.app/ts-icon.svg" width="55" height="55" alt="TypeScript"/>
+        <img src="https://techstack-generator.vercel.app/ts-icon.svg" width="50" height="50" alt="TypeScript"/>
       </a>
-      <br/><b>TypeScript</b>
+      <br/><sub><b>TypeScript</b></sub>
     </td>
-    <td align="center" width="110" height="90">
+    <td align="center" width="100" height="100">
       <a href="https://react.dev/">
-        <img src="https://techstack-generator.vercel.app/react-icon.svg" width="55" height="55" alt="React"/>
+        <img src="https://techstack-generator.vercel.app/react-icon.svg" width="50" height="50" alt="React"/>
       </a>
-      <br/><b>React</b>
+      <br/><sub><b>React</b></sub>
     </td>
-    <td align="center" width="110" height="90">
-      <a href="https://github.com/">
-        <img src="https://techstack-generator.vercel.app/github-icon.svg" width="55" height="55" alt="GitHub"/>
+    <td align="center" width="100" height="100">
+      <a href="https://angular.dev/">
+        <img src="https://skillicons.dev/icons?i=angular" width="50" height="50" alt="Angular"/>
       </a>
-      <br/><b>GitHub</b>
+      <br/><sub><b>Angular</b></sub>
     </td>
-    <td align="center" width="110" height="90">
-      <a href="https://www.mysql.com/">
-        <img src="https://techstack-generator.vercel.app/mysql-icon.svg" width="55" height="55" alt="MySQL"/>
+    <td align="center" width="100" height="100">
+      <a href="https://nodejs.org/">
+        <img src="https://skillicons.dev/icons?i=nodejs" width="50" height="50" alt="Node.js"/>
       </a>
-      <br/><b>MySQL</b>
+      <br/><sub><b>Node.js</b></sub>
     </td>
   </tr>
 </table>
 
-<br/>
+</div>
+
+### Frontend & Design
+
+<div align="center">
 
 <table>
   <tr>
-    <td align="center" width="90" height="80">
+    <td align="center" width="90">
       <a href="https://developer.mozilla.org/es/docs/Web/HTML">
-        <img src="https://skillicons.dev/icons?i=html" width="45" height="45" alt="HTML5"/>
+        <img src="https://skillicons.dev/icons?i=html" width="40" height="40" alt="HTML5"/>
       </a>
-      <br/><sub><b>HTML5</b></sub>
+      <br/><sub>HTML5</sub>
     </td>
-    <td align="center" width="90" height="80">
+    <td align="center" width="90">
       <a href="https://developer.mozilla.org/es/docs/Web/CSS">
-        <img src="https://skillicons.dev/icons?i=css" width="45" height="45" alt="CSS3"/>
+        <img src="https://skillicons.dev/icons?i=css" width="40" height="40" alt="CSS3"/>
       </a>
-      <br/><sub><b>CSS3</b></sub>
+      <br/><sub>CSS3</sub>
     </td>
-    <td align="center" width="90" height="80">
-      <a href="https://angular.dev/">
-        <img src="https://skillicons.dev/icons?i=angular" width="45" height="45" alt="Angular"/>
-      </a>
-      <br/><sub><b>Angular</b></sub>
-    </td>
-    <td align="center" width="90" height="80">
+    <td align="center" width="90">
       <a href="https://tailwindcss.com/">
-        <img src="https://skillicons.dev/icons?i=tailwind" width="45" height="45" alt="Tailwind"/>
+        <img src="https://skillicons.dev/icons?i=tailwind" width="40" height="40" alt="Tailwind"/>
       </a>
-      <br/><sub><b>Tailwind</b></sub>
+      <br/><sub>Tailwind CSS</sub>
     </td>
-    <td align="center" width="90" height="80">
+    <td align="center" width="90">
       <a href="https://getbootstrap.com/">
-        <img src="https://skillicons.dev/icons?i=bootstrap" width="45" height="45" alt="Bootstrap"/>
+        <img src="https://skillicons.dev/icons?i=bootstrap" width="40" height="40" alt="Bootstrap"/>
       </a>
-      <br/><sub><b>Bootstrap</b></sub>
+      <br/><sub>Bootstrap</sub>
     </td>
-    <td align="center" width="90" height="80">
-      <a href="https://nodejs.org/">
-        <img src="https://skillicons.dev/icons?i=nodejs" width="45" height="45" alt="Node.js"/>
-      </a>
-      <br/><sub><b>Node.js</b></sub>
-    </td>
-    <td align="center" width="90" height="80">
-      <a href="https://git-scm.com/">
-        <img src="https://skillicons.dev/icons?i=git" width="45" height="45" alt="Git"/>
-      </a>
-      <br/><sub><b>Git</b></sub>
-    </td>
-    <td align="center" width="90" height="80">
-      <a href="https://code.visualstudio.com/">
-        <img src="https://skillicons.dev/icons?i=vscode" width="45" height="45" alt="VS Code"/>
-      </a>
-      <br/><sub><b>VS Code</b></sub>
-    </td>
-    <td align="center" width="90" height="80">
+    <td align="center" width="90">
       <a href="https://www.figma.com/">
-        <img src="https://skillicons.dev/icons?i=figma" width="45" height="45" alt="Figma"/>
+        <img src="https://skillicons.dev/icons?i=figma" width="40" height="40" alt="Figma"/>
       </a>
-      <br/><sub><b>Figma</b></sub>
+      <br/><sub>Figma</sub>
+    </td>
+  </tr>
+</table>
+
+</div>
+
+### Tools & Platforms
+
+<div align="center">
+
+<table>
+  <tr>
+    <td align="center" width="90">
+      <a href="https://git-scm.com/">
+        <img src="https://skillicons.dev/icons?i=git" width="40" height="40" alt="Git"/>
+      </a>
+      <br/><sub>Git</sub>
+    </td>
+    <td align="center" width="90">
+      <a href="https://github.com/">
+        <img src="https://techstack-generator.vercel.app/github-icon.svg" width="40" height="40" alt="GitHub"/>
+      </a>
+      <br/><sub>GitHub</sub>
+    </td>
+    <td align="center" width="90">
+      <a href="https://code.visualstudio.com/">
+        <img src="https://skillicons.dev/icons?i=vscode" width="40" height="40" alt="VS Code"/>
+      </a>
+      <br/><sub>VS Code</sub>
+    </td>
+    <td align="center" width="90">
+      <a href="https://www.mysql.com/">
+        <img src="https://techstack-generator.vercel.app/mysql-icon.svg" width="40" height="40" alt="MySQL"/>
+      </a>
+      <br/><sub>MySQL</sub>
     </td>
   </tr>
 </table>
@@ -166,4 +191,32 @@ const jeremiAlexander = {
 
 <br/>
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:FF6B6B,25:4ECDC4,50:45B7D1,75:96C93D,100:DDA0DD&height=120&section=footer"/>
+## 📊 GitHub Statistics
+
+<div align="center">
+  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=TU_USERNAME&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true&hide_border=true&bg_color=0d1117"/>
+  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=TU_USERNAME&layout=compact&langs_count=8&theme=tokyonight&hide_border=true&bg_color=0d1117"/>
+</div>
+
+<br/>
+
+## 🤝 Let's Connect
+
+<div align="center">
+  
+I'm always interested in collaborating on innovative projects and connecting with fellow developers. Feel free to reach out!
+
+[![Email](https://img.shields.io/badge/Email-Contact%20Me-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:TU_CORREO@EJEMPLO.COM)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/TU_PERFIL)
+
+</div>
+
+<br/>
+
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:667eea,100:764ba2&height=120&section=footer"/>
+
+---
+
+<div align="center">
+  <sub>💜 Crafted with passion by Jeremi Alexander</sub>
+</div>
