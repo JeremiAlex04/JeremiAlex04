@@ -36,22 +36,20 @@
 
 ```typescript
 const developer = {
-    name: "Jeremi Alexander",
-    role: "Frontend Developer",
-    location: "Peru 🇵🇪",
-    education: "Systems & IT Engineering",
-    
-    currentFocus: [
-        "Building scalable web applications",
-        "Modern UI/UX implementation",
-        "Clean code practices"
-    ],
-    
-    learning: ["Next.js", "Testing (Jest/Vitest)", "Advanced TypeScript"],
-    
-    goal2025: "Contribute to Open Source projects",
-    
-    interests: ["Web Performance", "Accessibility", "Design Systems"]
+  name: "Jeremi Alexander",
+  role: "Frontend Developer",
+  location: "Peru 🇵🇪",
+  education: "Systems & IT Engineering",
+
+  focus: [
+    "Scalable web apps",
+    "Modern UI/UX",
+    "Clean code"
+  ],
+
+  learning: ["Next.js", "Testing", "TypeScript avanzado"],
+  goal: "Contribuir a Open Source en 2025",
+  interests: ["Performance web", "Accesibilidad", "Design Systems"]
 };
 ```
 
