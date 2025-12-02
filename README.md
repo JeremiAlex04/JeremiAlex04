@@ -119,13 +119,6 @@
 | **Compu Search** | Plataforma E-commerce B2C. Incluye catálogo dinámico, carrito de compras persistente y panel administrativo para gestión de inventario. | `PHP` `Laravel` `MySQL` |
 | **Ricos Chickens** | Sistema POS (Point of Sale) para restauración. Optimiza la toma de pedidos en tiempo real y gestiona el flujo de caja diario. | `Node` `Express` `Mongo` |
 
----
-
-<div align="center">
-  <h3>📊 Rendimiento en GitHub</h3>
-  <img src="https://github-readme-stats.vercel.app/api?username=JeremiAlex04&show_icons=true&theme=radical&hide_border=true&bg_color=0d1117&title_color=256EFF&icon_color=256EFF" alt="Stats" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=JeremiAlex04&layout=compact&theme=radical&hide_border=true&bg_color=0d1117&title_color=256EFF" alt="Langs" />
-</div>
 
 <div align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0,2,30,255&height=100&section=footer" width="100%" alt="Footer" />
