@@ -56,18 +56,22 @@ const jeremi_profile = {
 
 <div align="center">
 
-### Core & Backend
-<img src="https://skillicons.dev/icons?i=java,spring,php,nodejs,express&perline=3" />
+### 💻 Backend & Core
+<img src="https://skillicons.dev/icons?i=java,spring,nodejs,express,php&perline=5" />
 
-### Frontend & UI
-<img src="https://skillicons.dev/icons?i=js,html,css,react,nextjs,angular,bootstrap,tailwind,vue&perline=3" />
+### 🎨 Frontend & UI
+<img src="https://skillicons.dev/icons?i=react,nextjs,angular,vue,js,html,css,tailwind,bootstrap&perline=5" />
 
-### Tools & DB
-<img src="https://skillicons.dev/icons?i=mysql,mongodb,git,github,docker,figma,vscode&perline=4" />
-
-<img src="https://img.shields.io/badge/Junit5-25A162?style=flat-square&logo=junit5&logoColor=white" />
+### 🗄️ Databases
+<img src="https://skillicons.dev/icons?i=mysql,mongodb&perline=5" />
+<br/>
 <img src="https://img.shields.io/badge/Oracle-F80000?style=flat-square&logo=oracle&logoColor=white" />
 <img src="https://img.shields.io/badge/SQL_Server-CC2927?style=flat-square&logo=microsoft-sql-server&logoColor=white" />
+
+### 🛠️ Tools & Others
+<img src="https://skillicons.dev/icons?i=git,github,docker,vscode,figma&perline=5" />
+<br/>
+<img src="https://img.shields.io/badge/JUnit5-25A162?style=flat-square&logo=junit5&logoColor=white" />
 
 </div>
 
