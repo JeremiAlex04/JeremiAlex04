@@ -1,140 +1,130 @@
 <div align="center">
-  <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:FF6B6B,25:4ECDC4,50:45B7D1,75:96C93D,100:DDA0DD&height=220&section=header&text=Jeremi%20Alexander&fontSize=50&fontColor=ffffff&animation=twinkling&fontAlignY=35&desc=Ingeniería%20de%20Sistemas%20e%20Informática%20%7C%20Full%20Stack%20Developer&descSize=20&descAlignY=60"/>
 
-  <br/>
+# 👋 ¡Hola! Soy Jeremi Alexander
 
-  [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=3000&pause=1000&color=4ECDC4&center=true&vCenter=true&repeat=true&width=600&lines=🚀+Creando+experiencias+web+increíbles;✨+Java+%7C+Spring+Boot+%7C+React;🎯+Transformando+ideas+en+código;🛠️+Bases+de+Datos+%26+Seguridad)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=22&pause=1000&color=6C63FF&center=true&vCenter=true&random=false&width=600&lines=Desarrollador+Full+Stack;Apasionado+por+la+tecnolog%C3%ADa;Creando+soluciones+innovadoras)](https://git.io/typing-svg)
 
-  <br/>
+<img src="https://komarev.com/ghpvc/?username=JeremiAlex04&label=Visitantes&color=6C63FF&style=flat" alt="Profile views" />
 
-  [![Gmail](https://img.shields.io/badge/Gmail-FF6B6B?style=for-the-badge&logo=gmail&logoColor=white)](mailto:jeremialex04@gmail.com)
-  [![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/jeremialex04)
-  [![LinkedIn](https://img.shields.io/badge/LinkedIn-4ECDC4?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/jeremialex04)
-
-  <br/>
 </div>
 
 ---
 
-## 👨‍💻 Sobre Mí
-
-<table>
-  <tr>
-    <td width="60%">
-
-> *"Formar mi propio grupo de especialistas para mejorar las funciones de las organizaciones, utilizando herramientas tecnológicas que optimicen sus procesos y generen valor."*
+## 🚀 Sobre Mí
 
 ```javascript
-const jeremi_profile = {
-    educacion: "UTP - VII Ciclo",
-    carrera: "Ing. Sistemas e Informática",
+const jeremiAlexander = {
     ubicacion: "Perú 🇵🇪",
-    intereses: ["Full Stack", "Database", "IA", "Security"],
-    habilidades_blandas: [
-        "Pensamiento Crítico",
-        "Liderazgo",
-        "Organización"
-    ],
-    motto: "Nunca pares de aprender"
+    rol: "Desarrollador Full Stack",
+    aprendiendo: ["Angular", "Next.js", "Spring Boot"],
+    intereses: ["Desarrollo Web", "Bases de Datos", "UI/UX"],
+    hobbies: ["Programación", "Gaming", "Música"],
+    objetivos2024: "Contribuir a proyectos open source y crecer profesionalmente"
 };
 ```
 
-</td>
-    <td width="40%" align="center">
-      <img src="https://user-images.githubusercontent.com/74038190/212257454-16e3712e-945a-4ca2-b238-408ad0bf87e6.gif" width="100%"/>
-    </td>
-  </tr>
-</table>
+<div align="center">
+
+### 💡 _"El código es poesía que las máquinas pueden entender"_
+
+</div>
 
 ---
 
-## 🚀 Tech Stack
+## 🛠️ Tecnologías & Herramientas
 
 <div align="center">
 
-### 💻 Backend & Core
+### 💻 Frontend
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![Angular](https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white)
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
 
+### ⚙️ Backend
 ![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
 ![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=for-the-badge&logo=spring-boot&logoColor=white)
 ![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
-![Express](https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white)
-![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
 
-### 🎨 Frontend & UI
+### �️ Bases de Datos
+![MySQL](https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
 
-![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
-![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
-![Angular](https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white)
-![Vue.js](https://img.shields.io/badge/Vue.js-4FC08D?style=for-the-badge&logo=vuedotjs&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
-![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)
-
-### 🗄️ Databases
-
-![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
-![Oracle](https://img.shields.io/badge/Oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white)
-![SQL Server](https://img.shields.io/badge/SQL_Server-CC2927?style=for-the-badge&logo=microsoft-sql-server&logoColor=white)
-
-### 🛠️ Tools & DevOps
-
+### � Herramientas
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
-![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)
 ![VS Code](https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)
+![IntelliJ IDEA](https://img.shields.io/badge/IntelliJ_IDEA-000000?style=for-the-badge&logo=intellij-idea&logoColor=white)
 ![Figma](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white)
-![JUnit5](https://img.shields.io/badge/JUnit5-25A162?style=for-the-badge&logo=junit5&logoColor=white)
 
 </div>
 
 ---
 
-## 📊 GitHub Stats
+## 📊 Estadísticas de GitHub
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=jeremialex04&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=4ECDC4&icon_color=FF6B6B&text_color=ffffff" height="180" alt="GitHub Stats" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=jeremialex04&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=4ECDC4&text_color=ffffff" height="180" alt="Top Languages" />
+  
+<a href="https://github.com/JeremiAlex04">
+  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=JeremiAlex04&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true&hide_border=true&bg_color=0D1117"/>
+  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=JeremiAlex04&layout=compact&langs_count=8&theme=tokyonight&hide_border=true&bg_color=0D1117"/>
+</a>
+
 </div>
 
 <div align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=jeremialex04&theme=tokyonight&hide_border=true&background=0d1117&stroke=4ECDC4&ring=FF6B6B&fire=FF6B6B&currStreakLabel=4ECDC4" alt="GitHub Streak" />
-</div>
+  
+[![GitHub Streak](https://streak-stats.demolab.com?user=JeremiAlex04&theme=tokyonight&hide_border=true&background=0D1117&dates=888888)](https://git.io/streak-stats)
 
----
-
-## 🏆 GitHub Trophies
-
-<div align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=jeremialex04&theme=tokyonight&no-frame=true&no-bg=true&margin-w=10&margin-h=10" alt="GitHub Trophies" />
-</div>
-
----
-
-## 📈 Contribution Activity
-
-<div align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=jeremialex04&custom_title=Contribution%20Graph&bg_color=0d1117&color=4ECDC4&line=FF6B6B&point=ffffff&area_color=4ECDC4&area=true&hide_border=true" width="95%" alt="Contribution Graph"/>
 </div>
 
 ---
 
+## 🏆 Trofeos de GitHub
+
 <div align="center">
-  
-  ### 📫 Conecta Conmigo
-  
-  [![Email](https://img.shields.io/badge/📧_Contáctame-FF6B6B?style=for-the-badge)](mailto:jeremialex04@gmail.com)
-  
-  <br/>
-  
-  ![Profile Views](https://komarev.com/ghpvc/?username=jeremialex04&style=for-the-badge&color=4ECDC4&label=VISITAS+AL+PERFIL)
-  
-  <br/><br/>
-  
-  <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:FF6B6B,25:4ECDC4,50:45B7D1,75:96C93D,100:DDA0DD&height=100&section=footer"/>
-  
-  ### ⭐ Si te gustó mi perfil, considera dejar una estrella en mis repositorios
-  
+
+[![trophy](https://github-profile-trophy.vercel.app/?username=JeremiAlex04&theme=tokyonight&no-frame=true&no-bg=true&column=7)](https://github.com/ryo-ma/github-profile-trophy)
+
+</div>
+
+---
+
+## 📁 Proyectos Destacados
+
+<div align="center">
+
+[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=JeremiAlex04&repo=Angular&theme=tokyonight&hide_border=true&bg_color=0D1117)](https://github.com/JeremiAlex04/Angular)
+
+</div>
+
+<!-- Descomenta y modifica cuando tengas más proyectos
+[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=JeremiAlex04&repo=NOMBRE_REPO&theme=tokyonight&hide_border=true&bg_color=0D1117)](https://github.com/JeremiAlex04/NOMBRE_REPO)
+-->
+
+---
+
+## 🌐 Conéctate Conmigo
+
+<div align="center">
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/TU-LINKEDIN)
+[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:tu.email@gmail.com)
+[![Portfolio](https://img.shields.io/badge/Portfolio-6C63FF?style=for-the-badge&logo=google-chrome&logoColor=white)](https://tu-portfolio.com)
+[![Discord](https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/TU-DISCORD)
+
+</div>
+
+---
+
+<div align="center">
+
+### 💖 ¡Gracias por visitar mi perfil!
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=100&section=footer"/>
+
 </div>
