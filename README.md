@@ -1,152 +1,91 @@
 <div align="center">
+  <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:FF6B6B,25:4ECDC4,50:45B7D1,75:96C93D,100:DDA0DD&height=220&section=header&text=Jeremi%20Alexander&fontSize=50&fontColor=ffffff&animation=twinkling&fontAlignY=35&desc=Ingenier%C3%ADa%20de%20Sistemas%20e%20Inform%C3%A1tica%20%7C%20Full%20Stack%20Dev&descSize=20&descAlignY=60"/>
 
-<!-- Header Section -->
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&height=200&color=gradient&customColorList=6,11,20&text=JEREMI%20ALEXANDER&fontSize=50&fontColor=fff&animation=twinkling&fontAlignY=35" />
+  <a href="https://git.io/typing-svg">
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=3000&pause=1000&color=4ECDC4&center=true&vCenter=true&repeat=true&width=500&lines=%F0%9F%9A%80+Creando+experiencias+web+incre%C3%ADbles;%E2%9C%A8+Java+%7C+Spring+Boot+%7C+React;%F0%9F%8E%AF+Transformando+ideas+en+c%C3%B3digo;%F0%9F%9B%A0%EF%B8%8F+Bases+de+Datos+%26+Seguridad" alt="Typing SVG"/>
+  </a>
 
-<h3 align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=22&pause=1000&color=6366F1&center=true&vCenter=true&random=false&width=440&lines=Full+Stack+Developer;Software+Engineer;Problem+Solver;Technology+Enthusiast" alt="Typing SVG" />
-</h3>
+  <br/><br/>
 
-<br/>
+  <a href="mailto:jeremialex04@gmail.com">
+    <img src="https://img.shields.io/badge/Gmail-FF6B6B?style=for-the-badge&logo=gmail&logoColor=white"/>
+  </a>
+  &nbsp;&nbsp;
+  <a href="https://github.com/jeremialex04">
+    <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"/>
+  </a>
+  &nbsp;&nbsp;
+  <a href="https://www.linkedin.com/in/jeremialex04">
+    <img src="https://img.shields.io/badge/LinkedIn-4ECDC4?style=for-the-badge&logo=linkedin&logoColor=white"/>
+  </a>
 
-<!-- Badges de estado -->
-<p align="center">
-  <img src="https://img.shields.io/badge/📍%20Based%20in-Perú-FF6B6B?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/💼%20Status-Open%20to%20Work-4ECDC4?style=for-the-badge" />
-  <img src="https://komarev.com/ghpvc/?username=JeremiAlex04&label=Profile%20Views&color=6366F1&style=for-the-badge" />
-</p>
-
+  <br/><br/>
 </div>
 
-<br/>
-
-<!-- About Me Section -->
-<div align="center">
-
-## 👨‍💻 About Me
-
-</div>
-
-```yaml
-name: Jeremi Alexander
-role: Full Stack Developer
-location: Peru 🇵🇪
-
-fields_of_interest:
-  - Web Development
-  - Software Architecture
-  - UI/UX Design
-  - Cloud Computing
-
-currently_learning:
-  - Advanced Spring Boot
-  - Cloud Native Architecture
-  - Microservices Patterns
-
-motto: "Clean code is not written by following a set of rules. You know you are working on clean code when each routine you read turns out to be pretty much what you expected."
-```
-
-<br/>
-
-<!-- Tech Stack Section -->
-<div align="center">
-
-## � Technology Stack
-
-### Core Technologies
-
-<a href="https://skillicons.dev">
-  <img src="https://skillicons.dev/icons?i=angular,java,spring,typescript,nextjs,mysql&theme=light&perline=6" />
-</a>
-
-### Extended Toolbox
-
-<a href="https://skillicons.dev">
-  <img src="https://skillicons.dev/icons?i=html,css,javascript,react,tailwind,nodejs,postgres,mongodb,git,github,docker,vscode,idea,figma&theme=light&perline=7" />
-</a>
-
-</div>
-
-<br/>
-
-<!-- Stats Section con diseño mejorado -->
-<div align="center">
-
-## 📊 GitHub Statistics
+## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/People%20with%20professions/Man%20Technologist%20Light%20Skin%20Tone.png" width="30"/> &nbsp;Sobre Mí
 
 <table>
   <tr>
-    <td>
-      <img src="https://github-readme-stats.vercel.app/api?username=JeremiAlex04&show_icons=true&theme=radical&hide_border=true&bg_color=0D1117&title_color=6366F1&icon_color=4ECDC4&text_color=C9D1D9&rank_icon=github" alt="GitHub Stats" />
-    </td>
-    <td>
-      <img src="https://github-readme-streak-stats.herokuapp.com?user=JeremiAlex04&theme=radical&hide_border=true&background=0D1117&stroke=6366F1&ring=6366F1&fire=FF6B6B&currStreakLabel=6366F1" alt="GitHub Streak" />
-    </td>
-  </tr>
-  <tr>
-    <td colspan="2" align="center">
-      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=JeremiAlex04&layout=compact&theme=radical&hide_border=true&bg_color=0D1117&title_color=6366F1&text_color=C9D1D9" alt="Top Languages" />
+    <td width="60%">
+
+> *"Formar mi propio grupo de especialistas para mejorar las funciones de las organizaciones, utilizando herramientas tecnológicas que optimicen sus procesos y generen valor."*
+
+```javascript
+const jeremi_profile = {
+    educacion: "UTP - VII Ciclo",
+    carrera: "Ing. Sistemas e Informática",
+    ubicacion: "Perú 🇵🇪",
+    intereses: ["Full Stack", "Database", "IA", "Security"],
+    habilidades_blandas: [
+        "Pensamiento Crítico",
+        "Liderazgo",
+        "Organización"
+    ],
+    motto: "Nunca pares de aprender"
+};
+```
+
+</td>
+    <td width="40%" align="center">
+      <img src="https://raw.githubusercontent.com/abhisheknaiidu/abhisheknaiidu/master/code.gif" width="100%"/>
     </td>
   </tr>
 </table>
 
-</div>
+## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Rocket.png" width="30"/> &nbsp;Tech Stack
 
-<br/>
-
-<!-- Contribution Graph -->
 <div align="center">
 
-## 📈 Contribution Activity
+### 💻 Backend & Core
+<img src="https://skillicons.dev/icons?i=java,spring,nodejs,express,php&perline=5" />
 
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=JeremiAlex04&bg_color=0D1117&color=6366F1&line=4ECDC4&point=FF6B6B&area=true&hide_border=true" width="100%" alt="Contribution Graph"/>
+### 🎨 Frontend & UI
+<img src="https://skillicons.dev/icons?i=react,nextjs,angular,vue,js,html,css,tailwind,bootstrap&perline=5" />
 
-</div>
-
+### 🗄️ Databases
+<img src="https://skillicons.dev/icons?i=mysql,mongodb&perline=5" />
 <br/>
+<img src="https://img.shields.io/badge/Oracle-F80000?style=flat-square&logo=oracle&logoColor=white" />
+<img src="https://img.shields.io/badge/SQL_Server-CC2927?style=flat-square&logo=microsoft-sql-server&logoColor=white" />
 
-<!-- Contact Section -->
-<div align="center">
-
-## 🤝 Let's Connect
-
-<p>
-  <a href="https://linkedin.com/in/tu-perfil">
-    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
-  </a>
-  &nbsp;&nbsp;
-  <a href="mailto:tu.email@gmail.com">
-    <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
-  </a>
-  &nbsp;&nbsp;
-  <a href="https://github.com/JeremiAlex04">
-    <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
-  </a>
-  &nbsp;&nbsp;
-  <a href="https://twitter.com/tu-usuario">
-    <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter" />
-  </a>
-</p>
-
+### 🛠️ Tools & Others
+<img src="https://skillicons.dev/icons?i=git,github,docker,vscode,figma&perline=5" />
 <br/>
-
-### 💬 Open to Opportunities
-
-<p>
-  <img src="https://img.shields.io/badge/🚀-Freelance%20Projects-success?style=flat-square" />
-  <img src="https://img.shields.io/badge/💼-Full%20Time%20Roles-blue?style=flat-square" />
-  <img src="https://img.shields.io/badge/🤝-Collaborations-purple?style=flat-square" />
-</p>
+<img src="https://img.shields.io/badge/JUnit5-25A162?style=flat-square&logo=junit5&logoColor=white" />
 
 </div>
 
-<br/>
+## 📊 GitHub Stats
 
-<!-- Footer -->
 <div align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=jeremialex04&show_icons=true&theme=tokyonight&hide_border=true&bg_color=1e293b" height="150" alt="stats graph" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=jeremialex04&layout=compact&theme=tokyonight&hide_border=true&bg_color=1e293b" height="150" alt="languages graph" />
+</div>
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&height=120&color=gradient&customColorList=6,11,20&section=footer" />
+---
 
-**⭐ From [JeremiAlex04](https://github.com/JeremiAlex04) with 💙**
-
+<div align="center">
+  <img src="https://komarev.com/ghpvc/?username=jeremialex04&style=flat-square&color=4ECDC4&label=VISITAS+AL+PERFIL"/>
+  
+  <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:FF6B6B,25:4ECDC4,50:45B7D1,75:96C93D,100:DDA0DD&height=100&section=footer"/>
 </div>
