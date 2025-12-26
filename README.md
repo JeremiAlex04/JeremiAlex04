@@ -74,7 +74,7 @@ const jeremi_profile = {
 <img src="https://img.shields.io/badge/JUnit5-25A162?style=flat-square&logo=junit5&logoColor=white" />
 
 </div>
----
+
 
 <div align="center">
   <img src="https://komarev.com/ghpvc/?username=jeremialex04&style=flat-square&color=4ECDC4&label=VISITAS+AL+PERFIL"/>
