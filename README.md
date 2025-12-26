@@ -1,83 +1,151 @@
 <div align="center">
-  <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:FF6B6B,25:4ECDC4,50:45B7D1,75:96C93D,100:DDA0DD&height=220&section=header&text=Jeremi%20Alexander&fontSize=50&fontColor=ffffff&animation=twinkling&fontAlignY=35&desc=Ingenier%C3%ADa%20de%20Sistemas%20e%20Inform%C3%A1tica%20%7C%20Full%20Stack%20Dev&descSize=20&descAlignY=60"/>
-
-  <a href="https://git.io/typing-svg">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=3000&pause=1000&color=4ECDC4&center=true&vCenter=true&repeat=true&width=500&lines=%F0%9F%9A%80+Creando+experiencias+web+incre%C3%ADbles;%E2%9C%A8+Java+%7C+Spring+Boot+%7C+React;%F0%9F%8E%AF+Transformando+ideas+en+c%C3%B3digo;%F0%9F%9B%A0%EF%B8%8F+Bases+de+Datos+%26+Seguridad" alt="Typing SVG"/>
-  </a>
-
-  <br/><br/>
-
-  <a href="mailto:jeremialex04@gmail.com">
-    <img src="https://img.shields.io/badge/Gmail-FF6B6B?style=for-the-badge&logo=gmail&logoColor=white"/>
-  </a>
-  &nbsp;&nbsp;
-  <a href="https://github.com/jeremialex04">
-    <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"/>
-  </a>
-  &nbsp;&nbsp;
-  <a href="https://www.linkedin.com/in/jeremialex04">
-    <img src="https://img.shields.io/badge/LinkedIn-4ECDC4?style=for-the-badge&logo=linkedin&logoColor=white"/>
-  </a>
-
-  <br/><br/>
+  <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:667eea,50:764ba2,100:f093fb&height=250&section=header&text=Jeremi%20Alexander&fontSize=70&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Ingeniería%20de%20Sistemas%20e%20Informática%20%7C%20Full%20Stack%20Developer&descSize=22&descAlignY=58&descAlign=50"/>
 </div>
 
-## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/People%20with%20professions/Man%20Technologist%20Light%20Skin%20Tone.png" width="30"/> &nbsp;Sobre Mí
+<div align="center">
+  <a href="https://git.io/typing-svg">
+    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=24&duration=3000&pause=800&color=667EEA&center=true&vCenter=true&repeat=true&width=600&lines=🚀+Construyendo+el+futuro+digital;✨+Java+%7C+Spring+Boot+%7C+React;💡+De+la+idea+al+código+funcional;🎯+Innovación+%2B+Tecnología+%2B+Pasión" alt="Typing SVG"/>
+  </a>
+</div>
+
+<br/>
+
+<div align="center">
+  <a href="mailto:jeremialex04@gmail.com">
+    <img src="https://img.shields.io/badge/📧%20Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white&labelColor=EA4335"/>
+  </a>
+  <a href="https://github.com/jeremialex04">
+    <img src="https://img.shields.io/badge/💻%20GitHub-181717?style=for-the-badge&logo=github&logoColor=white"/>
+  </a>
+  <a href="https://www.linkedin.com/in/jeremialex04">
+    <img src="https://img.shields.io/badge/💼%20LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/>
+  </a>
+</div>
+
+<br/>
+
+## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/People%20with%20professions/Man%20Technologist%20Light%20Skin%20Tone.png" width="35" height="35"/> Sobre Mí
 
 <table>
   <tr>
-    <td width="60%">
+    <td width="55%" valign="top">
+      
+### 🎯 Mi Visión
 
-> *"Formar mi propio grupo de especialistas para mejorar las funciones de las organizaciones, utilizando herramientas tecnológicas que optimicen sus procesos y generen valor."*
+> **"Formar mi propio equipo de especialistas para revolucionar las organizaciones con soluciones tecnológicas que optimicen procesos y generen valor real."**
+
+<br/>
 
 ```javascript
-const jeremi_profile = {
-    educacion: "UTP - VII Ciclo",
-    carrera: "Ing. Sistemas e Informática",
-    ubicacion: "Perú 🇵🇪",
-    intereses: ["Full Stack", "Database", "IA", "Security"],
-    habilidades_blandas: [
-        "Pensamiento Crítico",
-        "Liderazgo",
-        "Organización"
+const jeremiProfile = {
+    🎓 educacion: "UTP - VII Ciclo",
+    💼 carrera: "Ing. Sistemas e Informática",
+    📍 ubicacion: "Lima, Perú 🇵🇪",
+    🔥 pasiones: [
+        "Full Stack Development",
+        "Database Architecture",
+        "Inteligencia Artificial",
+        "Ciberseguridad"
     ],
-    motto: "Nunca pares de aprender"
+    🌟 softSkills: [
+        "Pensamiento Crítico",
+        "Liderazgo de Equipos",
+        "Gestión de Proyectos"
+    ],
+    💭 motto: "Aprendizaje continuo, evolución constante"
 };
 ```
 
 </td>
-    <td width="40%" align="center">
-      <img src="https://raw.githubusercontent.com/abhisheknaiidu/abhisheknaiidu/master/code.gif" width="100%"/>
+    <td width="45%" align="center" valign="top">
+      <img src="https://raw.githubusercontent.com/abhisheknaiidu/abhisheknaiidu/master/code.gif" width="100%" style="border-radius: 10px;"/>
+      <br/><br/>
+      <img src="https://github-readme-stats.vercel.app/api?username=jeremialex04&show_icons=true&theme=radical&hide_border=true&bg_color=0D1117&title_color=667eea&icon_color=764ba2&text_color=ffffff" width="100%"/>
     </td>
   </tr>
 </table>
 
-## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Rocket.png" width="30"/> &nbsp;Tech Stack
+<br/>
+
+## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Rocket.png" width="35" height="35"/> Stack Tecnológico
 
 <div align="center">
 
-### 💻 Backend & Core
-<img src="https://skillicons.dev/icons?i=java,spring,nodejs,express,php&perline=5" />
+### 💎 Backend & Core Technologies
+<p>
+  <img src="https://skillicons.dev/icons?i=java,spring,nodejs,express,php&theme=dark" />
+</p>
 
-### 🎨 Frontend & UI
-<img src="https://skillicons.dev/icons?i=react,nextjs,angular,vue,js,html,css,tailwind,bootstrap&perline=5" />
+### 🎨 Frontend & User Interface
+<p>
+  <img src="https://skillicons.dev/icons?i=react,nextjs,angular,vue,typescript&theme=dark" />
+  <br/><br/>
+  <img src="https://skillicons.dev/icons?i=javascript,html,css,tailwind,bootstrap&theme=dark" />
+</p>
 
-### 🗄️ Databases
-<img src="https://skillicons.dev/icons?i=mysql,mongodb&perline=5" />
-<br/>
-<img src="https://img.shields.io/badge/Oracle-F80000?style=flat-square&logo=oracle&logoColor=white" />
-<img src="https://img.shields.io/badge/SQL_Server-CC2927?style=flat-square&logo=microsoft-sql-server&logoColor=white" />
+### 🗄️ Databases & Data Management
+<p>
+  <img src="https://skillicons.dev/icons?i=mysql,mongodb,postgresql&theme=dark" />
+  <br/><br/>
+  <img src="https://img.shields.io/badge/Oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white" />
+  <img src="https://img.shields.io/badge/SQL_Server-CC2927?style=for-the-badge&logo=microsoft-sql-server&logoColor=white" />
+</p>
 
-### 🛠️ Tools & Others
-<img src="https://skillicons.dev/icons?i=git,github,docker,vscode,figma&perline=5" />
-<br/>
-<img src="https://img.shields.io/badge/JUnit5-25A162?style=flat-square&logo=junit5&logoColor=white" />
+### 🛠️ Development Tools & DevOps
+<p>
+  <img src="https://skillicons.dev/icons?i=git,github,docker,vscode,postman&theme=dark" />
+  <br/><br/>
+  <img src="https://skillicons.dev/icons?i=figma,maven,npm&theme=dark" />
+  <img src="https://img.shields.io/badge/JUnit5-25A162?style=for-the-badge&logo=junit5&logoColor=white" />
+</p>
 
 </div>
 
+<br/>
+
+## 📊 Estadísticas de GitHub
 
 <div align="center">
-  <img src="https://komarev.com/ghpvc/?username=jeremialex04&style=flat-square&color=4ECDC4&label=VISITAS+AL+PERFIL"/>
+  <img width="49%" src="https://github-readme-streak-stats.herokuapp.com/?user=jeremialex04&theme=radical&hide_border=true&background=0D1117&stroke=667eea&ring=764ba2&fire=f093fb&currStreakLabel=667eea" />
+  <img width="49%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=jeremialex04&layout=compact&theme=radical&hide_border=true&bg_color=0D1117&title_color=667eea&text_color=ffffff" />
+</div>
+
+<br/>
+
+## 🏆 GitHub Trophies
+
+<div align="center">
+  <img src="https://github-profile-trophy.vercel.app/?username=jeremialex04&theme=radical&no-frame=true&no-bg=true&margin-w=4&row=1&column=7" width="100%" />
+</div>
+
+<br/>
+
+## 📈 Actividad de Contribución
+
+<div align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=jeremialex04&custom_title=Jeremi's%20Contribution%20Graph&bg_color=0D1117&color=667eea&line=764ba2&point=f093fb&area_color=667eea&area=true&hide_border=true" width="100%"/>
+</div>
+
+<br/>
+
+<div align="center">
   
-  <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:FF6B6B,25:4ECDC4,50:45B7D1,75:96C93D,100:DDA0DD&height=100&section=footer"/>
+### 💬 "El código es poesía, y cada proyecto es una obra de arte en construcción"
+
+<br/>
+
+  <img src="https://komarev.com/ghpvc/?username=jeremialex04&style=for-the-badge&color=667eea&label=Visitantes"/>
+  
+  <br/><br/>
+  
+  ### 🤝 ¿Colaboramos juntos?
+  
+  <p>
+    <img src="https://img.shields.io/badge/Siempre_abierto_a-Nuevos_Proyectos-667eea?style=for-the-badge&logo=handshake&logoColor=white"/>
+  </p>
+  
 </div>
+
+<br/>
+
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:667eea,50:764ba2,100:f093fb&height=120&section=footer"/>
