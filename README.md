@@ -74,14 +74,6 @@ const jeremi_profile = {
 <img src="https://img.shields.io/badge/JUnit5-25A162?style=flat-square&logo=junit5&logoColor=white" />
 
 </div>
-
-## 📊 GitHub Stats
-
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=jeremialex04&show_icons=true&theme=tokyonight&hide_border=true&bg_color=1e293b" height="150" alt="stats graph" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=jeremialex04&layout=compact&theme=tokyonight&hide_border=true&bg_color=1e293b" height="150" alt="languages graph" />
-</div>
-
 ---
 
 <div align="center">
