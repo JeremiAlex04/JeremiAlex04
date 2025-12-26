@@ -96,17 +96,6 @@ const jeremiProfile = {
 
 </div>
 
-<br/>
-
-## 📊 Estadísticas de GitHub
-
-<div align="center">
-  <img width="49%" src="https://github-readme-streak-stats.herokuapp.com/?user=jeremialex04&theme=radical&hide_border=true&background=0D1117&stroke=667eea&ring=764ba2&fire=f093fb&currStreakLabel=667eea" />
-  <img width="49%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=jeremialex04&layout=compact&theme=radical&hide_border=true&bg_color=0D1117&title_color=667eea&text_color=ffffff" />
-</div>
-
-<br/>
-
 
 <div align="center">
   
