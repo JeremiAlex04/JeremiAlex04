@@ -2,11 +2,6 @@
   <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:667eea,50:764ba2,100:f093fb&height=250&section=header&text=Jeremi%20Alexander&fontSize=70&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Ingeniería%20de%20Sistemas%20e%20Informática%20%7C%20Full%20Stack%20Developer&descSize=22&descAlignY=58&descAlign=50"/>
 </div>
 
-<div align="center">
-  <a href="https://git.io/typing-svg">
-    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=24&duration=3000&pause=800&color=667EEA&center=true&vCenter=true&repeat=true&width=600&lines=🚀+Construyendo+el+futuro+digital;✨+Java+%7C+Spring+Boot+%7C+React;💡+De+la+idea+al+código+funcional;🎯+Innovación+%2B+Tecnología+%2B+Pasión" alt="Typing SVG"/>
-  </a>
-</div>
 
 <br/>
 
@@ -112,21 +107,6 @@ const jeremiProfile = {
 
 <br/>
 
-## 🏆 GitHub Trophies
-
-<div align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=jeremialex04&theme=radical&no-frame=true&no-bg=true&margin-w=4&row=1&column=7" width="100%" />
-</div>
-
-<br/>
-
-## 📈 Actividad de Contribución
-
-<div align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=jeremialex04&custom_title=Jeremi's%20Contribution%20Graph&bg_color=0D1117&color=667eea&line=764ba2&point=f093fb&area_color=667eea&area=true&hide_border=true" width="100%"/>
-</div>
-
-<br/>
 
 <div align="center">
   
