@@ -54,8 +54,6 @@ const jeremiProfile = {
 </td>
     <td width="45%" align="center" valign="top">
       <img src="https://raw.githubusercontent.com/abhisheknaiidu/abhisheknaiidu/master/code.gif" width="100%" style="border-radius: 10px;"/>
-      <br/><br/>
-      <img src="[https://github-readme-stats.vercel.app/api?username=jeremialex04&show_icons=true&theme=radical&hide_border=true&bg_color=0D1117&title_color=667eea&icon_color=764ba2&text_color=ffffff](https://tenor.com/es/view/coding-gif-18657810)" width="100%"/>
     </td>
   </tr>
 </table>
