@@ -96,9 +96,6 @@ const jeremiProfile = {
 
 
 <div align="center">
-  
-### 💬 "El código es poesía, y cada proyecto es una obra de arte en construcción"
-
 <br/>
 
   <img src="https://komarev.com/ghpvc/?username=jeremialex04&style=for-the-badge&color=667eea&label=Visitantes"/>
