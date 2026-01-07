@@ -99,11 +99,7 @@ const jeremiProfile = {
 <br/>
 
   <img src="https://komarev.com/ghpvc/?username=jeremialex04&style=for-the-badge&color=667eea&label=Visitantes"/>
-  
-  <br/><br/>
-  
-  ### 🤝 ¿Colaboramos juntos?
-  
+
   <p>
     <img src="https://img.shields.io/badge/Siempre_abierto_a-Nuevos_Proyectos-667eea?style=for-the-badge&logo=handshake&logoColor=white"/>
   </p>
