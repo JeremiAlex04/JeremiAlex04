@@ -50,22 +50,12 @@ const jeremi: Developer = {
 
 <br/>
 
-### 🎯 Mis Principios
-
-> 💡 **Innovación constante** - Cada línea de código es una oportunidad de mejora
-> 
-> 🧠 **Aprendizaje perpetuo** - La tecnología evoluciona, yo también
-> 
-> 🤝 **Trabajo en equipo** - Los mejores proyectos nacen de la colaboración
-> 
-> 🎖️ **Excelencia técnica** - La calidad no es negociable
-
 </div>
 
 <br clear="both"/>
 
 <div align="center">
-  <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
+  <img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=0,1,2&height=3&section=header&text=&fontSize=0&fontColor=1A1A2E" width="900">
 </div>
 
 <br/>
@@ -231,7 +221,7 @@ const jeremi: Developer = {
 <br/>
 
 <div align="center">
-  <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
+  <img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=0,1,2&height=3&section=header&text=&fontSize=0&fontColor=1A1A2E" width="900">
 </div>
 
 <br/>
@@ -265,7 +255,7 @@ const jeremi: Developer = {
 <br/>
 
 <div align="center">
-  <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
+  <img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=0,1,2&height=3&section=header&text=&fontSize=0&fontColor=1A1A2E" width="900">
 </div>
 
 <br/>
@@ -302,8 +292,6 @@ estoy listo para crear algo extraordinario contigo.
 <img src="https://komarev.com/ghpvc/?username=jeremialex04&style=for-the-badge&color=667eea&label=👀%20Visitas%20al%20Perfil"/>
 
 <br/>
-
-### 💬 _"El código es poesía, y cada proyecto es una obra maestra en construcción"_
 
 </div>
 
