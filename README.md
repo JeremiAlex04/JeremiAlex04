@@ -2,7 +2,6 @@
   <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:667eea,50:764ba2,100:f093fb&height=250&section=header&text=Jeremi%20Alexander&fontSize=70&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Ingeniería%20de%20Sistemas%20e%20Informática%20%7C%20Full%20Stack%20Developer&descSize=22&descAlignY=58&descAlign=50"/>
 </div>
 
-
 <br/>
 
 <div align="center">
@@ -27,7 +26,7 @@
       
 ### 🎯 Mi Visión
 
-> **"Formar mi propio equipo de especialistas para revolucionar las organizaciones con soluciones tecnológicas que optimicen procesos y generen valor real."**
+> **"Formar mi propio equipo de especialistas para revolucionar organizaciones con soluciones tecnológicas que optimicen procesos y generen valor real."**
 
 <br/>
 
@@ -65,11 +64,13 @@ const jeremiProfile = {
 <div align="center">
 
 ### 💎 Backend & Core Technologies
+
 <p>
   <img src="https://skillicons.dev/icons?i=java,spring,nodejs,express,php&theme=dark" />
 </p>
 
 ### 🎨 Frontend & User Interface
+
 <p>
   <img src="https://skillicons.dev/icons?i=react,nextjs,angular,vue,typescript&theme=dark" />
   <br/><br/>
@@ -77,6 +78,7 @@ const jeremiProfile = {
 </p>
 
 ### 🗄️ Databases & Data Management
+
 <p>
   <img src="https://skillicons.dev/icons?i=mysql,mongodb,postgresql&theme=dark" />
   <br/><br/>
@@ -85,6 +87,7 @@ const jeremiProfile = {
 </p>
 
 ### 🛠️ Development Tools & DevOps
+
 <p>
   <img src="https://skillicons.dev/icons?i=git,github,docker,vscode,postman&theme=dark" />
   <br/><br/>
@@ -94,14 +97,60 @@ const jeremiProfile = {
 
 </div>
 
-
-<div align="center">
 <br/>
 
-  <img src="https://komarev.com/ghpvc/?username=jeremialex04&style=for-the-badge&color=667eea&label=Visitantes"/>
+## 📊 Estadísticas de GitHub
 
+<div align="center">
+  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=jeremialex04&show_icons=true&theme=radical&include_all_commits=true&count_private=true&hide_border=true&bg_color=0d1117&title_color=667eea&icon_color=764ba2&text_color=ffffff"/>
+  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=jeremialex04&layout=compact&langs_count=8&theme=radical&hide_border=true&bg_color=0d1117&title_color=667eea&text_color=ffffff"/>
+</div>
+
+<br/>
+
+<div align="center">
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=jeremialex04&theme=radical&hide_border=true&background=0d1117&stroke=667eea&ring=764ba2&fire=f093fb&currStreakLabel=764ba2" alt="GitHub Streak"/>
+</div>
+
+<br/>
+
+## 🏆 Logros y Actividad
+
+<div align="center">
+  <img src="https://github-profile-trophy.vercel.app/?username=jeremialex04&theme=radical&no-frame=true&no-bg=true&margin-w=4&column=7" alt="GitHub Trophies"/>
+</div>
+
+<br/>
+
+<div align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=jeremialex04&theme=react-dark&hide_border=true&bg_color=0d1117&color=667eea&line=764ba2&point=f093fb" alt="GitHub Activity Graph"/>
+</div>
+
+<br/>
+
+## 💡 Proyectos Destacados
+
+<div align="center">
+  
+  [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=jeremialex04&repo=NOMBRE_REPO_1&theme=radical&hide_border=true&bg_color=0d1117&title_color=667eea&icon_color=764ba2&text_color=ffffff)](https://github.com/jeremialex04/NOMBRE_REPO_1)
+  [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=jeremialex04&repo=NOMBRE_REPO_2&theme=radical&hide_border=true&bg_color=0d1117&title_color=667eea&icon_color=764ba2&text_color=ffffff)](https://github.com/jeremialex04/NOMBRE_REPO_2)
+  
+</div>
+
+<br/>
+
+## 🤝 Conectemos
+
+<div align="center">
+  
+  <img src="https://komarev.com/ghpvc/?username=jeremialex04&style=for-the-badge&color=667eea&label=Visitantes"/>
+  
   <p>
     <img src="https://img.shields.io/badge/Siempre_abierto_a-Nuevos_Proyectos-667eea?style=for-the-badge&logo=handshake&logoColor=white"/>
+  </p>
+  
+  <p>
+    <em>¿Tienes una idea innovadora? ¡Hablemos y hagámosla realidad! 🚀</em>
   </p>
   
 </div>
