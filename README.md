@@ -1,7 +1,5 @@
 <div align="center">
-  <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:667eea,50:764ba2,100:f093fb&height=280&section=header&text=Jeremi%20Alexander&fontSize=80&fontColor=ffffff&animation=twinkling&fontAlignY=35&desc=Full%20Stack%20Developer%20%7C%20Innovación%20%26%20Tecnología&descSize=25&descAlignY=55&descAlign=50"/>
-  
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=28&duration=3000&pause=1000&color=667EEA&center=true&vCenter=true&multiline=true&repeat=true&width=800&height=100&lines=Ingeniero+de+Sistemas+e+Informática;Construyendo+el+futuro+con+código;Transformando+ideas+en+soluciones+digitales" alt="Typing SVG" />
+  <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:667eea,50:764ba2,100:f093fb&height=250&section=header&text=Jeremi%20Alexander&fontSize=70&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Ingeniería%20de%20Sistemas%20e%20Informática%20%7C%20Full%20Stack%20Developer&descSize=22&descAlignY=58&descAlign=50"/>
 </div>
 
 <br/>
