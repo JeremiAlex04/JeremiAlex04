@@ -99,45 +99,7 @@ const jeremiProfile = {
 
 <br/>
 
-## 📊 Estadísticas de GitHub
 
-<div align="center">
-  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=jeremialex04&show_icons=true&theme=radical&include_all_commits=true&count_private=true&hide_border=true&bg_color=0d1117&title_color=667eea&icon_color=764ba2&text_color=ffffff"/>
-  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=jeremialex04&layout=compact&langs_count=8&theme=radical&hide_border=true&bg_color=0d1117&title_color=667eea&text_color=ffffff"/>
-</div>
-
-<br/>
-
-<div align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=jeremialex04&theme=radical&hide_border=true&background=0d1117&stroke=667eea&ring=764ba2&fire=f093fb&currStreakLabel=764ba2" alt="GitHub Streak"/>
-</div>
-
-<br/>
-
-## 🏆 Logros y Actividad
-
-<div align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=jeremialex04&theme=radical&no-frame=true&no-bg=true&margin-w=4&column=7" alt="GitHub Trophies"/>
-</div>
-
-<br/>
-
-<div align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=jeremialex04&theme=react-dark&hide_border=true&bg_color=0d1117&color=667eea&line=764ba2&point=f093fb" alt="GitHub Activity Graph"/>
-</div>
-
-<br/>
-
-## 💡 Proyectos Destacados
-
-<div align="center">
-  
-  [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=jeremialex04&repo=NOMBRE_REPO_1&theme=radical&hide_border=true&bg_color=0d1117&title_color=667eea&icon_color=764ba2&text_color=ffffff)](https://github.com/jeremialex04/NOMBRE_REPO_1)
-  [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=jeremialex04&repo=NOMBRE_REPO_2&theme=radical&hide_border=true&bg_color=0d1117&title_color=667eea&icon_color=764ba2&text_color=ffffff)](https://github.com/jeremialex04/NOMBRE_REPO_2)
-  
-</div>
-
-<br/>
 
 ## 🤝 Conectemos
 
