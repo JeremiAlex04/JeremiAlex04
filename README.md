@@ -70,7 +70,7 @@ const jeremi: Developer = {
 
 <br/>
 
-## <img src="https://user-images.githubusercontent.com/74038190/212257454-16e3712e-945a-4ca2-b238-408ad0bf87e6.gif" width="40"/> Arsenal Tecnológico
+## <img width="40"/> Arsenal Tecnológico
 
 <div align="center">
 
@@ -101,7 +101,7 @@ const jeremi: Developer = {
   </tr>
 </table>
 
-### <img src="https://user-images.githubusercontent.com/74038190/212257465-7ce8d493-cac5-494e-982a-5a9deb852c4b.gif" width="30"/> Frontend Development
+### <img width="30"/> Frontend Development
 
 <table>
   <tr>
@@ -150,7 +150,7 @@ const jeremi: Developer = {
   </tr>
 </table>
 
-### <img src="https://user-images.githubusercontent.com/74038190/212257467-871d32b7-e401-42e8-a166-fcfd7baa4c6b.gif" width="30"/> Database & Data
+### <img width="30"/> Database & Data
 
 <table>
   <tr>
