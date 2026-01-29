@@ -1,10 +1,15 @@
-# Jeremi Alexander
-### Full Stack Developer | Ingeniería de Sistemas e Informática
+<div align="center">
+  
+# 👨‍💻 Jeremi Alexander
+
+<h3>Full Stack Developer | Ingeniería de Sistemas e Informática</h3>
 
 [![Email](https://img.shields.io/badge/jeremialex04@gmail.com-D14836?style=flat-square&logo=gmail&logoColor=white)](mailto:jeremialex04@gmail.com)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/jeremialex04)
 [![Portfolio](https://img.shields.io/badge/Portfolio-000000?style=flat-square&logo=About.me&logoColor=white)](https://jeremialex04.github.io)
 [![GitHub](https://img.shields.io/badge/GitHub-100000?style=flat-square&logo=github&logoColor=white)](https://github.com/jeremialex04)
+
+</div>
 
 ---
 
@@ -38,7 +43,7 @@ Desarrollador Full Stack especializado en arquitectura de bases de datos e intel
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" width="50" height="50"/>
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" width="50" height="50"/>
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" width="50" height="50"/>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" alt="Tailwind CSS" width="50" height="50"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind CSS" width="50" height="50"/>
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap" width="50" height="50"/>
 </p>
 
