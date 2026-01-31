@@ -1,5 +1,5 @@
 <div align="center">
-  <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:1A1A2E,50:16213E,100:0F3460&height=250&section=header&text=Jeremi%20Alexander&fontSize=70&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Ingeniería%20de%20Sistemas%20e%20Informática%20%7C%20Full%20Stack%20Developer&descSize=22&descAlignY=58&descAlign=50"/>
+  <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:667eea,50:764ba2,100:f093fb&height=250&section=header&text=Jeremi%20Alexander&fontSize=70&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Ingeniería%20de%20Sistemas%20e%20Informática%20%7C%20Full%20Stack%20Developer&descSize=22&descAlignY=58&descAlign=50"/>
 </div>
 
 <div align="center">
@@ -55,7 +55,7 @@ const jeremi: Developer = {
 <br clear="both"/>
 
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=0,1,2&height=3&section=header&text=&fontSize=0&fontColor=1A1A2E" width="900">
+  <img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=12,13,14&height=3&section=header&text=&fontSize=0&fontColor=667eea" width="900">
 </div>
 
 <br/>
@@ -221,7 +221,7 @@ const jeremi: Developer = {
 <br/>
 
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=0,1,2&height=3&section=header&text=&fontSize=0&fontColor=1A1A2E" width="900">
+  <img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=12,13,14&height=3&section=header&text=&fontSize=0&fontColor=667eea" width="900">
 </div>
 
 <br/>
@@ -255,7 +255,7 @@ const jeremi: Developer = {
 <br/>
 
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=0,1,2&height=3&section=header&text=&fontSize=0&fontColor=1A1A2E" width="900">
+  <img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=12,13,14&height=3&section=header&text=&fontSize=0&fontColor=667eea" width="900">
 </div>
 
 <br/>
@@ -297,4 +297,4 @@ estoy listo para crear algo extraordinario contigo.
 
 <br/>
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:1A1A2E,50:16213E,100:0F3460&height=150&section=footer"/>
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:667eea,50:764ba2,100:f093fb&height=150&section=footer"/>
