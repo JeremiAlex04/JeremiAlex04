@@ -20,7 +20,7 @@
 <br/>
 
 <div align="center">
-  <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
+  <img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=12,13,14&height=3&section=header&text=&fontSize=0&fontColor=667eea" width="900">
 </div>
 
 <br/>
