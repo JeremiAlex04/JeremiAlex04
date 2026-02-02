@@ -268,10 +268,6 @@ const jeremi: Developer = {
 
 ### 🚀 ¿Tienes un proyecto innovador en mente?
 
-<p>
-  <img src="https://img.shields.io/badge/Estado-Disponible%20para%20proyectos-00ff00?style=for-the-badge&logo=statuspage&logoColor=white"/>
-</p>
-
 **¡Trabajemos juntos para convertir tu visión en realidad!**
 
 Ya sea que necesites desarrollar una aplicación web completa, optimizar bases de datos,<br/>
