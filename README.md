@@ -98,7 +98,7 @@
     </tr>
     <tr>
       <td align="center" width="110">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" width="55" height="55" alt="Tailwind"/>
+        <img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" width="55" height="55" alt="Tailwind"/>
         <br/><b>Tailwind</b>
       </td>
       <td align="center" width="110">
@@ -142,7 +142,7 @@
         <br/><b>Spring</b>
       </td>
       <td align="center" width="110">
-        <img src="https://techstack-generator.vercel.app/nodejs-icon.svg" width="55" height="55" alt="Node.js"/>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" width="55" height="55" alt="Node.js"/>
         <br/><b>Node.js</b>
       </td>
       <td align="center" width="110">
@@ -168,7 +168,7 @@
         <br/><b>PHP</b>
       </td>
       <td align="center" width="110">
-        <img src="https://www.vectorlogo.zone/logos/postman/postman-icon.svg" width="55" height="55" alt="Postman"/>
+        <img src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" width="55" height="55" alt="Postman"/>
         <br/><b>Postman</b>
       </td>
       <td align="center" width="110">
