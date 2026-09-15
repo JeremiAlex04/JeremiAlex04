@@ -1,82 +1,90 @@
-<div align="left">
-  <p><strong>JEREMI ALEXANDER OLIVARES CHAVEZ</strong> · Lima, Perú</p>
-</div>
+<sub>JEREMIALEX04 · LIMA, PERÚ</sub>
 
-# Desarrollo web con foco en backend y datos.
+# Jeremi Alexander Olivares Chavez
 
-Soy **Jeremi**, desarrollador full stack con enfoque en **Java, Spring y diseño de bases de datos**. Mi trabajo conecta interfaces web, APIs y lógica de negocio: desde la comparación de hardware hasta la gestión de ventas e inventarios.
+**Desarrollo full stack · Backend · Arquitectura de datos**
+
+Construyo aplicaciones web que conectan **interfaces, APIs y bases de datos**. Mi enfoque está en **Java + Spring**, la lógica de negocio y el diseño de datos: desde comparar componentes de PC hasta gestionar ventas e inventarios.
 
 **Ingeniería de Sistemas · Universidad Tecnológica del Perú**  
-Exploro inteligencia artificial, automatización y DevOps para ampliar lo que puedo construir.
+También exploro inteligencia artificial, automatización y DevOps.
 
-[![Portafolio](https://img.shields.io/badge/Ver_portafolio-667EEA?style=flat-square)](https://jeremialex04.github.io)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-764BA2?style=flat-square)](https://www.linkedin.com/in/jeremialex04)
-[![Contacto](https://img.shields.io/badge/Hablemos-A83E86?style=flat-square)](mailto:jeremialex04@gmail.com)
-
-[Stack técnico](#stack-técnico) · [Proyectos clave](#proyectos-clave) · [Contacto](#contacto)
+[![Ver proyectos](https://img.shields.io/badge/Ver_proyectos-5B4BC4?style=for-the-badge)](#proyectos-clave)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-37304F?style=for-the-badge)](https://www.linkedin.com/in/jeremialex04)
+[![Hablemos](https://img.shields.io/badge/Hablemos-37304F?style=for-the-badge&logo=gmail&logoColor=C4B5FD)](mailto:jeremialex04@gmail.com)
 
 ---
 
 ## Stack técnico
 
-Mi foco está en **APIs, arquitectura de aplicaciones y modelado de datos**. Estas son las tecnologías que reúno alrededor de ese trabajo:
+Mi foco: **desarrollo de APIs, modelado de datos, procedimientos almacenados y optimización de consultas**.
 
 | Área | Tecnologías |
 | :--- | :--- |
-| **Backend** | Java · Spring / Spring Boot · Node.js · Express |
+| **Backend y APIs** | Java · Spring / Spring Boot · Node.js · Express |
 | **Frontend** | React · Next.js · Angular · Vue · TypeScript · JavaScript |
-| **Interfaces** | HTML · CSS · Tailwind CSS · Bootstrap · Sass |
+| **Interfaces y estilos** | HTML · CSS · Tailwind CSS · Bootstrap · Sass |
 | **Bases de datos** | SQL Server · Oracle · PostgreSQL · MySQL · MongoDB · Redis |
-| **Entorno de desarrollo** | Docker · Git · GitHub · Postman |
-
-**En bases de datos:** modelado, procedimientos almacenados y optimización de consultas.
+| **Herramientas** | Docker · Git · GitHub · Postman |
 
 <details>
-<summary><strong>Otras tecnologías y áreas de exploración</strong></summary>
+<summary><strong>Más tecnologías y áreas de exploración</strong></summary>
 
 - **Lenguajes y plataformas:** Python, C#, .NET y PHP.
 - **Cloud y servicios:** AWS, Azure, Kubernetes y Firebase.
-- **Diseño y herramientas:** Figma, IntelliJ IDEA y Visual Studio Code.
-- **Aprendizaje actual:** fundamentos de machine learning, integraciones y automatización.
+- **Diseño y entorno de desarrollo:** Figma, IntelliJ IDEA y Visual Studio Code.
+- **En aprendizaje:** fundamentos de machine learning, integraciones y automatización.
 
 </details>
 
 ## Proyectos clave
 
-### 01 / CompuSearch
+### 01 · CompuSearch
 
-**Comparar hardware para tomar mejores decisiones de compra.**
+**Comparación de hardware para el mercado peruano.**
 
-Proyecto universitario en equipo que reúne búsqueda, filtros y comparación de componentes de PC de tiendas del Perú. Su alcance incluye configuración de equipos, administración de catálogos y gestión de usuarios.
+Proyecto universitario en equipo para buscar, filtrar y comparar componentes de PC de distintas tiendas. Incluye configuración de equipos y administración de catálogos y usuarios.
 
-- **Arquitectura:** frontend en React y Vite, API en Spring Boot y persistencia en MySQL.
-- **Punto técnico de interés:** ejecución del conjunto de servicios con Docker Compose.
+- **Arquitectura:** frontend en React + Vite, API en Spring Boot y persistencia en MySQL.
+- **Detalle técnico:** ejecución de los servicios con Docker Compose.
 
 `Java` `Spring Boot` `React` `MySQL` `Docker`
 
-[Explorar código y documentación →](https://github.com/JeremiAlex04/CompuSearch-App-Web)
+[Explorar CompuSearch →](https://github.com/JeremiAlex04/CompuSearch-App-Web)
 
-### 02 / Tiendas Mass — Gestión comercial
+### 02 · Tiendas Mass
 
-**Conectar ventas, caja e inventario en una aplicación web.**
+**Ventas, caja e inventario en una aplicación web.**
 
-Sistema en desarrollo orientado a la gestión comercial minorista. Contempla inventario por sucursal, punto de venta y reportes para dar seguimiento a la operación.
+Sistema de gestión comercial en desarrollo, orientado a la operación minorista. Contempla control de existencias por sucursal, punto de venta y reportes.
 
 - **Arquitectura:** backend en Spring Boot, frontend en React y base de datos MySQL.
-- **Puntos técnicos de interés:** autenticación con JWT, acceso por roles y modelado de productos, existencias y ventas.
+- **Detalle técnico:** autenticación con JWT, acceso por roles y modelado de productos, inventario y ventas.
 
 `Java` `Spring Boot` `React` `MySQL` `JWT`
 
-[Explorar código y documentación →](https://github.com/JeremiAlex04/Tiendas-Mass-Sistema-de-Gestion-Comercial)
+[Explorar Tiendas Mass →](https://github.com/JeremiAlex04/Tiendas-Mass-Sistema-de-Gestion-Comercial)
 
-**Más código:** [ver todos mis repositorios](https://github.com/JeremiAlex04?tab=repositories).
+### 03 · Algoritmos y estructuras de datos
+
+**Fundamentos de Java con visualización interactiva.**
+
+Colección académica de implementaciones de pilas, colas y listas enlazadas, con interfaces gráficas para observar su funcionamiento.
+
+- **Detalle técnico:** operaciones sobre estructuras lineales y navegación por listas simples y dobles.
+
+`Java` `Swing` `Estructuras de datos`
+
+[Explorar implementaciones →](https://github.com/JeremiAlex04/Algoritmos-y-Estructura-de-Datos)
+
+[Ver todos mis repositorios ↗](https://github.com/JeremiAlex04?tab=repositories)
 
 ---
 
 ## Contacto
 
-¿Tienes un proyecto que conecte desarrollo web, APIs y datos? **Conversemos.**
+Si tu proyecto conecta **desarrollo web, APIs y datos**, conversemos.
 
-- **Correo:** [jeremialex04@gmail.com](mailto:jeremialex04@gmail.com)
-- **LinkedIn:** [linkedin.com/in/jeremialex04](https://www.linkedin.com/in/jeremialex04)
-- **Portafolio:** [jeremialex04.github.io](https://jeremialex04.github.io)
+**Correo:** [jeremialex04@gmail.com](mailto:jeremialex04@gmail.com)  
+**LinkedIn:** [linkedin.com/in/jeremialex04](https://www.linkedin.com/in/jeremialex04)  
+**Portafolio:** [jeremialex04.github.io](https://jeremialex04.github.io)
