@@ -1,278 +1,82 @@
-<!-- ===================== HERO ===================== -->
-<div align="center">
-  <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:667eea,50:764ba2,100:ff6ec4&height=250&section=header&text=Jeremi%20Alexander&fontSize=72&fontColor=fff&animation=fadeIn&fontAlignY=37&desc=Full%20Stack%20Developer%20%7C%20Database%20Architect%20%7C%20AI%20Enthusiast&descSize=20&descAlignY=58"/>
+<div align="left">
+  <p><strong>JEREMI ALEXANDER OLIVARES CHAVEZ</strong> · Lima, Perú</p>
 </div>
 
-<div align="center">
+# Desarrollo web con foco en backend y datos.
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=22&duration=2600&pause=900&color=FFFFFF&center=true&vCenter=true&width=750&lines=Ingenier%C3%ADa+de+Sistemas+-+UTP;Lima%2C+Per%C3%BA+%F0%9F%87%B5%F0%9F%87%AA;Backend+%2B+DB+Architecture+%2B+AI;Construyendo+soluciones+con+impacto)](https://git.io/typing-svg)
+Soy **Jeremi**, desarrollador full stack con enfoque en **Java, Spring y diseño de bases de datos**. Mi trabajo conecta interfaces web, APIs y lógica de negocio: desde la comparación de hardware hasta la gestión de ventas e inventarios.
 
-</div>
+**Ingeniería de Sistemas · Universidad Tecnológica del Perú**  
+Exploro inteligencia artificial, automatización y DevOps para ampliar lo que puedo construir.
 
-<br/>
+[![Portafolio](https://img.shields.io/badge/Ver_portafolio-667EEA?style=flat-square)](https://jeremialex04.github.io)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-764BA2?style=flat-square)](https://www.linkedin.com/in/jeremialex04)
+[![Contacto](https://img.shields.io/badge/Hablemos-A83E86?style=flat-square)](mailto:jeremialex04@gmail.com)
 
-<!-- ===================== CTA BUTTONS ===================== -->
-<div align="center">
-  <a href="mailto:jeremialex04@gmail.com">
-    <img src="https://img.shields.io/badge/Gmail-EA4335?style=for-the-badge&logo=gmail&logoColor=white"/>
-  </a>
-  <a href="https://www.linkedin.com/in/jeremialex04">
-    <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/>
-  </a>
-  <a href="https://github.com/jeremialex04">
-    <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"/>
-  </a>
-  <a href="https://jeremialex04.github.io">
-    <img src="https://img.shields.io/badge/Portfolio-667EEA?style=for-the-badge&logo=google-chrome&logoColor=white"/>
-  </a>
-</div>
+[Stack técnico](#stack-técnico) · [Proyectos clave](#proyectos-clave) · [Contacto](#contacto)
 
-<br/>
+---
 
-<!-- ===================== NEON DIVIDER ===================== -->
-<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=0:667eea,50:764ba2,100:ff6ec4&height=2&section=header"/>
+## Stack técnico
 
-<br/>
+Mi foco está en **APIs, arquitectura de aplicaciones y modelado de datos**. Estas son las tecnologías que reúno alrededor de ese trabajo:
 
-<!-- ===================== GLASS CARDS ===================== -->
-<div align="center">
-  <table>
-    <tr>
-      <td align="center" width="260">
-        <h3>⚙️ Backend</h3>
-        <p>Java · Spring · Node.js<br/>APIs · Arquitectura · Patrones</p>
-        <img src="https://img.shields.io/badge/Core-Java%20%2B%20Spring-667eea?style=for-the-badge"/>
-      </td>
-      <td align="center" width="260">
-        <h3>🗄️ Databases</h3>
-        <p>SQL Server · Oracle · PostgreSQL<br/>Modelado · SPs · Optimización</p>
-        <img src="https://img.shields.io/badge/Focus-Database%20Architect-764ba2?style=for-the-badge"/>
-      </td>
-      <td align="center" width="260">
-        <h3>🧠 AI & DevOps</h3>
-        <p>Docker · Cloud · Automatización<br/>ML Basics · Integraciones</p>
-        <img src="https://img.shields.io/badge/Growing-AI%20%26%20DevOps-ff6ec4?style=for-the-badge"/>
-      </td>
-    </tr>
-  </table>
-</div>
+| Área | Tecnologías |
+| :--- | :--- |
+| **Backend** | Java · Spring / Spring Boot · Node.js · Express |
+| **Frontend** | React · Next.js · Angular · Vue · TypeScript · JavaScript |
+| **Interfaces** | HTML · CSS · Tailwind CSS · Bootstrap · Sass |
+| **Bases de datos** | SQL Server · Oracle · PostgreSQL · MySQL · MongoDB · Redis |
+| **Entorno de desarrollo** | Docker · Git · GitHub · Postman |
 
-<br/>
+**En bases de datos:** modelado, procedimientos almacenados y optimización de consultas.
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=0:667eea,50:764ba2,100:ff6ec4&height=2&section=header"/>
+<details>
+<summary><strong>Otras tecnologías y áreas de exploración</strong></summary>
 
-<br/>
+- **Lenguajes y plataformas:** Python, C#, .NET y PHP.
+- **Cloud y servicios:** AWS, Azure, Kubernetes y Firebase.
+- **Diseño y herramientas:** Figma, IntelliJ IDEA y Visual Studio Code.
+- **Aprendizaje actual:** fundamentos de machine learning, integraciones y automatización.
 
-## 🧩 Tech Stack (Original Logos)
+</details>
 
-<!-- =============== FRONTEND =============== -->
-<h3 align="center">🎨 Frontend</h3>
+## Proyectos clave
 
-<div align="center">
-  <table>
-    <tr>
-      <td align="center" width="110">
-        <img src="https://techstack-generator.vercel.app/react-icon.svg" width="55" height="55" alt="React"/>
-        <br/><b>React</b>
-      </td>
-      <td align="center" width="110">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" width="55" height="55" alt="Next.js"/>
-        <br/><b>Next.js</b>
-      </td>
-      <td align="center" width="110">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg" width="55" height="55" alt="Angular"/>
-        <br/><b>Angular</b>
-      </td>
-      <td align="center" width="110">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" width="55" height="55" alt="Vue"/>
-        <br/><b>Vue</b>
-      </td>
-      <td align="center" width="110">
-        <img src="https://techstack-generator.vercel.app/ts-icon.svg" width="55" height="55" alt="TypeScript"/>
-        <br/><b>TypeScript</b>
-      </td>
-      <td align="center" width="110">
-        <img src="https://techstack-generator.vercel.app/js-icon.svg" width="55" height="55" alt="JavaScript"/>
-        <br/><b>JavaScript</b>
-      </td>
-    </tr>
-    <tr>
-      <td align="center" width="110">
-        <img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" width="55" height="55" alt="Tailwind"/>
-        <br/><b>Tailwind</b>
-      </td>
-      <td align="center" width="110">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" width="55" height="55" alt="Bootstrap"/>
-        <br/><b>Bootstrap</b>
-      </td>
-      <td align="center" width="110">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="55" height="55" alt="HTML5"/>
-        <br/><b>HTML5</b>
-      </td>
-      <td align="center" width="110">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="55" height="55" alt="CSS3"/>
-        <br/><b>CSS3</b>
-      </td>
-      <td align="center" width="110">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" width="55" height="55" alt="Sass"/>
-        <br/><b>Sass</b>
-      </td>
-      <td align="center" width="110">
-        <img src="https://www.vectorlogo.zone/logos/figma/figma-icon.svg" width="55" height="55" alt="Figma"/>
-        <br/><b>Figma</b>
-      </td>
-    </tr>
-  </table>
-</div>
+### 01 / CompuSearch
 
-<br/>
+**Comparar hardware para tomar mejores decisiones de compra.**
 
-<!-- =============== BACKEND =============== -->
-<h3 align="center">⚙️ Backend</h3>
+Proyecto universitario en equipo que reúne búsqueda, filtros y comparación de componentes de PC de tiendas del Perú. Su alcance incluye configuración de equipos, administración de catálogos y gestión de usuarios.
 
-<div align="center">
-  <table>
-    <tr>
-      <td align="center" width="110">
-        <img src="https://techstack-generator.vercel.app/java-icon.svg" width="55" height="55" alt="Java"/>
-        <br/><b>Java</b>
-      </td>
-      <td align="center" width="110">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" width="55" height="55" alt="Spring"/>
-        <br/><b>Spring</b>
-      </td>
-      <td align="center" width="110">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" width="55" height="55" alt="Node.js"/>
-        <br/><b>Node.js</b>
-      </td>
-      <td align="center" width="110">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" width="55" height="55" alt="Express"/>
-        <br/><b>Express</b>
-      </td>
-      <td align="center" width="110">
-        <img src="https://techstack-generator.vercel.app/python-icon.svg" width="55" height="55" alt="Python"/>
-        <br/><b>Python</b>
-      </td>
-      <td align="center" width="110">
-        <img src="https://techstack-generator.vercel.app/csharp-icon.svg" width="55" height="55" alt="C#"/>
-        <br/><b>C#</b>
-      </td>
-    </tr>
-    <tr>
-      <td align="center" width="110">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dot-net/dot-net-original.svg" width="55" height="55" alt=".NET"/>
-        <br/><b>.NET</b>
-      </td>
-      <td align="center" width="110">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" width="55" height="55" alt="PHP"/>
-        <br/><b>PHP</b>
-      </td>
-      <td align="center" width="110">
-        <img src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" width="55" height="55" alt="Postman"/>
-        <br/><b>Postman</b>
-      </td>
-      <td align="center" width="110">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/intellij/intellij-original.svg" width="55" height="55" alt="IntelliJ"/>
-        <br/><b>IntelliJ</b>
-      </td>
-      <td align="center" width="110">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" width="55" height="55" alt="VS Code"/>
-        <br/><b>VS Code</b>
-      </td>
-      <td align="center" width="110">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" width="55" height="55" alt="Git"/>
-        <br/><b>Git</b>
-      </td>
-    </tr>
-  </table>
-</div>
+- **Arquitectura:** frontend en React y Vite, API en Spring Boot y persistencia en MySQL.
+- **Punto técnico de interés:** ejecución del conjunto de servicios con Docker Compose.
 
-<br/>
+`Java` `Spring Boot` `React` `MySQL` `Docker`
 
-<!-- =============== DATABASES =============== -->
-<h3 align="center">🗄️ Databases</h3>
+[Explorar código y documentación →](https://github.com/JeremiAlex04/CompuSearch-App-Web)
 
-<div align="center">
-  <table>
-    <tr>
-      <td align="center" width="110">
-        <img src="https://techstack-generator.vercel.app/mysql-icon.svg" width="55" height="55" alt="MySQL"/>
-        <br/><b>MySQL</b>
-      </td>
-      <td align="center" width="110">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" width="55" height="55" alt="PostgreSQL"/>
-        <br/><b>PostgreSQL</b>
-      </td>
-      <td align="center" width="110">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" width="55" height="55" alt="MongoDB"/>
-        <br/><b>MongoDB</b>
-      </td>
-      <td align="center" width="110">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg" width="55" height="55" alt="Oracle"/>
-        <br/><b>Oracle</b>
-      </td>
-      <td align="center" width="110">
-        <img src="https://www.svgrepo.com/show/303229/microsoft-sql-server-logo.svg" width="55" height="55" alt="SQL Server"/>
-        <br/><b>SQL Server</b>
-      </td>
-      <td align="center" width="110">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" width="55" height="55" alt="Redis"/>
-        <br/><b>Redis</b>
-      </td>
-    </tr>
-    <tr>
-      <td align="center" width="110">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" width="55" height="55" alt="Firebase"/>
-        <br/><b>Firebase</b>
-      </td>
-      <td align="center" width="110">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" width="55" height="55" alt="Docker"/>
-        <br/><b>Docker</b>
-      </td>
-      <td align="center" width="110">
-        <img src="https://techstack-generator.vercel.app/kubernetes-icon.svg" width="55" height="55" alt="Kubernetes"/>
-        <br/><b>Kubernetes</b>
-      </td>
-      <td align="center" width="110">
-        <img src="https://techstack-generator.vercel.app/aws-icon.svg" width="55" height="55" alt="AWS"/>
-        <br/><b>AWS</b>
-      </td>
-      <td align="center" width="110">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" width="55" height="55" alt="Azure"/>
-        <br/><b>Azure</b>
-      </td>
-      <td align="center" width="110">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" width="55" height="55" alt="GitHub"/>
-        <br/><b>GitHub</b>
-      </td>
-    </tr>
-  </table>
-</div>
+### 02 / Tiendas Mass — Gestión comercial
 
-<br/>
+**Conectar ventas, caja e inventario en una aplicación web.**
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=0:667eea,50:764ba2,100:ff6ec4&height=2&section=header"/>
+Sistema en desarrollo orientado a la gestión comercial minorista. Contempla inventario por sucursal, punto de venta y reportes para dar seguimiento a la operación.
 
-<br/>
+- **Arquitectura:** backend en Spring Boot, frontend en React y base de datos MySQL.
+- **Puntos técnicos de interés:** autenticación con JWT, acceso por roles y modelado de productos, existencias y ventas.
 
-## 📊 GitHub Stats
+`Java` `Spring Boot` `React` `MySQL` `JWT`
 
-<div align="center">
-  <img width="49%" height="190" src="https://github-readme-stats.vercel.app/api?username=jeremialex04&show_icons=true&count_private=true&hide_border=true&title_color=ff6ec4&icon_color=667eea&text_color=c9d1d9&bg_color=0d1117" /> 
-  <img width="41%" height="190" src="https://github-readme-stats.vercel.app/api/top-langs/?username=jeremialex04&layout=compact&hide_border=true&title_color=667eea&text_color=c9d1d9&bg_color=0d1117" />
-</div>
+[Explorar código y documentación →](https://github.com/JeremiAlex04/Tiendas-Mass-Sistema-de-Gestion-Comercial)
 
-<div align="center">
-  <img width="90%" src="https://github-readme-streak-stats.herokuapp.com/?user=jeremialex04&theme=radical&hide_border=true&stroke=0000&background=0D1117&ring=ff6ec4&fire=667eea&currStreakLabel=764ba2"/>
-</div>
+**Más código:** [ver todos mis repositorios](https://github.com/JeremiAlex04?tab=repositories).
 
-<div align="center">
-  <img width="90%" src="https://github-readme-activity-graph.vercel.app/graph?username=jeremialex04&custom_title=Contribution%20Graph&bg_color=0D1117&color=ffffff&line=ff6ec4&point=667eea&area=true&hide_border=true"/>
-</div>
+---
 
-<br/>
+## Contacto
 
-<!-- ===================== FOOTER ===================== -->
-<div align="center">
-  <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:667eea,50:764ba2,100:ff6ec4&height=130&section=footer"/>
-</div>
+¿Tienes un proyecto que conecte desarrollo web, APIs y datos? **Conversemos.**
+
+- **Correo:** [jeremialex04@gmail.com](mailto:jeremialex04@gmail.com)
+- **LinkedIn:** [linkedin.com/in/jeremialex04](https://www.linkedin.com/in/jeremialex04)
+- **Portafolio:** [jeremialex04.github.io](https://jeremialex04.github.io)
