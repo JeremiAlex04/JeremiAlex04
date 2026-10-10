@@ -5,7 +5,7 @@
 
 <div align="center">
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=22&duration=2600&pause=900&color=FFFFFF&center=true&vCenter=true&width=750&lines=Ingenier%C3%ADa+de+Sistemas+-+UTP;Lima%2C+Per%C3%BA+%F0%9F%87%B5%F0%9F%87%AA;Backend+%2B+DB+Architecture+%2B+AI;Construyendo+soluciones+con+impacto)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=22&duration=2600&pause=900&color=FFFFFF&center=true&vCenter=true&width=750&lines=Ingenier%C3%ADa+de+Sistemas;Lima%2C+Per%C3%BA+%F0%9F%87%B5%F0%9F%87%AA;Backend+%2B+DB+Architecture+%2B+AI;Construyendo+soluciones+con+impacto)](https://git.io/typing-svg)
 
 </div>
 
