@@ -1,0 +1,1851 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 340" width="100%" height="100%">
+  <defs>
+    <!-- Concrete Wall Night Gradient -->
+    <linearGradient id="wallBase" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0614"/>
+      <stop offset="45%" stop-color="#130a22"/>
+      <stop offset="100%" stop-color="#090b16"/>
+    </linearGradient>
+
+    <!-- Ambient Vice City Street Neon Spill (Magenta Left + Cyan Right) -->
+    <radialGradient id="neonSpillLeft" cx="12%" cy="18%" r="48%">
+      <stop offset="0%" stop-color="#ff2a85" stop-opacity="0.22"/>
+      <stop offset="55%" stop-color="#7b2cbf" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#0b0614" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="neonSpillRight" cx="88%" cy="82%" r="45%">
+      <stop offset="0%" stop-color="#00f0ff" stop-opacity="0.18"/>
+      <stop offset="60%" stop-color="#1d4ed8" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#090b16" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Iconic GTA VI Sunset Gradient -->
+    <linearGradient id="viSunset" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ff2a85"/>
+      <stop offset="48%" stop-color="#ff7b54"/>
+      <stop offset="100%" stop-color="#ffd166"/>
+    </linearGradient>
+
+    <linearGradient id="viBar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7b2cbf"/>
+      <stop offset="35%" stop-color="#ff2a85"/>
+      <stop offset="70%" stop-color="#ff7b54"/>
+      <stop offset="100%" stop-color="#00f0ff"/>
+    </linearGradient>
+
+    <!-- 3D Metallic Aerosol Can Body Gradient -->
+    <linearGradient id="canMetal" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1e1b2e"/>
+      <stop offset="28%" stop-color="#4c4668"/>
+      <stop offset="55%" stop-color="#151221"/>
+      <stop offset="85%" stop-color="#2e2845"/>
+      <stop offset="100%" stop-color="#0d0a16"/>
+    </linearGradient>
+    <linearGradient id="canChrome" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#64748b"/>
+      <stop offset="35%" stop-color="#f8fafc"/>
+      <stop offset="65%" stop-color="#94a3b8"/>
+      <stop offset="100%" stop-color="#475569"/>
+    </linearGradient>
+
+    <!-- Realistic Pressurized Aerosol Mist -->
+    <radialGradient id="mistOuter" cx="35%" cy="50%" r="65%">
+      <stop offset="0%" stop-color="#ff7b54" stop-opacity="0.72"/>
+      <stop offset="35%" stop-color="#ff2a85" stop-opacity="0.45"/>
+      <stop offset="72%" stop-color="#7b2cbf" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="sprayCone" x1="100%" y1="50%" x2="0%" y2="50%">
+      <stop offset="0%" stop-color="#fff1f2" stop-opacity="0.92"/>
+      <stop offset="22%" stop-color="#ff7b54" stop-opacity="0.65"/>
+      <stop offset="62%" stop-color="#ff2a85" stop-opacity="0.32"/>
+      <stop offset="100%" stop-color="#00f0ff" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Concrete Stucco Wall Texture Filter -->
+    <filter id="concreteTex" x="0%" y="0%" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" seed="11" result="noise"/>
+      <feColorMatrix type="matrix" values="
+        0 0 0 0 0.75
+        0 0 0 0 0.65
+        0 0 0 0 0.90
+        0 0 0 0.055 0" in="noise" result="coloredNoise"/>
+      <feComposite in="coloredNoise" in2="SourceGraphic" operator="over"/>
+    </filter>
+
+    <!-- Organic Aerosol Overspray Edge Filter -->
+    <filter id="sprayTexture" x="-25%" y="-25%" width="150%" height="150%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.42" numOctaves="2" seed="7" result="grain"/>
+      <feDisplacementMap in="SourceGraphic" in2="grain" scale="1.7" xChannelSelector="R" yChannelSelector="G" result="rough"/>
+      <feGaussianBlur in="rough" stdDeviation="0.9" result="soft"/>
+      <feMerge>
+        <feMergeNode in="soft"/>
+        <feMergeNode in="rough"/>
+      </feMerge>
+    </filter>
+
+    <!-- Neon Bloom Glow -->
+    <filter id="neonGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="2.2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Clip Path for Palm Silhouette inside VI Emblem -->
+    <clipPath id="viBadgeClip">
+      <rect x="0" y="0" width="54" height="44" rx="5"/>
+    </clipPath>
+  </defs>
+
+  <style>
+    .hud-title {
+      font-family: 'Impact', 'Arial Black', 'Franklin Gothic Heavy', sans-serif;
+      letter-spacing: 1.8px;
+    }
+    .ui-sans {
+      font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    }
+    .ui-mono {
+      font-family: 'Fira Code', 'Consolas', 'Courier New', monospace;
+    }
+    .day-label {
+      fill: #94a3b8;
+      font-size: 9.5px;
+      font-weight: 600;
+      font-family: 'Fira Code', 'Consolas', monospace;
+    }
+    .month-label {
+      fill: #cbd5e1;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      font-family: 'Fira Code', 'Consolas', monospace;
+    }
+    .stencil-cell {
+      fill: #120b1f;
+      stroke: #26193d;
+      stroke-width: 0.75;
+    }
+    @keyframes wantedPulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.7; }
+    }
+    .wanted-group {
+      animation: wantedPulse 2.4s infinite ease-in-out;
+    }
+    @keyframes passStamp {
+      0%, 63% { opacity: 0; }
+      69%, 92% { opacity: 1; }
+      98%, 100% { opacity: 0; }
+    }
+    .mission-stamp {
+      animation: passStamp 15.5s infinite ease-out;
+    }
+  </style>
+
+  <!-- Concrete Wall Surface & Ambient Street Neon Reflections -->
+  <rect x="2" y="2" width="936" height="336" rx="12" fill="url(#wallBase)" stroke="#2e1d4a" stroke-width="2"/>
+  <rect x="2" y="2" width="936" height="336" rx="12" fill="url(#neonSpillLeft)"/>
+  <rect x="2" y="2" width="936" height="336" rx="12" fill="url(#neonSpillRight)"/>
+  <rect x="4" y="4" width="932" height="332" rx="10" fill="transparent" filter="url(#concreteTex)"/>
+
+  <!-- Subtle Wall Concrete Seams & Architectural Plaster Joints -->
+  <g stroke="#ffffff" stroke-opacity="0.035" stroke-width="1">
+    <line x1="14" y1="76" x2="926" y2="76"/>
+    <line x1="14" y1="242" x2="926" y2="242"/>
+    <line x1="315" y1="76" x2="315" y2="242"/>
+    <line x1="630" y1="76" x2="630" y2="242"/>
+  </g>
+
+  <!-- Subtle Palm Frond Shadows Projected onto Concrete Wall Corners -->
+  <g fill="#05020a" opacity="0.45">
+    <path d="M 10 330 Q 45 270 95 255 Q 60 282 40 330 Z"/>
+    <path d="M 10 295 Q 55 255 110 268 Q 62 275 18 310 Z"/>
+    <path d="M 930 330 Q 890 260 830 248 Q 878 280 905 330 Z"/>
+    <path d="M 930 290 Q 880 245 815 260 Q 870 268 920 305 Z"/>
+  </g>
+
+  <!-- Neon Outer Accent Border -->
+  <rect x="9" y="9" width="922" height="322" rx="8" fill="none" stroke="url(#viBar)" stroke-opacity="0.42" stroke-width="1.2"/>
+
+  <!-- ===================== GTA VI TOP HUD BAR ===================== -->
+  <!-- Authentic-style VI Emblem -->
+  <g transform="translate(24, 18)">
+    <rect x="0" y="0" width="54" height="44" rx="5" fill="#090512" stroke="url(#viBar)" stroke-width="1.6"/>
+    <g clip-path="url(#viBadgeClip)">
+      <!-- Sunset Glow inside Badge -->
+      <circle cx="27" cy="40" r="24" fill="url(#viSunset)" opacity="0.22"/>
+      <!-- Roman Numeral VI -->
+      <text x="27" y="34" text-anchor="middle" class="hud-title" font-size="31" fill="url(#viSunset)" stroke="#090512" stroke-width="1.1">VI</text>
+      <!-- Tiny Palm Silhouette Overlay -->
+      <path d="M 12 44 Q 16 32 21 26 M 21 26 Q 14 23 10 27 M 21 26 Q 27 21 31 26 M 21 26 Q 25 27 28 32" stroke="#090512" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+    </g>
+  </g>
+
+  <!-- Wall Header Typography -->
+  <text x="92" y="37" class="hud-title" font-size="21" fill="#f8fafc">VICE CITY STREET WALL</text>
+  <text x="92" y="55" class="ui-mono" font-size="11" fill="#ff7b54" letter-spacing="1.2">LEONIDA AEROSOL CONTRIBUTION LOG // @JEREMIALEX04</text>
+
+  <!-- Top Right HUD: Vector Wanted Stars + Total Commits Cash Readout -->
+  <g class="wanted-group">
+    <polygon points="792.0,23.8 794.1,29.2 799.8,29.5 795.3,33.1 796.8,38.6 792.0,35.5 787.2,38.6 788.7,33.1 784.2,29.5 789.9,29.2" fill="url(#viSunset)" stroke="#0b0614" stroke-width="0.9" filter="url(#neonGlow)"/>
+    <polygon points="816.0,23.8 818.1,29.2 823.8,29.5 819.3,33.1 820.8,38.6 816.0,35.5 811.2,38.6 812.7,33.1 808.2,29.5 813.9,29.2" fill="url(#viSunset)" stroke="#0b0614" stroke-width="0.9" filter="url(#neonGlow)"/>
+    <polygon points="840.0,23.8 842.1,29.2 847.8,29.5 843.3,33.1 844.8,38.6 840.0,35.5 835.2,38.6 836.7,33.1 832.2,29.5 837.9,29.2" fill="url(#viSunset)" stroke="#0b0614" stroke-width="0.9" filter="url(#neonGlow)"/>
+    <polygon points="864.0,23.8 866.1,29.2 871.8,29.5 867.3,33.1 868.8,38.6 864.0,35.5 859.2,38.6 860.7,33.1 856.2,29.5 861.9,29.2" fill="url(#viSunset)" stroke="#0b0614" stroke-width="0.9" filter="url(#neonGlow)"/>
+    <polygon points="888.0,23.8 890.1,29.2 895.8,29.5 891.3,33.1 892.8,38.6 888.0,35.5 883.2,38.6 884.7,33.1 880.2,29.5 885.9,29.2" fill="url(#viSunset)" stroke="#0b0614" stroke-width="0.9" filter="url(#neonGlow)"/>
+  </g>
+  <text x="914" y="57" text-anchor="end" class="ui-mono" font-size="13.5" font-weight="700" fill="#00f0ff">$575,000 <tspan fill="#e2e8f0" font-size="10.5">// 575 COMMITS (LAST YEAR)</tspan></text>
+
+  <text x="93.6" y="97" class="month-label">DIC</text>
+  <text x="156.8" y="97" class="month-label">ENE</text>
+  <text x="220.0" y="97" class="month-label">FEB</text>
+  <text x="283.2" y="97" class="month-label">MAR</text>
+  <text x="362.2" y="97" class="month-label">ABR</text>
+  <text x="425.4" y="97" class="month-label">MAY</text>
+  <text x="504.4" y="97" class="month-label">JUN</text>
+  <text x="567.6" y="97" class="month-label">JUL</text>
+  <text x="630.8" y="97" class="month-label">AGO</text>
+  <text x="709.8" y="97" class="month-label">SEP</text>
+  <text x="773.0" y="97" class="month-label">OCT</text>
+  <text x="836.2" y="97" class="month-label">NOV</text>
+  <text x="22" y="133.3" class="day-label">LUN</text>
+  <text x="22" y="164.9" class="day-label">MIE</text>
+  <text x="22" y="196.5" class="day-label">VIE</text>
+  <!-- Concrete Stencil Base Grid -->
+  <g id="stencil-grid">
+    <rect x="62.0" y="108.0" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="62.0" y="123.8" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="62.0" y="139.6" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="62.0" y="155.4" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="62.0" y="171.2" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="62.0" y="187.0" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="62.0" y="202.8" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="77.8" y="108.0" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="77.8" y="123.8" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="77.8" y="139.6" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="77.8" y="155.4" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="77.8" y="171.2" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="77.8" y="187.0" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="77.8" y="202.8" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="93.6" y="108.0" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="93.6" y="123.8" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="93.6" y="139.6" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="93.6" y="155.4" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="93.6" y="171.2" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="93.6" y="187.0" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="93.6" y="202.8" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="109.4" y="108.0" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="109.4" y="123.8" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="109.4" y="139.6" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="109.4" y="155.4" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="109.4" y="171.2" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="109.4" y="187.0" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="109.4" y="202.8" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="125.2" y="108.0" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="125.2" y="123.8" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="125.2" y="139.6" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="125.2" y="155.4" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="125.2" y="171.2" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="125.2" y="187.0" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="125.2" y="202.8" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="141.0" y="108.0" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="141.0" y="123.8" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="141.0" y="139.6" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="141.0" y="155.4" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="141.0" y="171.2" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="141.0" y="187.0" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="141.0" y="202.8" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="156.8" y="108.0" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="156.8" y="123.8" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="156.8" y="139.6" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="156.8" y="155.4" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="156.8" y="171.2" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="156.8" y="187.0" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="156.8" y="202.8" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="172.6" y="108.0" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="172.6" y="123.8" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="172.6" y="139.6" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="172.6" y="155.4" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="172.6" y="171.2" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="172.6" y="187.0" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="172.6" y="202.8" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="188.4" y="108.0" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="188.4" y="123.8" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="188.4" y="139.6" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="188.4" y="155.4" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="188.4" y="171.2" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="188.4" y="187.0" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="188.4" y="202.8" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="204.2" y="108.0" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="204.2" y="123.8" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="204.2" y="139.6" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="204.2" y="155.4" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="204.2" y="171.2" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="204.2" y="187.0" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="204.2" y="202.8" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="220.0" y="108.0" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="220.0" y="123.8" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="220.0" y="139.6" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="220.0" y="155.4" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="220.0" y="171.2" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="220.0" y="187.0" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="220.0" y="202.8" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="235.8" y="108.0" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="235.8" y="123.8" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="235.8" y="139.6" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="235.8" y="155.4" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="235.8" y="171.2" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="235.8" y="187.0" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="235.8" y="202.8" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="251.6" y="108.0" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="251.6" y="123.8" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="251.6" y="139.6" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="251.6" y="155.4" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="251.6" y="171.2" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="251.6" y="187.0" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="251.6" y="202.8" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="267.4" y="108.0" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="267.4" y="123.8" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="267.4" y="139.6" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="267.4" y="155.4" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="267.4" y="171.2" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="267.4" y="187.0" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="267.4" y="202.8" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="283.2" y="108.0" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="283.2" y="123.8" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="283.2" y="139.6" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="283.2" y="155.4" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="283.2" y="171.2" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="283.2" y="187.0" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="283.2" y="202.8" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="299.0" y="108.0" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="299.0" y="123.8" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="299.0" y="139.6" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="299.0" y="155.4" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="299.0" y="171.2" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="299.0" y="187.0" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="299.0" y="202.8" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="314.8" y="108.0" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="314.8" y="123.8" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="314.8" y="139.6" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="314.8" y="155.4" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="314.8" y="171.2" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="314.8" y="187.0" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="314.8" y="202.8" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="330.6" y="108.0" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="330.6" y="123.8" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="330.6" y="139.6" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="330.6" y="155.4" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="330.6" y="171.2" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="330.6" y="187.0" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="330.6" y="202.8" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="346.4" y="108.0" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="346.4" y="123.8" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="346.4" y="139.6" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="346.4" y="155.4" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="346.4" y="171.2" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="346.4" y="187.0" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="346.4" y="202.8" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="362.2" y="108.0" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="362.2" y="123.8" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="362.2" y="139.6" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="362.2" y="155.4" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="362.2" y="171.2" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="362.2" y="187.0" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="362.2" y="202.8" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="378.0" y="108.0" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="378.0" y="123.8" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="378.0" y="139.6" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="378.0" y="155.4" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="378.0" y="171.2" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="378.0" y="187.0" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="378.0" y="202.8" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="393.8" y="108.0" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="393.8" y="123.8" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="393.8" y="139.6" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="393.8" y="155.4" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="393.8" y="171.2" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="393.8" y="187.0" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="393.8" y="202.8" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="409.6" y="108.0" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="409.6" y="123.8" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="409.6" y="139.6" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="409.6" y="155.4" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="409.6" y="171.2" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="409.6" y="187.0" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="409.6" y="202.8" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="425.4" y="108.0" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="425.4" y="123.8" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="425.4" y="139.6" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="425.4" y="155.4" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="425.4" y="171.2" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="425.4" y="187.0" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="425.4" y="202.8" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="441.2" y="108.0" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="441.2" y="123.8" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="441.2" y="139.6" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="441.2" y="155.4" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="441.2" y="171.2" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="441.2" y="187.0" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="441.2" y="202.8" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="457.0" y="108.0" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="457.0" y="123.8" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="457.0" y="139.6" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="457.0" y="155.4" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="457.0" y="171.2" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="457.0" y="187.0" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="457.0" y="202.8" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="472.8" y="108.0" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="472.8" y="123.8" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="472.8" y="139.6" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="472.8" y="155.4" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="472.8" y="171.2" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="472.8" y="187.0" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="472.8" y="202.8" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="488.6" y="108.0" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="488.6" y="123.8" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="488.6" y="139.6" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="488.6" y="155.4" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="488.6" y="171.2" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="488.6" y="187.0" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="488.6" y="202.8" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="504.4" y="108.0" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="504.4" y="123.8" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="504.4" y="139.6" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="504.4" y="155.4" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="504.4" y="171.2" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="504.4" y="187.0" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="504.4" y="202.8" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="520.2" y="108.0" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="520.2" y="123.8" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="520.2" y="139.6" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="520.2" y="155.4" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="520.2" y="171.2" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="520.2" y="187.0" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="520.2" y="202.8" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="536.0" y="108.0" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="536.0" y="123.8" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="536.0" y="139.6" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="536.0" y="155.4" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="536.0" y="171.2" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="536.0" y="187.0" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="536.0" y="202.8" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="551.8" y="108.0" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="551.8" y="123.8" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="551.8" y="139.6" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="551.8" y="155.4" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="551.8" y="171.2" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="551.8" y="187.0" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="551.8" y="202.8" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="567.6" y="108.0" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="567.6" y="123.8" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="567.6" y="139.6" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="567.6" y="155.4" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="567.6" y="171.2" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="567.6" y="187.0" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="567.6" y="202.8" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="583.4" y="108.0" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="583.4" y="123.8" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="583.4" y="139.6" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="583.4" y="155.4" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="583.4" y="171.2" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="583.4" y="187.0" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="583.4" y="202.8" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="599.2" y="108.0" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="599.2" y="123.8" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="599.2" y="139.6" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="599.2" y="155.4" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="599.2" y="171.2" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="599.2" y="187.0" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="599.2" y="202.8" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="615.0" y="108.0" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="615.0" y="123.8" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="615.0" y="139.6" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="615.0" y="155.4" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="615.0" y="171.2" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="615.0" y="187.0" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="615.0" y="202.8" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="630.8" y="108.0" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="630.8" y="123.8" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="630.8" y="139.6" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="630.8" y="155.4" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="630.8" y="171.2" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="630.8" y="187.0" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="630.8" y="202.8" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="646.6" y="108.0" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="646.6" y="123.8" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="646.6" y="139.6" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="646.6" y="155.4" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="646.6" y="171.2" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="646.6" y="187.0" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="646.6" y="202.8" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="662.4" y="108.0" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="662.4" y="123.8" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="662.4" y="139.6" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="662.4" y="155.4" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="662.4" y="171.2" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="662.4" y="187.0" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="662.4" y="202.8" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="678.2" y="108.0" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="678.2" y="123.8" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="678.2" y="139.6" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="678.2" y="155.4" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="678.2" y="171.2" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="678.2" y="187.0" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="678.2" y="202.8" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="694.0" y="108.0" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="694.0" y="123.8" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="694.0" y="139.6" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="694.0" y="155.4" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="694.0" y="171.2" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="694.0" y="187.0" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="694.0" y="202.8" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="709.8" y="108.0" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="709.8" y="123.8" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="709.8" y="139.6" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="709.8" y="155.4" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="709.8" y="171.2" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="709.8" y="187.0" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="709.8" y="202.8" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="725.6" y="108.0" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="725.6" y="123.8" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="725.6" y="139.6" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="725.6" y="155.4" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="725.6" y="171.2" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="725.6" y="187.0" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="725.6" y="202.8" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="741.4" y="108.0" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="741.4" y="123.8" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="741.4" y="139.6" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="741.4" y="155.4" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="741.4" y="171.2" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="741.4" y="187.0" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="741.4" y="202.8" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="757.2" y="108.0" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="757.2" y="123.8" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="757.2" y="139.6" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="757.2" y="155.4" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="757.2" y="171.2" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="757.2" y="187.0" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="757.2" y="202.8" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="773.0" y="108.0" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="773.0" y="123.8" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="773.0" y="139.6" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="773.0" y="155.4" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="773.0" y="171.2" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="773.0" y="187.0" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="773.0" y="202.8" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="788.8" y="108.0" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="788.8" y="123.8" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="788.8" y="139.6" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="788.8" y="155.4" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="788.8" y="171.2" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="788.8" y="187.0" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="788.8" y="202.8" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="804.6" y="108.0" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="804.6" y="123.8" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="804.6" y="139.6" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="804.6" y="155.4" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="804.6" y="171.2" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="804.6" y="187.0" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="804.6" y="202.8" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="820.4" y="108.0" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="820.4" y="123.8" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="820.4" y="139.6" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="820.4" y="155.4" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="820.4" y="171.2" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="820.4" y="187.0" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="820.4" y="202.8" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="836.2" y="108.0" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="836.2" y="123.8" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="836.2" y="139.6" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="836.2" y="155.4" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="836.2" y="171.2" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="836.2" y="187.0" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="836.2" y="202.8" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="852.0" y="108.0" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="852.0" y="123.8" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="852.0" y="139.6" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="852.0" y="155.4" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="852.0" y="171.2" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="852.0" y="187.0" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="852.0" y="202.8" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="867.8" y="108.0" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="867.8" y="123.8" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="867.8" y="139.6" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="867.8" y="155.4" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="867.8" y="171.2" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="867.8" y="187.0" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="867.8" y="202.8" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+    <rect x="883.6" y="108.0" width="12.2" height="12.2" rx="2.2" class="stencil-cell"/>
+  </g>
+  <!-- Progressive Aerosol Spray-Painted Columns -->
+  <g id="sprayed-layers">
+    <g opacity="0">
+      <animate attributeName="opacity" dur="15.5s" repeatCount="indefinite" keyTimes="0;0.0010;0.0140;0.9350;0.9850;1" values="0;0;1;1;0;0"/>
+      <circle cx="68.1" cy="114.1" r="7.5" fill="#7b2cbf" opacity="0.22"/>
+      <rect x="62.0" y="108.0" width="12.2" height="12.2" rx="2.8" fill="#7b2cbf"><title>2025-11-23: 4 contribuciones</title></rect>
+      <line x1="64.2" y1="110.2" x2="71.2" y2="110.2" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="60.0" cy="114.2" r="1.0" fill="#7b2cbf" opacity="0.78"/>
+      <circle cx="59.7" cy="108.2" r="1.1" fill="#7b2cbf" opacity="0.63"/>
+      <circle cx="74.1" cy="115.1" r="1.2" fill="#7b2cbf" opacity="0.73"/>
+      <circle cx="68.1" cy="129.9" r="7.5" fill="#7b2cbf" opacity="0.22"/>
+      <rect x="62.0" y="123.8" width="12.2" height="12.2" rx="2.8" fill="#7b2cbf"><title>2025-11-24: 3 contribuciones</title></rect>
+      <line x1="64.2" y1="126.0" x2="71.2" y2="126.0" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="73.4" cy="131.7" r="0.8" fill="#7b2cbf" opacity="0.66"/>
+      <circle cx="59.8" cy="136.6" r="1.0" fill="#7b2cbf" opacity="0.76"/>
+      <circle cx="72.0" cy="133.7" r="0.7" fill="#7b2cbf" opacity="0.48"/>
+      <rect x="62.0" y="139.6" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <circle cx="68.1" cy="161.5" r="9.5" fill="#e11d74" opacity="0.22"/>
+      <rect x="62.0" y="155.4" width="12.2" height="12.2" rx="2.8" fill="#e11d74" filter="url(#sprayTexture)"><title>2025-11-26: 10 contribuciones</title></rect>
+      <line x1="64.2" y1="157.6" x2="71.2" y2="157.6" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="78.3" cy="170.6" r="1.3" fill="#e11d74" opacity="0.85"/>
+      <circle cx="68.4" cy="152.5" r="0.9" fill="#e11d74" opacity="0.63"/>
+      <circle cx="63.7" cy="160.6" r="1.3" fill="#e11d74" opacity="0.70"/>
+      <circle cx="69.7" cy="151.4" r="1.2" fill="#e11d74" opacity="0.53"/>
+      <circle cx="66.5" cy="159.4" r="1.1" fill="#e11d74" opacity="0.60"/>
+      <path d="M 68.1 166.6 L 68.1 175.0" stroke="#e11d74" stroke-width="1.7" stroke-linecap="round" opacity="0.88"/>
+      <circle cx="68.1" cy="175.0" r="1.55" fill="#e11d74" opacity="0.95"/>
+      <circle cx="67.7" cy="174.6" r="0.45" fill="#ffffff" opacity="0.7"/>
+      <circle cx="68.1" cy="177.3" r="7.5" fill="#7b2cbf" opacity="0.22"/>
+      <rect x="62.0" y="171.2" width="12.2" height="12.2" rx="2.8" fill="#7b2cbf"><title>2025-11-27: 2 contribuciones</title></rect>
+      <line x1="64.2" y1="173.4" x2="71.2" y2="173.4" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="70.2" cy="177.1" r="1.4" fill="#7b2cbf" opacity="0.48"/>
+      <circle cx="66.4" cy="186.3" r="1.0" fill="#7b2cbf" opacity="0.61"/>
+      <circle cx="58.0" cy="171.5" r="0.7" fill="#7b2cbf" opacity="0.37"/>
+      <circle cx="68.1" cy="193.1" r="9.5" fill="#e11d74" opacity="0.22"/>
+      <rect x="62.0" y="187.0" width="12.2" height="12.2" rx="2.8" fill="#e11d74" filter="url(#sprayTexture)"><title>2025-11-28: 11 contribuciones</title></rect>
+      <line x1="64.2" y1="189.2" x2="71.2" y2="189.2" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="72.4" cy="201.3" r="0.6" fill="#e11d74" opacity="0.66"/>
+      <circle cx="67.5" cy="192.7" r="0.8" fill="#e11d74" opacity="0.79"/>
+      <circle cx="70.8" cy="192.2" r="1.0" fill="#e11d74" opacity="0.81"/>
+      <circle cx="78.4" cy="194.1" r="1.1" fill="#e11d74" opacity="0.68"/>
+      <circle cx="64.0" cy="199.5" r="1.0" fill="#e11d74" opacity="0.59"/>
+      <circle cx="68.1" cy="208.9" r="7.5" fill="#7b2cbf" opacity="0.22"/>
+      <rect x="62.0" y="202.8" width="12.2" height="12.2" rx="2.8" fill="#7b2cbf"><title>2025-11-29: 3 contribuciones</title></rect>
+      <line x1="64.2" y1="205.0" x2="71.2" y2="205.0" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="66.7" cy="204.5" r="0.8" fill="#7b2cbf" opacity="0.37"/>
+      <circle cx="71.4" cy="211.0" r="1.0" fill="#7b2cbf" opacity="0.61"/>
+      <circle cx="67.9" cy="217.8" r="0.8" fill="#7b2cbf" opacity="0.59"/>
+    </g>
+    <g opacity="0">
+      <animate attributeName="opacity" dur="15.5s" repeatCount="indefinite" keyTimes="0;0.0084;0.0264;0.9350;0.9850;1" values="0;0;1;1;0;0"/>
+      <circle cx="83.9" cy="114.1" r="7.5" fill="#7b2cbf" opacity="0.22"/>
+      <rect x="77.8" y="108.0" width="12.2" height="12.2" rx="2.8" fill="#7b2cbf"><title>2025-11-30: 6 contribuciones</title></rect>
+      <line x1="80.0" y1="110.2" x2="87.0" y2="110.2" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="84.1" cy="121.0" r="1.3" fill="#7b2cbf" opacity="0.63"/>
+      <circle cx="92.5" cy="121.1" r="0.8" fill="#7b2cbf" opacity="0.81"/>
+      <circle cx="75.4" cy="118.1" r="1.3" fill="#7b2cbf" opacity="0.61"/>
+      <circle cx="83.9" cy="129.9" r="7.5" fill="#7b2cbf" opacity="0.22"/>
+      <rect x="77.8" y="123.8" width="12.2" height="12.2" rx="2.8" fill="#7b2cbf"><title>2025-12-01: 1 contribuciones</title></rect>
+      <line x1="80.0" y1="126.0" x2="87.0" y2="126.0" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="82.9" cy="139.8" r="1.4" fill="#7b2cbf" opacity="0.77"/>
+      <circle cx="83.5" cy="120.7" r="0.8" fill="#7b2cbf" opacity="0.60"/>
+      <circle cx="75.3" cy="135.1" r="0.9" fill="#7b2cbf" opacity="0.57"/>
+      <circle cx="83.9" cy="145.7" r="11.5" fill="#00f0ff" opacity="0.22"/>
+      <rect x="77.8" y="139.6" width="12.2" height="12.2" rx="2.8" fill="#00f0ff" filter="url(#sprayTexture)"><title>2025-12-02: 18 contribuciones</title></rect>
+      <line x1="80.0" y1="141.8" x2="87.0" y2="141.8" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="73.6" cy="135.1" r="1.1" fill="#00f0ff" opacity="0.82"/>
+      <circle cx="75.1" cy="151.9" r="0.8" fill="#00f0ff" opacity="0.66"/>
+      <circle cx="89.2" cy="155.4" r="1.2" fill="#00f0ff" opacity="0.67"/>
+      <circle cx="76.6" cy="141.7" r="1.1" fill="#00f0ff" opacity="0.73"/>
+      <circle cx="93.4" cy="145.5" r="1.2" fill="#00f0ff" opacity="0.42"/>
+      <circle cx="78.0" cy="147.6" r="1.4" fill="#00f0ff" opacity="0.79"/>
+      <circle cx="84.0" cy="136.9" r="1.2" fill="#00f0ff" opacity="0.82"/>
+      <circle cx="89.9" cy="154.5" r="0.8" fill="#00f0ff" opacity="0.56"/>
+      <path d="M 86.1 150.8 L 86.1 164.3" stroke="#00f0ff" stroke-width="1.7" stroke-linecap="round" opacity="0.88"/>
+      <circle cx="86.1" cy="164.3" r="1.55" fill="#00f0ff" opacity="0.95"/>
+      <circle cx="85.7" cy="163.9" r="0.45" fill="#ffffff" opacity="0.7"/>
+      <circle cx="83.9" cy="161.5" r="9.5" fill="#e11d74" opacity="0.22"/>
+      <rect x="77.8" y="155.4" width="12.2" height="12.2" rx="2.8" fill="#e11d74" filter="url(#sprayTexture)"><title>2025-12-03: 7 contribuciones</title></rect>
+      <line x1="80.0" y1="157.6" x2="87.0" y2="157.6" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="77.5" cy="151.2" r="0.6" fill="#e11d74" opacity="0.79"/>
+      <circle cx="74.4" cy="158.3" r="0.9" fill="#e11d74" opacity="0.73"/>
+      <circle cx="73.8" cy="161.7" r="0.8" fill="#e11d74" opacity="0.50"/>
+      <circle cx="80.2" cy="153.5" r="1.4" fill="#e11d74" opacity="0.64"/>
+      <circle cx="90.4" cy="154.2" r="1.0" fill="#e11d74" opacity="0.57"/>
+      <circle cx="83.9" cy="177.3" r="7.5" fill="#7b2cbf" opacity="0.22"/>
+      <rect x="77.8" y="171.2" width="12.2" height="12.2" rx="2.8" fill="#7b2cbf"><title>2025-12-04: 5 contribuciones</title></rect>
+      <line x1="80.0" y1="173.4" x2="87.0" y2="173.4" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="86.0" cy="181.1" r="0.6" fill="#7b2cbf" opacity="0.55"/>
+      <circle cx="77.4" cy="186.2" r="0.6" fill="#7b2cbf" opacity="0.62"/>
+      <circle cx="91.1" cy="176.3" r="1.2" fill="#7b2cbf" opacity="0.44"/>
+      <circle cx="83.9" cy="193.1" r="7.5" fill="#7b2cbf" opacity="0.22"/>
+      <rect x="77.8" y="187.0" width="12.2" height="12.2" rx="2.8" fill="#7b2cbf"><title>2025-12-05: 2 contribuciones</title></rect>
+      <line x1="80.0" y1="189.2" x2="87.0" y2="189.2" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="88.4" cy="201.1" r="0.7" fill="#7b2cbf" opacity="0.61"/>
+      <circle cx="90.0" cy="193.5" r="1.4" fill="#7b2cbf" opacity="0.43"/>
+      <circle cx="91.2" cy="190.8" r="0.9" fill="#7b2cbf" opacity="0.56"/>
+      <circle cx="83.9" cy="208.9" r="9.5" fill="#e11d74" opacity="0.22"/>
+      <rect x="77.8" y="202.8" width="12.2" height="12.2" rx="2.8" fill="#e11d74" filter="url(#sprayTexture)"><title>2025-12-06: 12 contribuciones</title></rect>
+      <line x1="80.0" y1="205.0" x2="87.0" y2="205.0" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="75.0" cy="204.8" r="0.9" fill="#e11d74" opacity="0.48"/>
+      <circle cx="83.8" cy="214.8" r="0.9" fill="#e11d74" opacity="0.58"/>
+      <circle cx="80.2" cy="208.5" r="0.7" fill="#e11d74" opacity="0.75"/>
+      <circle cx="90.2" cy="215.6" r="1.3" fill="#e11d74" opacity="0.47"/>
+      <circle cx="93.5" cy="216.9" r="1.1" fill="#e11d74" opacity="0.55"/>
+    </g>
+    <g opacity="0">
+      <animate attributeName="opacity" dur="15.5s" repeatCount="indefinite" keyTimes="0;0.0208;0.0388;0.9350;0.9850;1" values="0;0;1;1;0;0"/>
+      <circle cx="99.7" cy="114.1" r="7.5" fill="#7b2cbf" opacity="0.22"/>
+      <rect x="93.6" y="108.0" width="12.2" height="12.2" rx="2.8" fill="#7b2cbf"><title>2025-12-07: 4 contribuciones</title></rect>
+      <line x1="95.8" y1="110.2" x2="102.8" y2="110.2" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="107.1" cy="117.7" r="1.4" fill="#7b2cbf" opacity="0.53"/>
+      <circle cx="92.4" cy="115.4" r="1.1" fill="#7b2cbf" opacity="0.62"/>
+      <circle cx="91.4" cy="118.7" r="1.1" fill="#7b2cbf" opacity="0.63"/>
+      <circle cx="99.7" cy="129.9" r="7.5" fill="#7b2cbf" opacity="0.22"/>
+      <rect x="93.6" y="123.8" width="12.2" height="12.2" rx="2.8" fill="#7b2cbf"><title>2025-12-08: 6 contribuciones</title></rect>
+      <line x1="95.8" y1="126.0" x2="102.8" y2="126.0" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="93.6" cy="125.5" r="0.8" fill="#7b2cbf" opacity="0.63"/>
+      <circle cx="91.3" cy="124.9" r="1.4" fill="#7b2cbf" opacity="0.44"/>
+      <circle cx="103.6" cy="135.4" r="1.2" fill="#7b2cbf" opacity="0.44"/>
+      <circle cx="99.7" cy="145.7" r="7.5" fill="#7b2cbf" opacity="0.22"/>
+      <rect x="93.6" y="139.6" width="12.2" height="12.2" rx="2.8" fill="#7b2cbf"><title>2025-12-09: 2 contribuciones</title></rect>
+      <line x1="95.8" y1="141.8" x2="102.8" y2="141.8" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="102.5" cy="145.8" r="0.8" fill="#7b2cbf" opacity="0.77"/>
+      <circle cx="95.3" cy="141.8" r="0.8" fill="#7b2cbf" opacity="0.38"/>
+      <circle cx="97.8" cy="154.1" r="1.2" fill="#7b2cbf" opacity="0.56"/>
+      <rect x="93.6" y="155.4" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="93.6" y="171.2" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="93.6" y="187.0" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="93.6" y="202.8" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+    </g>
+    <g opacity="0">
+      <animate attributeName="opacity" dur="15.5s" repeatCount="indefinite" keyTimes="0;0.0332;0.0512;0.9350;0.9850;1" values="0;0;1;1;0;0"/>
+      <circle cx="115.5" cy="114.1" r="7.5" fill="#7b2cbf" opacity="0.22"/>
+      <rect x="109.4" y="108.0" width="12.2" height="12.2" rx="2.8" fill="#7b2cbf"><title>2025-12-14: 3 contribuciones</title></rect>
+      <line x1="111.6" y1="110.2" x2="118.6" y2="110.2" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="105.2" cy="105.5" r="0.6" fill="#7b2cbf" opacity="0.41"/>
+      <circle cx="119.4" cy="115.7" r="1.4" fill="#7b2cbf" opacity="0.53"/>
+      <circle cx="121.4" cy="116.4" r="1.1" fill="#7b2cbf" opacity="0.66"/>
+      <circle cx="115.5" cy="129.9" r="7.5" fill="#7b2cbf" opacity="0.22"/>
+      <rect x="109.4" y="123.8" width="12.2" height="12.2" rx="2.8" fill="#7b2cbf"><title>2025-12-15: 2 contribuciones</title></rect>
+      <line x1="111.6" y1="126.0" x2="118.6" y2="126.0" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="124.5" cy="126.0" r="0.7" fill="#7b2cbf" opacity="0.58"/>
+      <circle cx="125.7" cy="137.9" r="1.2" fill="#7b2cbf" opacity="0.78"/>
+      <circle cx="119.3" cy="138.9" r="0.9" fill="#7b2cbf" opacity="0.82"/>
+      <circle cx="115.5" cy="145.7" r="7.5" fill="#7b2cbf" opacity="0.22"/>
+      <rect x="109.4" y="139.6" width="12.2" height="12.2" rx="2.8" fill="#7b2cbf"><title>2025-12-16: 3 contribuciones</title></rect>
+      <line x1="111.6" y1="141.8" x2="118.6" y2="141.8" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="112.5" cy="150.7" r="0.9" fill="#7b2cbf" opacity="0.36"/>
+      <circle cx="119.6" cy="141.2" r="1.4" fill="#7b2cbf" opacity="0.75"/>
+      <circle cx="107.5" cy="151.4" r="0.8" fill="#7b2cbf" opacity="0.80"/>
+      <circle cx="115.5" cy="161.5" r="7.5" fill="#7b2cbf" opacity="0.22"/>
+      <rect x="109.4" y="155.4" width="12.2" height="12.2" rx="2.8" fill="#7b2cbf"><title>2025-12-17: 4 contribuciones</title></rect>
+      <line x1="111.6" y1="157.6" x2="118.6" y2="157.6" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="116.4" cy="158.2" r="1.1" fill="#7b2cbf" opacity="0.71"/>
+      <circle cx="107.3" cy="164.0" r="0.7" fill="#7b2cbf" opacity="0.41"/>
+      <circle cx="112.4" cy="164.6" r="1.1" fill="#7b2cbf" opacity="0.36"/>
+      <circle cx="115.5" cy="177.3" r="7.5" fill="#7b2cbf" opacity="0.22"/>
+      <rect x="109.4" y="171.2" width="12.2" height="12.2" rx="2.8" fill="#7b2cbf"><title>2025-12-18: 3 contribuciones</title></rect>
+      <line x1="111.6" y1="173.4" x2="118.6" y2="173.4" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="117.2" cy="174.2" r="0.9" fill="#7b2cbf" opacity="0.47"/>
+      <circle cx="113.8" cy="171.4" r="0.7" fill="#7b2cbf" opacity="0.62"/>
+      <circle cx="118.9" cy="186.5" r="1.2" fill="#7b2cbf" opacity="0.55"/>
+      <circle cx="115.5" cy="193.1" r="11.5" fill="#00f0ff" opacity="0.22"/>
+      <rect x="109.4" y="187.0" width="12.2" height="12.2" rx="2.8" fill="#00f0ff" filter="url(#sprayTexture)"><title>2025-12-19: 15 contribuciones</title></rect>
+      <line x1="111.6" y1="189.2" x2="118.6" y2="189.2" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="110.3" cy="185.6" r="0.6" fill="#00f0ff" opacity="0.49"/>
+      <circle cx="115.1" cy="188.1" r="0.8" fill="#00f0ff" opacity="0.82"/>
+      <circle cx="117.5" cy="200.3" r="1.0" fill="#00f0ff" opacity="0.68"/>
+      <circle cx="125.3" cy="193.4" r="0.8" fill="#00f0ff" opacity="0.67"/>
+      <circle cx="120.9" cy="189.2" r="1.1" fill="#00f0ff" opacity="0.36"/>
+      <circle cx="125.6" cy="192.5" r="1.4" fill="#00f0ff" opacity="0.69"/>
+      <circle cx="123.2" cy="202.2" r="1.4" fill="#00f0ff" opacity="0.55"/>
+      <circle cx="125.6" cy="202.7" r="0.8" fill="#00f0ff" opacity="0.76"/>
+      <path d="M 114.4 198.2 L 114.4 208.3" stroke="#00f0ff" stroke-width="1.7" stroke-linecap="round" opacity="0.88"/>
+      <circle cx="114.4" cy="208.3" r="1.55" fill="#00f0ff" opacity="0.95"/>
+      <circle cx="114.0" cy="207.9" r="0.45" fill="#ffffff" opacity="0.7"/>
+      <circle cx="115.5" cy="208.9" r="7.5" fill="#7b2cbf" opacity="0.22"/>
+      <rect x="109.4" y="202.8" width="12.2" height="12.2" rx="2.8" fill="#7b2cbf"><title>2025-12-20: 2 contribuciones</title></rect>
+      <line x1="111.6" y1="205.0" x2="118.6" y2="205.0" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="112.5" cy="211.8" r="1.0" fill="#7b2cbf" opacity="0.59"/>
+      <circle cx="121.6" cy="210.6" r="0.7" fill="#7b2cbf" opacity="0.66"/>
+      <circle cx="108.2" cy="217.2" r="1.4" fill="#7b2cbf" opacity="0.76"/>
+    </g>
+    <g opacity="0">
+      <animate attributeName="opacity" dur="15.5s" repeatCount="indefinite" keyTimes="0;0.0456;0.0636;0.9350;0.9850;1" values="0;0;1;1;0;0"/>
+      <circle cx="131.3" cy="114.1" r="7.5" fill="#7b2cbf" opacity="0.22"/>
+      <rect x="125.2" y="108.0" width="12.2" height="12.2" rx="2.8" fill="#7b2cbf"><title>2025-12-21: 3 contribuciones</title></rect>
+      <line x1="127.4" y1="110.2" x2="134.4" y2="110.2" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="138.4" cy="118.4" r="1.3" fill="#7b2cbf" opacity="0.67"/>
+      <circle cx="122.5" cy="111.4" r="1.2" fill="#7b2cbf" opacity="0.42"/>
+      <circle cx="136.4" cy="124.7" r="0.6" fill="#7b2cbf" opacity="0.46"/>
+      <circle cx="131.3" cy="129.9" r="7.5" fill="#7b2cbf" opacity="0.22"/>
+      <rect x="125.2" y="123.8" width="12.2" height="12.2" rx="2.8" fill="#7b2cbf"><title>2025-12-22: 5 contribuciones</title></rect>
+      <line x1="127.4" y1="126.0" x2="134.4" y2="126.0" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="138.7" cy="131.6" r="1.1" fill="#7b2cbf" opacity="0.83"/>
+      <circle cx="128.8" cy="139.7" r="1.0" fill="#7b2cbf" opacity="0.67"/>
+      <circle cx="124.1" cy="130.1" r="0.6" fill="#7b2cbf" opacity="0.72"/>
+      <circle cx="131.3" cy="145.7" r="7.5" fill="#7b2cbf" opacity="0.22"/>
+      <rect x="125.2" y="139.6" width="12.2" height="12.2" rx="2.8" fill="#7b2cbf"><title>2025-12-23: 6 contribuciones</title></rect>
+      <line x1="127.4" y1="141.8" x2="134.4" y2="141.8" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="127.8" cy="140.6" r="0.6" fill="#7b2cbf" opacity="0.65"/>
+      <circle cx="137.4" cy="138.5" r="0.8" fill="#7b2cbf" opacity="0.62"/>
+      <circle cx="128.3" cy="155.7" r="0.7" fill="#7b2cbf" opacity="0.72"/>
+      <circle cx="131.3" cy="161.5" r="7.5" fill="#7b2cbf" opacity="0.22"/>
+      <rect x="125.2" y="155.4" width="12.2" height="12.2" rx="2.8" fill="#7b2cbf"><title>2025-12-24: 2 contribuciones</title></rect>
+      <line x1="127.4" y1="157.6" x2="134.4" y2="157.6" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="120.9" cy="163.7" r="1.0" fill="#7b2cbf" opacity="0.56"/>
+      <circle cx="137.9" cy="170.0" r="1.4" fill="#7b2cbf" opacity="0.85"/>
+      <circle cx="124.3" cy="161.8" r="0.7" fill="#7b2cbf" opacity="0.62"/>
+      <circle cx="131.3" cy="177.3" r="11.5" fill="#00f0ff" opacity="0.22"/>
+      <rect x="125.2" y="171.2" width="12.2" height="12.2" rx="2.8" fill="#00f0ff" filter="url(#sprayTexture)"><title>2025-12-25: 19 contribuciones</title></rect>
+      <line x1="127.4" y1="173.4" x2="134.4" y2="173.4" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="124.2" cy="185.5" r="1.0" fill="#00f0ff" opacity="0.79"/>
+      <circle cx="134.3" cy="166.7" r="0.9" fill="#00f0ff" opacity="0.53"/>
+      <circle cx="125.3" cy="170.0" r="1.1" fill="#00f0ff" opacity="0.41"/>
+      <circle cx="141.6" cy="177.0" r="1.3" fill="#00f0ff" opacity="0.71"/>
+      <circle cx="128.8" cy="179.8" r="1.1" fill="#00f0ff" opacity="0.52"/>
+      <circle cx="140.0" cy="169.3" r="1.0" fill="#00f0ff" opacity="0.76"/>
+      <circle cx="135.2" cy="176.4" r="1.1" fill="#00f0ff" opacity="0.39"/>
+      <circle cx="137.2" cy="168.6" r="1.0" fill="#00f0ff" opacity="0.51"/>
+      <path d="M 133.1 182.4 L 133.1 192.8" stroke="#00f0ff" stroke-width="1.7" stroke-linecap="round" opacity="0.88"/>
+      <circle cx="133.1" cy="192.8" r="1.55" fill="#00f0ff" opacity="0.95"/>
+      <circle cx="132.7" cy="192.4" r="0.45" fill="#ffffff" opacity="0.7"/>
+      <circle cx="131.3" cy="193.1" r="9.5" fill="#e11d74" opacity="0.22"/>
+      <rect x="125.2" y="187.0" width="12.2" height="12.2" rx="2.8" fill="#e11d74" filter="url(#sprayTexture)"><title>2025-12-26: 11 contribuciones</title></rect>
+      <line x1="127.4" y1="189.2" x2="134.4" y2="189.2" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="127.6" cy="193.2" r="0.8" fill="#e11d74" opacity="0.80"/>
+      <circle cx="136.0" cy="200.7" r="0.9" fill="#e11d74" opacity="0.44"/>
+      <circle cx="137.8" cy="187.2" r="1.2" fill="#e11d74" opacity="0.52"/>
+      <circle cx="137.4" cy="191.2" r="1.3" fill="#e11d74" opacity="0.54"/>
+      <circle cx="124.0" cy="198.3" r="1.1" fill="#e11d74" opacity="0.41"/>
+      <path d="M 133.7 198.2 L 133.7 204.6" stroke="#e11d74" stroke-width="1.7" stroke-linecap="round" opacity="0.88"/>
+      <circle cx="133.7" cy="204.6" r="1.55" fill="#e11d74" opacity="0.95"/>
+      <circle cx="133.3" cy="204.2" r="0.45" fill="#ffffff" opacity="0.7"/>
+      <circle cx="131.3" cy="208.9" r="7.5" fill="#7b2cbf" opacity="0.22"/>
+      <rect x="125.2" y="202.8" width="12.2" height="12.2" rx="2.8" fill="#7b2cbf"><title>2025-12-27: 5 contribuciones</title></rect>
+      <line x1="127.4" y1="205.0" x2="134.4" y2="205.0" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="138.5" cy="207.7" r="0.7" fill="#7b2cbf" opacity="0.66"/>
+      <circle cx="125.7" cy="218.9" r="1.1" fill="#7b2cbf" opacity="0.41"/>
+      <circle cx="126.9" cy="208.0" r="0.9" fill="#7b2cbf" opacity="0.36"/>
+    </g>
+    <g opacity="0">
+      <animate attributeName="opacity" dur="15.5s" repeatCount="indefinite" keyTimes="0;0.0580;0.0760;0.9350;0.9850;1" values="0;0;1;1;0;0"/>
+      <circle cx="147.1" cy="114.1" r="7.5" fill="#7b2cbf" opacity="0.22"/>
+      <rect x="141.0" y="108.0" width="12.2" height="12.2" rx="2.8" fill="#7b2cbf"><title>2025-12-28: 3 contribuciones</title></rect>
+      <line x1="143.2" y1="110.2" x2="150.2" y2="110.2" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="151.7" cy="117.8" r="0.9" fill="#7b2cbf" opacity="0.69"/>
+      <circle cx="156.1" cy="122.8" r="1.3" fill="#7b2cbf" opacity="0.83"/>
+      <circle cx="150.7" cy="115.1" r="0.7" fill="#7b2cbf" opacity="0.53"/>
+      <circle cx="147.1" cy="129.9" r="7.5" fill="#7b2cbf" opacity="0.22"/>
+      <rect x="141.0" y="123.8" width="12.2" height="12.2" rx="2.8" fill="#7b2cbf"><title>2025-12-29: 3 contribuciones</title></rect>
+      <line x1="143.2" y1="126.0" x2="150.2" y2="126.0" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="143.5" cy="138.9" r="1.2" fill="#7b2cbf" opacity="0.36"/>
+      <circle cx="148.3" cy="124.6" r="0.9" fill="#7b2cbf" opacity="0.67"/>
+      <circle cx="145.3" cy="135.8" r="1.0" fill="#7b2cbf" opacity="0.79"/>
+      <circle cx="147.1" cy="145.7" r="7.5" fill="#7b2cbf" opacity="0.22"/>
+      <rect x="141.0" y="139.6" width="12.2" height="12.2" rx="2.8" fill="#7b2cbf"><title>2025-12-30: 6 contribuciones</title></rect>
+      <line x1="143.2" y1="141.8" x2="150.2" y2="141.8" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="143.7" cy="135.9" r="0.7" fill="#7b2cbf" opacity="0.41"/>
+      <circle cx="154.6" cy="140.8" r="0.6" fill="#7b2cbf" opacity="0.45"/>
+      <circle cx="146.2" cy="141.0" r="1.1" fill="#7b2cbf" opacity="0.39"/>
+      <rect x="141.0" y="155.4" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="141.0" y="171.2" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="141.0" y="187.0" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="141.0" y="202.8" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+    </g>
+    <g opacity="0">
+      <animate attributeName="opacity" dur="15.5s" repeatCount="indefinite" keyTimes="0;0.0704;0.0884;0.9350;0.9850;1" values="0;0;1;1;0;0"/>
+      <circle cx="162.9" cy="114.1" r="7.5" fill="#7b2cbf" opacity="0.22"/>
+      <rect x="156.8" y="108.0" width="12.2" height="12.2" rx="2.8" fill="#7b2cbf"><title>2026-01-04: 6 contribuciones</title></rect>
+      <line x1="159.0" y1="110.2" x2="166.0" y2="110.2" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="167.0" cy="114.9" r="0.6" fill="#7b2cbf" opacity="0.40"/>
+      <circle cx="159.3" cy="108.2" r="1.0" fill="#7b2cbf" opacity="0.65"/>
+      <circle cx="155.9" cy="110.1" r="1.1" fill="#7b2cbf" opacity="0.71"/>
+      <rect x="156.8" y="123.8" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <circle cx="162.9" cy="145.7" r="7.5" fill="#7b2cbf" opacity="0.22"/>
+      <rect x="156.8" y="139.6" width="12.2" height="12.2" rx="2.8" fill="#7b2cbf"><title>2026-01-06: 6 contribuciones</title></rect>
+      <line x1="159.0" y1="141.8" x2="166.0" y2="141.8" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="166.7" cy="147.0" r="0.6" fill="#7b2cbf" opacity="0.49"/>
+      <circle cx="161.2" cy="139.0" r="1.2" fill="#7b2cbf" opacity="0.84"/>
+      <circle cx="173.3" cy="154.4" r="1.1" fill="#7b2cbf" opacity="0.52"/>
+      <circle cx="162.9" cy="161.5" r="7.5" fill="#7b2cbf" opacity="0.22"/>
+      <rect x="156.8" y="155.4" width="12.2" height="12.2" rx="2.8" fill="#7b2cbf"><title>2026-01-07: 6 contribuciones</title></rect>
+      <line x1="159.0" y1="157.6" x2="166.0" y2="157.6" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="159.7" cy="163.8" r="0.8" fill="#7b2cbf" opacity="0.79"/>
+      <circle cx="170.1" cy="151.7" r="1.0" fill="#7b2cbf" opacity="0.36"/>
+      <circle cx="169.4" cy="156.3" r="1.2" fill="#7b2cbf" opacity="0.45"/>
+      <circle cx="162.9" cy="177.3" r="9.5" fill="#e11d74" opacity="0.22"/>
+      <rect x="156.8" y="171.2" width="12.2" height="12.2" rx="2.8" fill="#e11d74" filter="url(#sprayTexture)"><title>2026-01-08: 7 contribuciones</title></rect>
+      <line x1="159.0" y1="173.4" x2="166.0" y2="173.4" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="158.1" cy="184.6" r="0.9" fill="#e11d74" opacity="0.46"/>
+      <circle cx="153.4" cy="175.4" r="0.6" fill="#e11d74" opacity="0.71"/>
+      <circle cx="166.3" cy="181.2" r="1.2" fill="#e11d74" opacity="0.50"/>
+      <circle cx="162.5" cy="168.6" r="1.0" fill="#e11d74" opacity="0.61"/>
+      <circle cx="159.2" cy="173.4" r="0.9" fill="#e11d74" opacity="0.44"/>
+      <rect x="156.8" y="187.0" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="156.8" y="202.8" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+    </g>
+    <g opacity="0">
+      <animate attributeName="opacity" dur="15.5s" repeatCount="indefinite" keyTimes="0;0.0828;0.1008;0.9350;0.9850;1" values="0;0;1;1;0;0"/>
+      <rect x="172.6" y="108.0" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="172.6" y="123.8" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="172.6" y="139.6" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <circle cx="178.7" cy="161.5" r="9.5" fill="#e11d74" opacity="0.22"/>
+      <rect x="172.6" y="155.4" width="12.2" height="12.2" rx="2.8" fill="#e11d74" filter="url(#sprayTexture)"><title>2026-01-14: 11 contribuciones</title></rect>
+      <line x1="174.8" y1="157.6" x2="181.8" y2="157.6" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="186.4" cy="154.6" r="0.8" fill="#e11d74" opacity="0.82"/>
+      <circle cx="186.6" cy="161.9" r="0.9" fill="#e11d74" opacity="0.40"/>
+      <circle cx="181.0" cy="155.5" r="1.0" fill="#e11d74" opacity="0.45"/>
+      <circle cx="178.9" cy="162.1" r="1.0" fill="#e11d74" opacity="0.75"/>
+      <circle cx="173.8" cy="169.4" r="1.0" fill="#e11d74" opacity="0.63"/>
+      <circle cx="178.7" cy="177.3" r="7.5" fill="#7b2cbf" opacity="0.22"/>
+      <rect x="172.6" y="171.2" width="12.2" height="12.2" rx="2.8" fill="#7b2cbf"><title>2026-01-15: 1 contribuciones</title></rect>
+      <line x1="174.8" y1="173.4" x2="181.8" y2="173.4" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="175.0" cy="187.8" r="0.9" fill="#7b2cbf" opacity="0.66"/>
+      <circle cx="179.5" cy="169.9" r="1.0" fill="#7b2cbf" opacity="0.84"/>
+      <circle cx="183.5" cy="169.5" r="1.3" fill="#7b2cbf" opacity="0.68"/>
+      <rect x="172.6" y="187.0" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <circle cx="178.7" cy="208.9" r="7.5" fill="#7b2cbf" opacity="0.22"/>
+      <rect x="172.6" y="202.8" width="12.2" height="12.2" rx="2.8" fill="#7b2cbf"><title>2026-01-17: 4 contribuciones</title></rect>
+      <line x1="174.8" y1="205.0" x2="181.8" y2="205.0" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="169.4" cy="212.4" r="0.6" fill="#7b2cbf" opacity="0.74"/>
+      <circle cx="188.0" cy="202.1" r="0.8" fill="#7b2cbf" opacity="0.62"/>
+      <circle cx="175.7" cy="208.0" r="0.7" fill="#7b2cbf" opacity="0.38"/>
+    </g>
+    <g opacity="0">
+      <animate attributeName="opacity" dur="15.5s" repeatCount="indefinite" keyTimes="0;0.0953;0.1133;0.9350;0.9850;1" values="0;0;1;1;0;0"/>
+      <rect x="188.4" y="108.0" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="188.4" y="123.8" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="188.4" y="139.6" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="188.4" y="155.4" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <circle cx="194.5" cy="177.3" r="7.5" fill="#7b2cbf" opacity="0.22"/>
+      <rect x="188.4" y="171.2" width="12.2" height="12.2" rx="2.8" fill="#7b2cbf"><title>2026-01-22: 6 contribuciones</title></rect>
+      <line x1="190.6" y1="173.4" x2="197.6" y2="173.4" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="187.8" cy="170.0" r="1.1" fill="#7b2cbf" opacity="0.59"/>
+      <circle cx="195.5" cy="167.3" r="0.7" fill="#7b2cbf" opacity="0.53"/>
+      <circle cx="195.4" cy="176.6" r="1.2" fill="#7b2cbf" opacity="0.43"/>
+      <circle cx="194.5" cy="193.1" r="7.5" fill="#7b2cbf" opacity="0.22"/>
+      <rect x="188.4" y="187.0" width="12.2" height="12.2" rx="2.8" fill="#7b2cbf"><title>2026-01-23: 4 contribuciones</title></rect>
+      <line x1="190.6" y1="189.2" x2="197.6" y2="189.2" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="190.8" cy="197.7" r="0.6" fill="#7b2cbf" opacity="0.35"/>
+      <circle cx="185.9" cy="194.9" r="1.2" fill="#7b2cbf" opacity="0.76"/>
+      <circle cx="189.4" cy="198.5" r="0.7" fill="#7b2cbf" opacity="0.45"/>
+      <rect x="188.4" y="202.8" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+    </g>
+    <g opacity="0">
+      <animate attributeName="opacity" dur="15.5s" repeatCount="indefinite" keyTimes="0;0.1077;0.1257;0.9350;0.9850;1" values="0;0;1;1;0;0"/>
+      <rect x="204.2" y="108.0" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="204.2" y="123.8" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="204.2" y="139.6" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="204.2" y="155.4" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <circle cx="210.3" cy="177.3" r="9.5" fill="#e11d74" opacity="0.22"/>
+      <rect x="204.2" y="171.2" width="12.2" height="12.2" rx="2.8" fill="#e11d74" filter="url(#sprayTexture)"><title>2026-01-29: 9 contribuciones</title></rect>
+      <line x1="206.4" y1="173.4" x2="213.4" y2="173.4" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="217.0" cy="175.7" r="0.9" fill="#e11d74" opacity="0.77"/>
+      <circle cx="203.3" cy="171.5" r="1.4" fill="#e11d74" opacity="0.46"/>
+      <circle cx="203.1" cy="187.7" r="0.9" fill="#e11d74" opacity="0.56"/>
+      <circle cx="217.9" cy="181.6" r="1.4" fill="#e11d74" opacity="0.66"/>
+      <circle cx="209.0" cy="186.8" r="1.1" fill="#e11d74" opacity="0.40"/>
+      <circle cx="210.3" cy="193.1" r="7.5" fill="#7b2cbf" opacity="0.22"/>
+      <rect x="204.2" y="187.0" width="12.2" height="12.2" rx="2.8" fill="#7b2cbf"><title>2026-01-30: 3 contribuciones</title></rect>
+      <line x1="206.4" y1="189.2" x2="213.4" y2="189.2" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="215.4" cy="185.0" r="0.6" fill="#7b2cbf" opacity="0.71"/>
+      <circle cx="212.9" cy="185.9" r="0.7" fill="#7b2cbf" opacity="0.67"/>
+      <circle cx="203.7" cy="202.6" r="1.4" fill="#7b2cbf" opacity="0.37"/>
+      <rect x="204.2" y="202.8" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+    </g>
+    <g opacity="0">
+      <animate attributeName="opacity" dur="15.5s" repeatCount="indefinite" keyTimes="0;0.1201;0.1381;0.9350;0.9850;1" values="0;0;1;1;0;0"/>
+      <rect x="220.0" y="108.0" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <circle cx="226.1" cy="129.9" r="7.5" fill="#7b2cbf" opacity="0.22"/>
+      <rect x="220.0" y="123.8" width="12.2" height="12.2" rx="2.8" fill="#7b2cbf"><title>2026-02-02: 5 contribuciones</title></rect>
+      <line x1="222.2" y1="126.0" x2="229.2" y2="126.0" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="236.1" cy="133.0" r="1.4" fill="#7b2cbf" opacity="0.74"/>
+      <circle cx="221.6" cy="127.0" r="0.6" fill="#7b2cbf" opacity="0.61"/>
+      <circle cx="234.3" cy="137.1" r="1.0" fill="#7b2cbf" opacity="0.42"/>
+      <circle cx="226.1" cy="145.7" r="7.5" fill="#7b2cbf" opacity="0.22"/>
+      <rect x="220.0" y="139.6" width="12.2" height="12.2" rx="2.8" fill="#7b2cbf"><title>2026-02-03: 6 contribuciones</title></rect>
+      <line x1="222.2" y1="141.8" x2="229.2" y2="141.8" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="232.3" cy="147.0" r="1.4" fill="#7b2cbf" opacity="0.58"/>
+      <circle cx="228.4" cy="147.7" r="1.4" fill="#7b2cbf" opacity="0.69"/>
+      <circle cx="222.4" cy="140.5" r="1.2" fill="#7b2cbf" opacity="0.58"/>
+      <rect x="220.0" y="155.4" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="220.0" y="171.2" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <circle cx="226.1" cy="193.1" r="7.5" fill="#7b2cbf" opacity="0.22"/>
+      <rect x="220.0" y="187.0" width="12.2" height="12.2" rx="2.8" fill="#7b2cbf"><title>2026-02-06: 1 contribuciones</title></rect>
+      <line x1="222.2" y1="189.2" x2="229.2" y2="189.2" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="222.8" cy="200.0" r="1.0" fill="#7b2cbf" opacity="0.62"/>
+      <circle cx="217.6" cy="188.4" r="0.6" fill="#7b2cbf" opacity="0.65"/>
+      <circle cx="217.0" cy="202.1" r="1.1" fill="#7b2cbf" opacity="0.54"/>
+      <rect x="220.0" y="202.8" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+    </g>
+    <g opacity="0">
+      <animate attributeName="opacity" dur="15.5s" repeatCount="indefinite" keyTimes="0;0.1325;0.1505;0.9350;0.9850;1" values="0;0;1;1;0;0"/>
+      <circle cx="241.9" cy="114.1" r="7.5" fill="#7b2cbf" opacity="0.22"/>
+      <rect x="235.8" y="108.0" width="12.2" height="12.2" rx="2.8" fill="#7b2cbf"><title>2026-02-08: 6 contribuciones</title></rect>
+      <line x1="238.0" y1="110.2" x2="245.0" y2="110.2" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="245.0" cy="115.7" r="1.0" fill="#7b2cbf" opacity="0.59"/>
+      <circle cx="231.8" cy="122.5" r="0.7" fill="#7b2cbf" opacity="0.40"/>
+      <circle cx="233.2" cy="114.8" r="0.8" fill="#7b2cbf" opacity="0.84"/>
+      <rect x="235.8" y="123.8" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <circle cx="241.9" cy="145.7" r="7.5" fill="#7b2cbf" opacity="0.22"/>
+      <rect x="235.8" y="139.6" width="12.2" height="12.2" rx="2.8" fill="#7b2cbf"><title>2026-02-10: 3 contribuciones</title></rect>
+      <line x1="238.0" y1="141.8" x2="245.0" y2="141.8" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="247.2" cy="136.6" r="1.1" fill="#7b2cbf" opacity="0.41"/>
+      <circle cx="251.7" cy="154.3" r="1.2" fill="#7b2cbf" opacity="0.50"/>
+      <circle cx="241.3" cy="141.9" r="1.4" fill="#7b2cbf" opacity="0.70"/>
+      <circle cx="241.9" cy="161.5" r="7.5" fill="#7b2cbf" opacity="0.22"/>
+      <rect x="235.8" y="155.4" width="12.2" height="12.2" rx="2.8" fill="#7b2cbf"><title>2026-02-11: 2 contribuciones</title></rect>
+      <line x1="238.0" y1="157.6" x2="245.0" y2="157.6" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="239.8" cy="161.8" r="1.3" fill="#7b2cbf" opacity="0.56"/>
+      <circle cx="241.7" cy="163.5" r="0.9" fill="#7b2cbf" opacity="0.73"/>
+      <circle cx="243.8" cy="163.4" r="1.0" fill="#7b2cbf" opacity="0.36"/>
+      <circle cx="241.9" cy="177.3" r="7.5" fill="#7b2cbf" opacity="0.22"/>
+      <rect x="235.8" y="171.2" width="12.2" height="12.2" rx="2.8" fill="#7b2cbf"><title>2026-02-12: 1 contribuciones</title></rect>
+      <line x1="238.0" y1="173.4" x2="245.0" y2="173.4" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="251.3" cy="174.9" r="0.6" fill="#7b2cbf" opacity="0.58"/>
+      <circle cx="234.3" cy="171.8" r="1.0" fill="#7b2cbf" opacity="0.48"/>
+      <circle cx="240.5" cy="182.3" r="0.6" fill="#7b2cbf" opacity="0.65"/>
+      <rect x="235.8" y="187.0" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <circle cx="241.9" cy="208.9" r="9.5" fill="#e11d74" opacity="0.22"/>
+      <rect x="235.8" y="202.8" width="12.2" height="12.2" rx="2.8" fill="#e11d74" filter="url(#sprayTexture)"><title>2026-02-14: 11 contribuciones</title></rect>
+      <line x1="238.0" y1="205.0" x2="245.0" y2="205.0" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="242.3" cy="218.5" r="0.7" fill="#e11d74" opacity="0.53"/>
+      <circle cx="235.9" cy="199.9" r="0.7" fill="#e11d74" opacity="0.55"/>
+      <circle cx="233.7" cy="200.5" r="1.4" fill="#e11d74" opacity="0.55"/>
+      <circle cx="231.4" cy="202.5" r="0.8" fill="#e11d74" opacity="0.75"/>
+      <circle cx="242.4" cy="217.6" r="0.6" fill="#e11d74" opacity="0.43"/>
+    </g>
+    <g opacity="0">
+      <animate attributeName="opacity" dur="15.5s" repeatCount="indefinite" keyTimes="0;0.1449;0.1629;0.9350;0.9850;1" values="0;0;1;1;0;0"/>
+      <circle cx="257.7" cy="114.1" r="9.5" fill="#e11d74" opacity="0.22"/>
+      <rect x="251.6" y="108.0" width="12.2" height="12.2" rx="2.8" fill="#e11d74" filter="url(#sprayTexture)"><title>2026-02-15: 9 contribuciones</title></rect>
+      <line x1="253.8" y1="110.2" x2="260.8" y2="110.2" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="251.7" cy="121.4" r="1.3" fill="#e11d74" opacity="0.63"/>
+      <circle cx="266.2" cy="115.2" r="0.6" fill="#e11d74" opacity="0.83"/>
+      <circle cx="267.9" cy="118.2" r="1.3" fill="#e11d74" opacity="0.61"/>
+      <circle cx="266.9" cy="123.8" r="1.4" fill="#e11d74" opacity="0.83"/>
+      <circle cx="260.9" cy="124.1" r="0.6" fill="#e11d74" opacity="0.40"/>
+      <rect x="251.6" y="123.8" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="251.6" y="139.6" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="251.6" y="155.4" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <circle cx="257.7" cy="177.3" r="9.5" fill="#e11d74" opacity="0.22"/>
+      <rect x="251.6" y="171.2" width="12.2" height="12.2" rx="2.8" fill="#e11d74" filter="url(#sprayTexture)"><title>2026-02-19: 10 contribuciones</title></rect>
+      <line x1="253.8" y1="173.4" x2="260.8" y2="173.4" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="253.0" cy="166.9" r="1.1" fill="#e11d74" opacity="0.37"/>
+      <circle cx="266.7" cy="168.2" r="1.2" fill="#e11d74" opacity="0.62"/>
+      <circle cx="258.7" cy="177.7" r="1.0" fill="#e11d74" opacity="0.60"/>
+      <circle cx="248.2" cy="174.2" r="1.0" fill="#e11d74" opacity="0.58"/>
+      <circle cx="252.2" cy="167.0" r="0.9" fill="#e11d74" opacity="0.39"/>
+      <rect x="251.6" y="187.0" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="251.6" y="202.8" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+    </g>
+    <g opacity="0">
+      <animate attributeName="opacity" dur="15.5s" repeatCount="indefinite" keyTimes="0;0.1573;0.1753;0.9350;0.9850;1" values="0;0;1;1;0;0"/>
+      <rect x="267.4" y="108.0" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="267.4" y="123.8" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="267.4" y="139.6" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="267.4" y="155.4" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="267.4" y="171.2" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="267.4" y="187.0" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="267.4" y="202.8" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+    </g>
+    <g opacity="0">
+      <animate attributeName="opacity" dur="15.5s" repeatCount="indefinite" keyTimes="0;0.1697;0.1877;0.9350;0.9850;1" values="0;0;1;1;0;0"/>
+      <rect x="283.2" y="108.0" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="283.2" y="123.8" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="283.2" y="139.6" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="283.2" y="155.4" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="283.2" y="171.2" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="283.2" y="187.0" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="283.2" y="202.8" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+    </g>
+    <g opacity="0">
+      <animate attributeName="opacity" dur="15.5s" repeatCount="indefinite" keyTimes="0;0.1821;0.2001;0.9350;0.9850;1" values="0;0;1;1;0;0"/>
+      <rect x="299.0" y="108.0" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="299.0" y="123.8" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="299.0" y="139.6" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="299.0" y="155.4" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="299.0" y="171.2" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="299.0" y="187.0" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="299.0" y="202.8" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+    </g>
+    <g opacity="0">
+      <animate attributeName="opacity" dur="15.5s" repeatCount="indefinite" keyTimes="0;0.1945;0.2125;0.9350;0.9850;1" values="0;0;1;1;0;0"/>
+      <rect x="314.8" y="108.0" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="314.8" y="123.8" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="314.8" y="139.6" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="314.8" y="155.4" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="314.8" y="171.2" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="314.8" y="187.0" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="314.8" y="202.8" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+    </g>
+    <g opacity="0">
+      <animate attributeName="opacity" dur="15.5s" repeatCount="indefinite" keyTimes="0;0.2069;0.2249;0.9350;0.9850;1" values="0;0;1;1;0;0"/>
+      <rect x="330.6" y="108.0" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="330.6" y="123.8" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="330.6" y="139.6" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="330.6" y="155.4" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="330.6" y="171.2" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="330.6" y="187.0" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="330.6" y="202.8" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+    </g>
+    <g opacity="0">
+      <animate attributeName="opacity" dur="15.5s" repeatCount="indefinite" keyTimes="0;0.2193;0.2373;0.9350;0.9850;1" values="0;0;1;1;0;0"/>
+      <rect x="346.4" y="108.0" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="346.4" y="123.8" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <circle cx="352.5" cy="145.7" r="7.5" fill="#7b2cbf" opacity="0.22"/>
+      <rect x="346.4" y="139.6" width="12.2" height="12.2" rx="2.8" fill="#7b2cbf"><title>2026-03-31: 2 contribuciones</title></rect>
+      <line x1="348.6" y1="141.8" x2="355.6" y2="141.8" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="345.7" cy="140.1" r="1.1" fill="#7b2cbf" opacity="0.60"/>
+      <circle cx="349.0" cy="141.0" r="1.1" fill="#7b2cbf" opacity="0.43"/>
+      <circle cx="343.9" cy="142.4" r="1.2" fill="#7b2cbf" opacity="0.42"/>
+      <circle cx="352.5" cy="161.5" r="7.5" fill="#7b2cbf" opacity="0.22"/>
+      <rect x="346.4" y="155.4" width="12.2" height="12.2" rx="2.8" fill="#7b2cbf"><title>2026-04-01: 3 contribuciones</title></rect>
+      <line x1="348.6" y1="157.6" x2="355.6" y2="157.6" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="361.8" cy="169.2" r="1.3" fill="#7b2cbf" opacity="0.76"/>
+      <circle cx="352.0" cy="165.6" r="1.2" fill="#7b2cbf" opacity="0.51"/>
+      <circle cx="352.4" cy="153.3" r="0.6" fill="#7b2cbf" opacity="0.54"/>
+      <rect x="346.4" y="171.2" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="346.4" y="187.0" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="346.4" y="202.8" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+    </g>
+    <g opacity="0">
+      <animate attributeName="opacity" dur="15.5s" repeatCount="indefinite" keyTimes="0;0.2317;0.2497;0.9350;0.9850;1" values="0;0;1;1;0;0"/>
+      <circle cx="368.3" cy="114.1" r="7.5" fill="#7b2cbf" opacity="0.22"/>
+      <rect x="362.2" y="108.0" width="12.2" height="12.2" rx="2.8" fill="#7b2cbf"><title>2026-04-05: 4 contribuciones</title></rect>
+      <line x1="364.4" y1="110.2" x2="371.4" y2="110.2" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="378.2" cy="114.1" r="0.9" fill="#7b2cbf" opacity="0.63"/>
+      <circle cx="368.6" cy="111.0" r="1.2" fill="#7b2cbf" opacity="0.65"/>
+      <circle cx="371.5" cy="108.5" r="0.9" fill="#7b2cbf" opacity="0.47"/>
+      <rect x="362.2" y="123.8" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <circle cx="368.3" cy="145.7" r="7.5" fill="#7b2cbf" opacity="0.22"/>
+      <rect x="362.2" y="139.6" width="12.2" height="12.2" rx="2.8" fill="#7b2cbf"><title>2026-04-07: 1 contribuciones</title></rect>
+      <line x1="364.4" y1="141.8" x2="371.4" y2="141.8" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="364.1" cy="149.4" r="1.2" fill="#7b2cbf" opacity="0.63"/>
+      <circle cx="364.2" cy="146.4" r="1.4" fill="#7b2cbf" opacity="0.52"/>
+      <circle cx="373.3" cy="150.2" r="1.1" fill="#7b2cbf" opacity="0.47"/>
+      <rect x="362.2" y="155.4" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <circle cx="368.3" cy="177.3" r="7.5" fill="#7b2cbf" opacity="0.22"/>
+      <rect x="362.2" y="171.2" width="12.2" height="12.2" rx="2.8" fill="#7b2cbf"><title>2026-04-09: 1 contribuciones</title></rect>
+      <line x1="364.4" y1="173.4" x2="371.4" y2="173.4" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="367.7" cy="186.7" r="1.1" fill="#7b2cbf" opacity="0.60"/>
+      <circle cx="371.7" cy="169.1" r="0.7" fill="#7b2cbf" opacity="0.66"/>
+      <circle cx="364.3" cy="175.3" r="0.8" fill="#7b2cbf" opacity="0.57"/>
+      <rect x="362.2" y="187.0" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="362.2" y="202.8" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+    </g>
+    <g opacity="0">
+      <animate attributeName="opacity" dur="15.5s" repeatCount="indefinite" keyTimes="0;0.2441;0.2621;0.9350;0.9850;1" values="0;0;1;1;0;0"/>
+      <rect x="378.0" y="108.0" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="378.0" y="123.8" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="378.0" y="139.6" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="378.0" y="155.4" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="378.0" y="171.2" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="378.0" y="187.0" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <circle cx="384.1" cy="208.9" r="7.5" fill="#7b2cbf" opacity="0.22"/>
+      <rect x="378.0" y="202.8" width="12.2" height="12.2" rx="2.8" fill="#7b2cbf"><title>2026-04-18: 1 contribuciones</title></rect>
+      <line x1="380.2" y1="205.0" x2="387.2" y2="205.0" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="379.8" cy="201.5" r="1.1" fill="#7b2cbf" opacity="0.35"/>
+      <circle cx="385.9" cy="200.3" r="1.3" fill="#7b2cbf" opacity="0.57"/>
+      <circle cx="374.9" cy="206.5" r="0.8" fill="#7b2cbf" opacity="0.73"/>
+    </g>
+    <g opacity="0">
+      <animate attributeName="opacity" dur="15.5s" repeatCount="indefinite" keyTimes="0;0.2565;0.2745;0.9350;0.9850;1" values="0;0;1;1;0;0"/>
+      <circle cx="399.9" cy="114.1" r="9.5" fill="#e11d74" opacity="0.22"/>
+      <rect x="393.8" y="108.0" width="12.2" height="12.2" rx="2.8" fill="#e11d74" filter="url(#sprayTexture)"><title>2026-04-19: 10 contribuciones</title></rect>
+      <line x1="396.0" y1="110.2" x2="403.0" y2="110.2" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="404.7" cy="121.1" r="0.8" fill="#e11d74" opacity="0.72"/>
+      <circle cx="398.0" cy="109.8" r="0.8" fill="#e11d74" opacity="0.43"/>
+      <circle cx="402.3" cy="104.1" r="0.7" fill="#e11d74" opacity="0.70"/>
+      <circle cx="404.4" cy="119.6" r="0.9" fill="#e11d74" opacity="0.78"/>
+      <circle cx="403.4" cy="107.0" r="0.6" fill="#e11d74" opacity="0.54"/>
+      <circle cx="399.9" cy="129.9" r="7.5" fill="#7b2cbf" opacity="0.22"/>
+      <rect x="393.8" y="123.8" width="12.2" height="12.2" rx="2.8" fill="#7b2cbf"><title>2026-04-20: 1 contribuciones</title></rect>
+      <line x1="396.0" y1="126.0" x2="403.0" y2="126.0" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="403.0" cy="127.7" r="1.1" fill="#7b2cbf" opacity="0.50"/>
+      <circle cx="400.8" cy="139.9" r="1.2" fill="#7b2cbf" opacity="0.52"/>
+      <circle cx="408.9" cy="124.4" r="1.0" fill="#7b2cbf" opacity="0.37"/>
+      <rect x="393.8" y="139.6" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="393.8" y="155.4" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <circle cx="399.9" cy="177.3" r="11.5" fill="#00f0ff" opacity="0.22"/>
+      <rect x="393.8" y="171.2" width="12.2" height="12.2" rx="2.8" fill="#00f0ff" filter="url(#sprayTexture)"><title>2026-04-23: 26 contribuciones</title></rect>
+      <line x1="396.0" y1="173.4" x2="403.0" y2="173.4" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="402.5" cy="170.8" r="0.7" fill="#00f0ff" opacity="0.57"/>
+      <circle cx="401.6" cy="176.1" r="0.9" fill="#00f0ff" opacity="0.60"/>
+      <circle cx="390.6" cy="173.2" r="0.6" fill="#00f0ff" opacity="0.65"/>
+      <circle cx="396.5" cy="173.0" r="0.9" fill="#00f0ff" opacity="0.84"/>
+      <circle cx="402.6" cy="178.0" r="1.3" fill="#00f0ff" opacity="0.82"/>
+      <circle cx="395.4" cy="180.8" r="1.4" fill="#00f0ff" opacity="0.60"/>
+      <circle cx="406.9" cy="174.1" r="0.9" fill="#00f0ff" opacity="0.46"/>
+      <circle cx="398.2" cy="175.8" r="1.1" fill="#00f0ff" opacity="0.80"/>
+      <path d="M 402.4 182.4 L 402.4 198.8" stroke="#00f0ff" stroke-width="1.7" stroke-linecap="round" opacity="0.88"/>
+      <circle cx="402.4" cy="198.8" r="1.55" fill="#00f0ff" opacity="0.95"/>
+      <circle cx="402.0" cy="198.4" r="0.45" fill="#ffffff" opacity="0.7"/>
+      <rect x="393.8" y="187.0" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="393.8" y="202.8" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+    </g>
+    <g opacity="0">
+      <animate attributeName="opacity" dur="15.5s" repeatCount="indefinite" keyTimes="0;0.2690;0.2870;0.9350;0.9850;1" values="0;0;1;1;0;0"/>
+      <rect x="409.6" y="108.0" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="409.6" y="123.8" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="409.6" y="139.6" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="409.6" y="155.4" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="409.6" y="171.2" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="409.6" y="187.0" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="409.6" y="202.8" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+    </g>
+    <g opacity="0">
+      <animate attributeName="opacity" dur="15.5s" repeatCount="indefinite" keyTimes="0;0.2814;0.2994;0.9350;0.9850;1" values="0;0;1;1;0;0"/>
+      <rect x="425.4" y="108.0" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="425.4" y="123.8" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <circle cx="431.5" cy="145.7" r="7.5" fill="#7b2cbf" opacity="0.22"/>
+      <rect x="425.4" y="139.6" width="12.2" height="12.2" rx="2.8" fill="#7b2cbf"><title>2026-05-05: 4 contribuciones</title></rect>
+      <line x1="427.6" y1="141.8" x2="434.6" y2="141.8" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="432.8" cy="143.1" r="1.3" fill="#7b2cbf" opacity="0.78"/>
+      <circle cx="421.5" cy="140.1" r="0.7" fill="#7b2cbf" opacity="0.66"/>
+      <circle cx="430.9" cy="152.4" r="0.9" fill="#7b2cbf" opacity="0.44"/>
+      <rect x="425.4" y="155.4" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <circle cx="431.5" cy="177.3" r="7.5" fill="#7b2cbf" opacity="0.22"/>
+      <rect x="425.4" y="171.2" width="12.2" height="12.2" rx="2.8" fill="#7b2cbf"><title>2026-05-07: 2 contribuciones</title></rect>
+      <line x1="427.6" y1="173.4" x2="434.6" y2="173.4" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="421.6" cy="168.5" r="0.6" fill="#7b2cbf" opacity="0.46"/>
+      <circle cx="423.5" cy="179.5" r="1.1" fill="#7b2cbf" opacity="0.85"/>
+      <circle cx="434.2" cy="175.5" r="0.8" fill="#7b2cbf" opacity="0.80"/>
+      <rect x="425.4" y="187.0" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="425.4" y="202.8" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+    </g>
+    <g opacity="0">
+      <animate attributeName="opacity" dur="15.5s" repeatCount="indefinite" keyTimes="0;0.2938;0.3118;0.9350;0.9850;1" values="0;0;1;1;0;0"/>
+      <circle cx="447.3" cy="114.1" r="7.5" fill="#7b2cbf" opacity="0.22"/>
+      <rect x="441.2" y="108.0" width="12.2" height="12.2" rx="2.8" fill="#7b2cbf"><title>2026-05-10: 1 contribuciones</title></rect>
+      <line x1="443.4" y1="110.2" x2="450.4" y2="110.2" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="438.8" cy="104.9" r="0.9" fill="#7b2cbf" opacity="0.43"/>
+      <circle cx="450.0" cy="105.6" r="0.6" fill="#7b2cbf" opacity="0.76"/>
+      <circle cx="455.2" cy="115.3" r="1.0" fill="#7b2cbf" opacity="0.65"/>
+      <rect x="441.2" y="123.8" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <circle cx="447.3" cy="145.7" r="7.5" fill="#7b2cbf" opacity="0.22"/>
+      <rect x="441.2" y="139.6" width="12.2" height="12.2" rx="2.8" fill="#7b2cbf"><title>2026-05-12: 3 contribuciones</title></rect>
+      <line x1="443.4" y1="141.8" x2="450.4" y2="141.8" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="439.3" cy="142.4" r="0.7" fill="#7b2cbf" opacity="0.58"/>
+      <circle cx="454.8" cy="137.2" r="1.4" fill="#7b2cbf" opacity="0.75"/>
+      <circle cx="445.7" cy="155.2" r="0.6" fill="#7b2cbf" opacity="0.69"/>
+      <rect x="441.2" y="155.4" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="441.2" y="171.2" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <circle cx="447.3" cy="193.1" r="7.5" fill="#7b2cbf" opacity="0.22"/>
+      <rect x="441.2" y="187.0" width="12.2" height="12.2" rx="2.8" fill="#7b2cbf"><title>2026-05-15: 2 contribuciones</title></rect>
+      <line x1="443.4" y1="189.2" x2="450.4" y2="189.2" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="445.7" cy="203.5" r="0.9" fill="#7b2cbf" opacity="0.38"/>
+      <circle cx="446.8" cy="198.3" r="1.4" fill="#7b2cbf" opacity="0.55"/>
+      <circle cx="445.8" cy="184.0" r="1.2" fill="#7b2cbf" opacity="0.61"/>
+      <circle cx="447.3" cy="208.9" r="7.5" fill="#7b2cbf" opacity="0.22"/>
+      <rect x="441.2" y="202.8" width="12.2" height="12.2" rx="2.8" fill="#7b2cbf"><title>2026-05-16: 1 contribuciones</title></rect>
+      <line x1="443.4" y1="205.0" x2="450.4" y2="205.0" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="445.7" cy="205.7" r="0.7" fill="#7b2cbf" opacity="0.78"/>
+      <circle cx="449.5" cy="215.1" r="0.8" fill="#7b2cbf" opacity="0.75"/>
+      <circle cx="453.4" cy="213.0" r="0.9" fill="#7b2cbf" opacity="0.73"/>
+    </g>
+    <g opacity="0">
+      <animate attributeName="opacity" dur="15.5s" repeatCount="indefinite" keyTimes="0;0.3062;0.3242;0.9350;0.9850;1" values="0;0;1;1;0;0"/>
+      <rect x="457.0" y="108.0" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <circle cx="463.1" cy="129.9" r="7.5" fill="#7b2cbf" opacity="0.22"/>
+      <rect x="457.0" y="123.8" width="12.2" height="12.2" rx="2.8" fill="#7b2cbf"><title>2026-05-18: 3 contribuciones</title></rect>
+      <line x1="459.2" y1="126.0" x2="466.2" y2="126.0" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="461.2" cy="132.7" r="1.1" fill="#7b2cbf" opacity="0.66"/>
+      <circle cx="459.3" cy="137.5" r="1.3" fill="#7b2cbf" opacity="0.51"/>
+      <circle cx="468.2" cy="132.1" r="0.7" fill="#7b2cbf" opacity="0.56"/>
+      <circle cx="463.1" cy="145.7" r="7.5" fill="#7b2cbf" opacity="0.22"/>
+      <rect x="457.0" y="139.6" width="12.2" height="12.2" rx="2.8" fill="#7b2cbf"><title>2026-05-19: 2 contribuciones</title></rect>
+      <line x1="459.2" y1="141.8" x2="466.2" y2="141.8" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="453.2" cy="148.0" r="1.0" fill="#7b2cbf" opacity="0.50"/>
+      <circle cx="468.2" cy="153.5" r="0.7" fill="#7b2cbf" opacity="0.82"/>
+      <circle cx="467.9" cy="144.5" r="0.9" fill="#7b2cbf" opacity="0.61"/>
+      <rect x="457.0" y="155.4" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="457.0" y="171.2" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="457.0" y="187.0" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="457.0" y="202.8" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+    </g>
+    <g opacity="0">
+      <animate attributeName="opacity" dur="15.5s" repeatCount="indefinite" keyTimes="0;0.3186;0.3366;0.9350;0.9850;1" values="0;0;1;1;0;0"/>
+      <circle cx="478.9" cy="114.1" r="7.5" fill="#7b2cbf" opacity="0.22"/>
+      <rect x="472.8" y="108.0" width="12.2" height="12.2" rx="2.8" fill="#7b2cbf"><title>2026-05-24: 1 contribuciones</title></rect>
+      <line x1="475.0" y1="110.2" x2="482.0" y2="110.2" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="488.5" cy="110.1" r="1.3" fill="#7b2cbf" opacity="0.47"/>
+      <circle cx="487.8" cy="116.2" r="0.9" fill="#7b2cbf" opacity="0.51"/>
+      <circle cx="487.8" cy="117.0" r="1.1" fill="#7b2cbf" opacity="0.55"/>
+      <circle cx="478.9" cy="129.9" r="7.5" fill="#7b2cbf" opacity="0.22"/>
+      <rect x="472.8" y="123.8" width="12.2" height="12.2" rx="2.8" fill="#7b2cbf"><title>2026-05-25: 3 contribuciones</title></rect>
+      <line x1="475.0" y1="126.0" x2="482.0" y2="126.0" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="477.3" cy="129.1" r="0.9" fill="#7b2cbf" opacity="0.40"/>
+      <circle cx="476.2" cy="136.8" r="0.9" fill="#7b2cbf" opacity="0.69"/>
+      <circle cx="480.7" cy="131.4" r="0.9" fill="#7b2cbf" opacity="0.73"/>
+      <rect x="472.8" y="139.6" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <circle cx="478.9" cy="161.5" r="11.5" fill="#ff6b4a" opacity="0.22"/>
+      <rect x="472.8" y="155.4" width="12.2" height="12.2" rx="2.8" fill="#ff6b4a" filter="url(#sprayTexture)"><title>2026-05-27: 14 contribuciones</title></rect>
+      <line x1="475.0" y1="157.6" x2="482.0" y2="157.6" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="476.5" cy="158.3" r="0.8" fill="#ff6b4a" opacity="0.59"/>
+      <circle cx="475.9" cy="160.8" r="1.1" fill="#ff6b4a" opacity="0.78"/>
+      <circle cx="474.5" cy="171.6" r="1.3" fill="#ff6b4a" opacity="0.41"/>
+      <circle cx="475.3" cy="156.4" r="0.8" fill="#ff6b4a" opacity="0.78"/>
+      <circle cx="483.3" cy="150.9" r="0.7" fill="#ff6b4a" opacity="0.39"/>
+      <circle cx="472.0" cy="165.9" r="1.4" fill="#ff6b4a" opacity="0.83"/>
+      <circle cx="479.7" cy="153.1" r="1.1" fill="#ff6b4a" opacity="0.61"/>
+      <circle cx="481.4" cy="157.0" r="0.6" fill="#ff6b4a" opacity="0.56"/>
+      <path d="M 476.1 166.6 L 476.1 185.1" stroke="#ff6b4a" stroke-width="1.7" stroke-linecap="round" opacity="0.88"/>
+      <circle cx="476.1" cy="185.1" r="1.55" fill="#ff6b4a" opacity="0.95"/>
+      <circle cx="475.7" cy="184.7" r="0.45" fill="#ffffff" opacity="0.7"/>
+      <rect x="472.8" y="171.2" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="472.8" y="187.0" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="472.8" y="202.8" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+    </g>
+    <g opacity="0">
+      <animate attributeName="opacity" dur="15.5s" repeatCount="indefinite" keyTimes="0;0.3310;0.3490;0.9350;0.9850;1" values="0;0;1;1;0;0"/>
+      <rect x="488.6" y="108.0" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="488.6" y="123.8" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="488.6" y="139.6" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="488.6" y="155.4" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="488.6" y="171.2" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="488.6" y="187.0" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="488.6" y="202.8" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+    </g>
+    <g opacity="0">
+      <animate attributeName="opacity" dur="15.5s" repeatCount="indefinite" keyTimes="0;0.3434;0.3614;0.9350;0.9850;1" values="0;0;1;1;0;0"/>
+      <rect x="504.4" y="108.0" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="504.4" y="123.8" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="504.4" y="139.6" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="504.4" y="155.4" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <circle cx="510.5" cy="177.3" r="7.5" fill="#7b2cbf" opacity="0.22"/>
+      <rect x="504.4" y="171.2" width="12.2" height="12.2" rx="2.8" fill="#7b2cbf"><title>2026-06-11: 6 contribuciones</title></rect>
+      <line x1="506.6" y1="173.4" x2="513.6" y2="173.4" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="519.1" cy="183.5" r="0.6" fill="#7b2cbf" opacity="0.64"/>
+      <circle cx="515.5" cy="174.9" r="0.7" fill="#7b2cbf" opacity="0.84"/>
+      <circle cx="511.8" cy="167.2" r="1.2" fill="#7b2cbf" opacity="0.49"/>
+      <rect x="504.4" y="187.0" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <circle cx="510.5" cy="208.9" r="7.5" fill="#7b2cbf" opacity="0.22"/>
+      <rect x="504.4" y="202.8" width="12.2" height="12.2" rx="2.8" fill="#7b2cbf"><title>2026-06-13: 1 contribuciones</title></rect>
+      <line x1="506.6" y1="205.0" x2="513.6" y2="205.0" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="519.5" cy="210.1" r="1.3" fill="#7b2cbf" opacity="0.57"/>
+      <circle cx="519.6" cy="207.1" r="0.7" fill="#7b2cbf" opacity="0.67"/>
+      <circle cx="520.8" cy="201.8" r="0.9" fill="#7b2cbf" opacity="0.37"/>
+    </g>
+    <g opacity="0">
+      <animate attributeName="opacity" dur="15.5s" repeatCount="indefinite" keyTimes="0;0.3558;0.3738;0.9350;0.9850;1" values="0;0;1;1;0;0"/>
+      <circle cx="526.3" cy="114.1" r="7.5" fill="#7b2cbf" opacity="0.22"/>
+      <rect x="520.2" y="108.0" width="12.2" height="12.2" rx="2.8" fill="#7b2cbf"><title>2026-06-14: 1 contribuciones</title></rect>
+      <line x1="522.4" y1="110.2" x2="529.4" y2="110.2" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="525.3" cy="115.7" r="1.3" fill="#7b2cbf" opacity="0.57"/>
+      <circle cx="529.2" cy="120.1" r="0.8" fill="#7b2cbf" opacity="0.74"/>
+      <circle cx="532.6" cy="112.6" r="0.8" fill="#7b2cbf" opacity="0.72"/>
+      <circle cx="526.3" cy="129.9" r="7.5" fill="#7b2cbf" opacity="0.22"/>
+      <rect x="520.2" y="123.8" width="12.2" height="12.2" rx="2.8" fill="#7b2cbf"><title>2026-06-15: 3 contribuciones</title></rect>
+      <line x1="522.4" y1="126.0" x2="529.4" y2="126.0" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="526.8" cy="122.5" r="0.8" fill="#7b2cbf" opacity="0.73"/>
+      <circle cx="530.3" cy="120.0" r="0.6" fill="#7b2cbf" opacity="0.58"/>
+      <circle cx="517.3" cy="127.6" r="0.6" fill="#7b2cbf" opacity="0.85"/>
+      <rect x="520.2" y="139.6" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <circle cx="526.3" cy="161.5" r="7.5" fill="#7b2cbf" opacity="0.22"/>
+      <rect x="520.2" y="155.4" width="12.2" height="12.2" rx="2.8" fill="#7b2cbf"><title>2026-06-17: 5 contribuciones</title></rect>
+      <line x1="522.4" y1="157.6" x2="529.4" y2="157.6" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="523.5" cy="165.1" r="0.8" fill="#7b2cbf" opacity="0.46"/>
+      <circle cx="522.9" cy="152.9" r="1.0" fill="#7b2cbf" opacity="0.41"/>
+      <circle cx="527.2" cy="165.5" r="1.0" fill="#7b2cbf" opacity="0.52"/>
+      <circle cx="526.3" cy="177.3" r="7.5" fill="#7b2cbf" opacity="0.22"/>
+      <rect x="520.2" y="171.2" width="12.2" height="12.2" rx="2.8" fill="#7b2cbf"><title>2026-06-18: 5 contribuciones</title></rect>
+      <line x1="522.4" y1="173.4" x2="529.4" y2="173.4" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="532.3" cy="169.6" r="0.7" fill="#7b2cbf" opacity="0.63"/>
+      <circle cx="530.2" cy="175.0" r="1.1" fill="#7b2cbf" opacity="0.59"/>
+      <circle cx="519.8" cy="182.8" r="1.4" fill="#7b2cbf" opacity="0.59"/>
+      <circle cx="526.3" cy="193.1" r="7.5" fill="#7b2cbf" opacity="0.22"/>
+      <rect x="520.2" y="187.0" width="12.2" height="12.2" rx="2.8" fill="#7b2cbf"><title>2026-06-19: 3 contribuciones</title></rect>
+      <line x1="522.4" y1="189.2" x2="529.4" y2="189.2" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="535.0" cy="195.1" r="1.1" fill="#7b2cbf" opacity="0.49"/>
+      <circle cx="536.5" cy="193.8" r="1.4" fill="#7b2cbf" opacity="0.52"/>
+      <circle cx="535.5" cy="197.7" r="1.0" fill="#7b2cbf" opacity="0.81"/>
+      <circle cx="526.3" cy="208.9" r="7.5" fill="#7b2cbf" opacity="0.22"/>
+      <rect x="520.2" y="202.8" width="12.2" height="12.2" rx="2.8" fill="#7b2cbf"><title>2026-06-20: 3 contribuciones</title></rect>
+      <line x1="522.4" y1="205.0" x2="529.4" y2="205.0" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="535.1" cy="201.5" r="1.0" fill="#7b2cbf" opacity="0.79"/>
+      <circle cx="535.8" cy="213.4" r="0.7" fill="#7b2cbf" opacity="0.41"/>
+      <circle cx="536.2" cy="215.7" r="0.6" fill="#7b2cbf" opacity="0.51"/>
+    </g>
+    <g opacity="0">
+      <animate attributeName="opacity" dur="15.5s" repeatCount="indefinite" keyTimes="0;0.3682;0.3862;0.9350;0.9850;1" values="0;0;1;1;0;0"/>
+      <circle cx="542.1" cy="114.1" r="7.5" fill="#7b2cbf" opacity="0.22"/>
+      <rect x="536.0" y="108.0" width="12.2" height="12.2" rx="2.8" fill="#7b2cbf"><title>2026-06-21: 6 contribuciones</title></rect>
+      <line x1="538.2" y1="110.2" x2="545.2" y2="110.2" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="537.8" cy="124.1" r="1.2" fill="#7b2cbf" opacity="0.77"/>
+      <circle cx="551.1" cy="109.7" r="0.9" fill="#7b2cbf" opacity="0.79"/>
+      <circle cx="545.4" cy="123.4" r="0.6" fill="#7b2cbf" opacity="0.84"/>
+      <rect x="536.0" y="123.8" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="536.0" y="139.6" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="536.0" y="155.4" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="536.0" y="171.2" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="536.0" y="187.0" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <circle cx="542.1" cy="208.9" r="7.5" fill="#7b2cbf" opacity="0.22"/>
+      <rect x="536.0" y="202.8" width="12.2" height="12.2" rx="2.8" fill="#7b2cbf"><title>2026-06-27: 1 contribuciones</title></rect>
+      <line x1="538.2" y1="205.0" x2="545.2" y2="205.0" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="535.8" cy="211.6" r="0.8" fill="#7b2cbf" opacity="0.48"/>
+      <circle cx="552.2" cy="216.1" r="1.2" fill="#7b2cbf" opacity="0.62"/>
+      <circle cx="544.5" cy="199.2" r="1.3" fill="#7b2cbf" opacity="0.64"/>
+    </g>
+    <g opacity="0">
+      <animate attributeName="opacity" dur="15.5s" repeatCount="indefinite" keyTimes="0;0.3806;0.3986;0.9350;0.9850;1" values="0;0;1;1;0;0"/>
+      <circle cx="557.9" cy="114.1" r="7.5" fill="#7b2cbf" opacity="0.22"/>
+      <rect x="551.8" y="108.0" width="12.2" height="12.2" rx="2.8" fill="#7b2cbf"><title>2026-06-28: 1 contribuciones</title></rect>
+      <line x1="554.0" y1="110.2" x2="561.0" y2="110.2" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="557.7" cy="118.0" r="1.2" fill="#7b2cbf" opacity="0.38"/>
+      <circle cx="561.1" cy="122.0" r="0.7" fill="#7b2cbf" opacity="0.82"/>
+      <circle cx="559.1" cy="114.6" r="1.3" fill="#7b2cbf" opacity="0.62"/>
+      <circle cx="557.9" cy="129.9" r="7.5" fill="#7b2cbf" opacity="0.22"/>
+      <rect x="551.8" y="123.8" width="12.2" height="12.2" rx="2.8" fill="#7b2cbf"><title>2026-06-29: 1 contribuciones</title></rect>
+      <line x1="554.0" y1="126.0" x2="561.0" y2="126.0" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="563.5" cy="132.8" r="1.3" fill="#7b2cbf" opacity="0.74"/>
+      <circle cx="556.5" cy="139.1" r="0.6" fill="#7b2cbf" opacity="0.65"/>
+      <circle cx="557.3" cy="137.7" r="1.0" fill="#7b2cbf" opacity="0.41"/>
+      <rect x="551.8" y="139.6" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="551.8" y="155.4" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="551.8" y="171.2" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="551.8" y="187.0" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="551.8" y="202.8" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+    </g>
+    <g opacity="0">
+      <animate attributeName="opacity" dur="15.5s" repeatCount="indefinite" keyTimes="0;0.3930;0.4110;0.9350;0.9850;1" values="0;0;1;1;0;0"/>
+      <circle cx="573.7" cy="114.1" r="7.5" fill="#7b2cbf" opacity="0.22"/>
+      <rect x="567.6" y="108.0" width="12.2" height="12.2" rx="2.8" fill="#7b2cbf"><title>2026-07-05: 2 contribuciones</title></rect>
+      <line x1="569.8" y1="110.2" x2="576.8" y2="110.2" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="582.5" cy="121.8" r="1.4" fill="#7b2cbf" opacity="0.48"/>
+      <circle cx="568.3" cy="108.3" r="0.7" fill="#7b2cbf" opacity="0.84"/>
+      <circle cx="572.9" cy="118.0" r="0.7" fill="#7b2cbf" opacity="0.72"/>
+      <rect x="567.6" y="123.8" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="567.6" y="139.6" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="567.6" y="155.4" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="567.6" y="171.2" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="567.6" y="187.0" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <circle cx="573.7" cy="208.9" r="7.5" fill="#7b2cbf" opacity="0.22"/>
+      <rect x="567.6" y="202.8" width="12.2" height="12.2" rx="2.8" fill="#7b2cbf"><title>2026-07-11: 2 contribuciones</title></rect>
+      <line x1="569.8" y1="205.0" x2="576.8" y2="205.0" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="574.3" cy="205.7" r="0.9" fill="#7b2cbf" opacity="0.75"/>
+      <circle cx="576.7" cy="215.6" r="1.2" fill="#7b2cbf" opacity="0.50"/>
+      <circle cx="569.6" cy="207.4" r="0.9" fill="#7b2cbf" opacity="0.57"/>
+    </g>
+    <g opacity="0">
+      <animate attributeName="opacity" dur="15.5s" repeatCount="indefinite" keyTimes="0;0.4054;0.4234;0.9350;0.9850;1" values="0;0;1;1;0;0"/>
+      <circle cx="589.5" cy="114.1" r="7.5" fill="#7b2cbf" opacity="0.22"/>
+      <rect x="583.4" y="108.0" width="12.2" height="12.2" rx="2.8" fill="#7b2cbf"><title>2026-07-12: 2 contribuciones</title></rect>
+      <line x1="585.6" y1="110.2" x2="592.6" y2="110.2" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="588.1" cy="105.4" r="0.9" fill="#7b2cbf" opacity="0.53"/>
+      <circle cx="583.5" cy="115.0" r="1.1" fill="#7b2cbf" opacity="0.73"/>
+      <circle cx="599.2" cy="109.0" r="0.8" fill="#7b2cbf" opacity="0.71"/>
+      <circle cx="589.5" cy="129.9" r="9.5" fill="#e11d74" opacity="0.22"/>
+      <rect x="583.4" y="123.8" width="12.2" height="12.2" rx="2.8" fill="#e11d74" filter="url(#sprayTexture)"><title>2026-07-13: 9 contribuciones</title></rect>
+      <line x1="585.6" y1="126.0" x2="592.6" y2="126.0" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="594.4" cy="136.4" r="1.3" fill="#e11d74" opacity="0.52"/>
+      <circle cx="580.8" cy="123.4" r="0.8" fill="#e11d74" opacity="0.39"/>
+      <circle cx="582.6" cy="134.6" r="0.8" fill="#e11d74" opacity="0.50"/>
+      <circle cx="587.5" cy="137.1" r="0.6" fill="#e11d74" opacity="0.49"/>
+      <circle cx="599.3" cy="138.1" r="0.8" fill="#e11d74" opacity="0.40"/>
+      <path d="M 591.9 135.0 L 591.9 143.5" stroke="#e11d74" stroke-width="1.7" stroke-linecap="round" opacity="0.88"/>
+      <circle cx="591.9" cy="143.5" r="1.55" fill="#e11d74" opacity="0.95"/>
+      <circle cx="591.5" cy="143.1" r="0.45" fill="#ffffff" opacity="0.7"/>
+      <circle cx="589.5" cy="145.7" r="7.5" fill="#7b2cbf" opacity="0.22"/>
+      <rect x="583.4" y="139.6" width="12.2" height="12.2" rx="2.8" fill="#7b2cbf"><title>2026-07-14: 2 contribuciones</title></rect>
+      <line x1="585.6" y1="141.8" x2="592.6" y2="141.8" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="586.0" cy="152.3" r="1.2" fill="#7b2cbf" opacity="0.79"/>
+      <circle cx="589.7" cy="150.9" r="0.9" fill="#7b2cbf" opacity="0.41"/>
+      <circle cx="593.4" cy="137.6" r="0.6" fill="#7b2cbf" opacity="0.78"/>
+      <rect x="583.4" y="155.4" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <circle cx="589.5" cy="177.3" r="7.5" fill="#7b2cbf" opacity="0.22"/>
+      <rect x="583.4" y="171.2" width="12.2" height="12.2" rx="2.8" fill="#7b2cbf"><title>2026-07-16: 2 contribuciones</title></rect>
+      <line x1="585.6" y1="173.4" x2="592.6" y2="173.4" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="584.1" cy="173.6" r="1.1" fill="#7b2cbf" opacity="0.51"/>
+      <circle cx="583.7" cy="179.7" r="0.8" fill="#7b2cbf" opacity="0.69"/>
+      <circle cx="598.2" cy="178.7" r="0.8" fill="#7b2cbf" opacity="0.59"/>
+      <circle cx="589.5" cy="193.1" r="9.5" fill="#e11d74" opacity="0.22"/>
+      <rect x="583.4" y="187.0" width="12.2" height="12.2" rx="2.8" fill="#e11d74" filter="url(#sprayTexture)"><title>2026-07-17: 8 contribuciones</title></rect>
+      <line x1="585.6" y1="189.2" x2="592.6" y2="189.2" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="588.6" cy="193.5" r="1.2" fill="#e11d74" opacity="0.72"/>
+      <circle cx="595.2" cy="185.2" r="1.3" fill="#e11d74" opacity="0.55"/>
+      <circle cx="582.7" cy="202.9" r="1.1" fill="#e11d74" opacity="0.55"/>
+      <circle cx="590.7" cy="182.7" r="1.1" fill="#e11d74" opacity="0.38"/>
+      <circle cx="597.6" cy="203.3" r="0.6" fill="#e11d74" opacity="0.51"/>
+      <path d="M 586.1 198.2 L 586.1 203.4" stroke="#e11d74" stroke-width="1.7" stroke-linecap="round" opacity="0.88"/>
+      <circle cx="586.1" cy="203.4" r="1.55" fill="#e11d74" opacity="0.95"/>
+      <circle cx="585.7" cy="203.0" r="0.45" fill="#ffffff" opacity="0.7"/>
+      <rect x="583.4" y="202.8" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+    </g>
+    <g opacity="0">
+      <animate attributeName="opacity" dur="15.5s" repeatCount="indefinite" keyTimes="0;0.4178;0.4358;0.9350;0.9850;1" values="0;0;1;1;0;0"/>
+      <rect x="599.2" y="108.0" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="599.2" y="123.8" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="599.2" y="139.6" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="599.2" y="155.4" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="599.2" y="171.2" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="599.2" y="187.0" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="599.2" y="202.8" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+    </g>
+    <g opacity="0">
+      <animate attributeName="opacity" dur="15.5s" repeatCount="indefinite" keyTimes="0;0.4302;0.4482;0.9350;0.9850;1" values="0;0;1;1;0;0"/>
+      <rect x="615.0" y="108.0" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="615.0" y="123.8" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="615.0" y="139.6" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="615.0" y="155.4" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <circle cx="621.1" cy="177.3" r="7.5" fill="#7b2cbf" opacity="0.22"/>
+      <rect x="615.0" y="171.2" width="12.2" height="12.2" rx="2.8" fill="#7b2cbf"><title>2026-07-30: 3 contribuciones</title></rect>
+      <line x1="617.2" y1="173.4" x2="624.2" y2="173.4" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="610.9" cy="186.7" r="0.9" fill="#7b2cbf" opacity="0.38"/>
+      <circle cx="626.4" cy="179.3" r="1.0" fill="#7b2cbf" opacity="0.84"/>
+      <circle cx="611.3" cy="176.3" r="0.7" fill="#7b2cbf" opacity="0.51"/>
+      <circle cx="621.1" cy="193.1" r="7.5" fill="#7b2cbf" opacity="0.22"/>
+      <rect x="615.0" y="187.0" width="12.2" height="12.2" rx="2.8" fill="#7b2cbf"><title>2026-07-31: 6 contribuciones</title></rect>
+      <line x1="617.2" y1="189.2" x2="624.2" y2="189.2" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="631.4" cy="192.6" r="1.2" fill="#7b2cbf" opacity="0.70"/>
+      <circle cx="612.5" cy="191.4" r="1.2" fill="#7b2cbf" opacity="0.78"/>
+      <circle cx="629.5" cy="189.0" r="0.8" fill="#7b2cbf" opacity="0.39"/>
+      <circle cx="621.1" cy="208.9" r="9.5" fill="#e11d74" opacity="0.22"/>
+      <rect x="615.0" y="202.8" width="12.2" height="12.2" rx="2.8" fill="#e11d74" filter="url(#sprayTexture)"><title>2026-08-01: 7 contribuciones</title></rect>
+      <line x1="617.2" y1="205.0" x2="624.2" y2="205.0" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="610.6" cy="198.9" r="1.0" fill="#e11d74" opacity="0.82"/>
+      <circle cx="611.6" cy="204.8" r="1.1" fill="#e11d74" opacity="0.35"/>
+      <circle cx="610.6" cy="201.8" r="0.7" fill="#e11d74" opacity="0.57"/>
+      <circle cx="612.3" cy="207.4" r="0.6" fill="#e11d74" opacity="0.80"/>
+      <circle cx="614.3" cy="210.8" r="1.4" fill="#e11d74" opacity="0.39"/>
+    </g>
+    <g opacity="0">
+      <animate attributeName="opacity" dur="15.5s" repeatCount="indefinite" keyTimes="0;0.4427;0.4607;0.9350;0.9850;1" values="0;0;1;1;0;0"/>
+      <rect x="630.8" y="108.0" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="630.8" y="123.8" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="630.8" y="139.6" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="630.8" y="155.4" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="630.8" y="171.2" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="630.8" y="187.0" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="630.8" y="202.8" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+    </g>
+    <g opacity="0">
+      <animate attributeName="opacity" dur="15.5s" repeatCount="indefinite" keyTimes="0;0.4551;0.4731;0.9350;0.9850;1" values="0;0;1;1;0;0"/>
+      <rect x="646.6" y="108.0" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="646.6" y="123.8" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="646.6" y="139.6" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="646.6" y="155.4" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="646.6" y="171.2" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="646.6" y="187.0" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <circle cx="652.7" cy="208.9" r="7.5" fill="#7b2cbf" opacity="0.22"/>
+      <rect x="646.6" y="202.8" width="12.2" height="12.2" rx="2.8" fill="#7b2cbf"><title>2026-08-15: 2 contribuciones</title></rect>
+      <line x1="648.8" y1="205.0" x2="655.8" y2="205.0" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="651.0" cy="199.2" r="1.2" fill="#7b2cbf" opacity="0.74"/>
+      <circle cx="658.6" cy="216.6" r="1.0" fill="#7b2cbf" opacity="0.36"/>
+      <circle cx="649.3" cy="208.9" r="1.2" fill="#7b2cbf" opacity="0.64"/>
+    </g>
+    <g opacity="0">
+      <animate attributeName="opacity" dur="15.5s" repeatCount="indefinite" keyTimes="0;0.4675;0.4855;0.9350;0.9850;1" values="0;0;1;1;0;0"/>
+      <rect x="662.4" y="108.0" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="662.4" y="123.8" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="662.4" y="139.6" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="662.4" y="155.4" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="662.4" y="171.2" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="662.4" y="187.0" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="662.4" y="202.8" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+    </g>
+    <g opacity="0">
+      <animate attributeName="opacity" dur="15.5s" repeatCount="indefinite" keyTimes="0;0.4799;0.4979;0.9350;0.9850;1" values="0;0;1;1;0;0"/>
+      <rect x="678.2" y="108.0" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="678.2" y="123.8" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="678.2" y="139.6" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="678.2" y="155.4" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="678.2" y="171.2" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="678.2" y="187.0" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="678.2" y="202.8" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+    </g>
+    <g opacity="0">
+      <animate attributeName="opacity" dur="15.5s" repeatCount="indefinite" keyTimes="0;0.4923;0.5103;0.9350;0.9850;1" values="0;0;1;1;0;0"/>
+      <rect x="694.0" y="108.0" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="694.0" y="123.8" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="694.0" y="139.6" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <circle cx="700.1" cy="161.5" r="9.5" fill="#e11d74" opacity="0.22"/>
+      <rect x="694.0" y="155.4" width="12.2" height="12.2" rx="2.8" fill="#e11d74" filter="url(#sprayTexture)"><title>2026-09-02: 8 contribuciones</title></rect>
+      <line x1="696.2" y1="157.6" x2="703.2" y2="157.6" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="702.6" cy="155.2" r="1.3" fill="#e11d74" opacity="0.38"/>
+      <circle cx="708.1" cy="154.9" r="1.0" fill="#e11d74" opacity="0.77"/>
+      <circle cx="710.5" cy="165.4" r="0.6" fill="#e11d74" opacity="0.56"/>
+      <circle cx="697.3" cy="169.4" r="0.7" fill="#e11d74" opacity="0.64"/>
+      <circle cx="708.1" cy="163.6" r="1.4" fill="#e11d74" opacity="0.84"/>
+      <circle cx="700.1" cy="177.3" r="7.5" fill="#7b2cbf" opacity="0.22"/>
+      <rect x="694.0" y="171.2" width="12.2" height="12.2" rx="2.8" fill="#7b2cbf"><title>2026-09-03: 5 contribuciones</title></rect>
+      <line x1="696.2" y1="173.4" x2="703.2" y2="173.4" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="703.6" cy="176.7" r="0.9" fill="#7b2cbf" opacity="0.48"/>
+      <circle cx="708.7" cy="167.9" r="0.9" fill="#7b2cbf" opacity="0.83"/>
+      <circle cx="706.8" cy="168.7" r="1.0" fill="#7b2cbf" opacity="0.74"/>
+      <rect x="694.0" y="187.0" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="694.0" y="202.8" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+    </g>
+    <g opacity="0">
+      <animate attributeName="opacity" dur="15.5s" repeatCount="indefinite" keyTimes="0;0.5047;0.5227;0.9350;0.9850;1" values="0;0;1;1;0;0"/>
+      <rect x="709.8" y="108.0" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="709.8" y="123.8" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="709.8" y="139.6" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="709.8" y="155.4" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="709.8" y="171.2" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="709.8" y="187.0" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <circle cx="715.9" cy="208.9" r="11.5" fill="#ff6b4a" opacity="0.22"/>
+      <rect x="709.8" y="202.8" width="12.2" height="12.2" rx="2.8" fill="#ff6b4a" filter="url(#sprayTexture)"><title>2026-09-12: 14 contribuciones</title></rect>
+      <line x1="712.0" y1="205.0" x2="719.0" y2="205.0" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="716.3" cy="219.2" r="1.3" fill="#ff6b4a" opacity="0.64"/>
+      <circle cx="709.5" cy="209.9" r="0.6" fill="#ff6b4a" opacity="0.48"/>
+      <circle cx="715.0" cy="219.2" r="1.2" fill="#ff6b4a" opacity="0.69"/>
+      <circle cx="708.7" cy="203.9" r="1.3" fill="#ff6b4a" opacity="0.72"/>
+      <circle cx="713.9" cy="215.4" r="1.0" fill="#ff6b4a" opacity="0.43"/>
+      <circle cx="705.8" cy="212.3" r="1.1" fill="#ff6b4a" opacity="0.84"/>
+      <circle cx="705.6" cy="213.8" r="1.2" fill="#ff6b4a" opacity="0.42"/>
+      <circle cx="720.6" cy="201.6" r="0.7" fill="#ff6b4a" opacity="0.72"/>
+      <path d="M 713.3 214.0 L 713.3 223.7" stroke="#ff6b4a" stroke-width="1.7" stroke-linecap="round" opacity="0.88"/>
+      <circle cx="713.3" cy="223.7" r="1.55" fill="#ff6b4a" opacity="0.95"/>
+      <circle cx="712.9" cy="223.3" r="0.45" fill="#ffffff" opacity="0.7"/>
+    </g>
+    <g opacity="0">
+      <animate attributeName="opacity" dur="15.5s" repeatCount="indefinite" keyTimes="0;0.5171;0.5351;0.9350;0.9850;1" values="0;0;1;1;0;0"/>
+      <rect x="725.6" y="108.0" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="725.6" y="123.8" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <circle cx="731.7" cy="145.7" r="9.5" fill="#e11d74" opacity="0.22"/>
+      <rect x="725.6" y="139.6" width="12.2" height="12.2" rx="2.8" fill="#e11d74" filter="url(#sprayTexture)"><title>2026-09-15: 11 contribuciones</title></rect>
+      <line x1="727.8" y1="141.8" x2="734.8" y2="141.8" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="725.8" cy="145.0" r="1.4" fill="#e11d74" opacity="0.74"/>
+      <circle cx="735.6" cy="147.7" r="1.2" fill="#e11d74" opacity="0.37"/>
+      <circle cx="722.4" cy="156.3" r="0.7" fill="#e11d74" opacity="0.84"/>
+      <circle cx="733.6" cy="146.9" r="0.6" fill="#e11d74" opacity="0.41"/>
+      <circle cx="723.7" cy="154.4" r="0.6" fill="#e11d74" opacity="0.40"/>
+      <path d="M 732.6 150.8 L 732.6 157.3" stroke="#e11d74" stroke-width="1.7" stroke-linecap="round" opacity="0.88"/>
+      <circle cx="732.6" cy="157.3" r="1.55" fill="#e11d74" opacity="0.95"/>
+      <circle cx="732.2" cy="156.9" r="0.45" fill="#ffffff" opacity="0.7"/>
+      <rect x="725.6" y="155.4" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="725.6" y="171.2" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="725.6" y="187.0" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="725.6" y="202.8" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+    </g>
+    <g opacity="0">
+      <animate attributeName="opacity" dur="15.5s" repeatCount="indefinite" keyTimes="0;0.5295;0.5475;0.9350;0.9850;1" values="0;0;1;1;0;0"/>
+      <rect x="741.4" y="108.0" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="741.4" y="123.8" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="741.4" y="139.6" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="741.4" y="155.4" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="741.4" y="171.2" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="741.4" y="187.0" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="741.4" y="202.8" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+    </g>
+    <g opacity="0">
+      <animate attributeName="opacity" dur="15.5s" repeatCount="indefinite" keyTimes="0;0.5419;0.5599;0.9350;0.9850;1" values="0;0;1;1;0;0"/>
+      <rect x="757.2" y="108.0" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="757.2" y="123.8" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="757.2" y="139.6" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="757.2" y="155.4" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <circle cx="763.3" cy="177.3" r="7.5" fill="#7b2cbf" opacity="0.22"/>
+      <rect x="757.2" y="171.2" width="12.2" height="12.2" rx="2.8" fill="#7b2cbf"><title>2026-10-01: 5 contribuciones</title></rect>
+      <line x1="759.4" y1="173.4" x2="766.4" y2="173.4" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="756.5" cy="179.2" r="1.3" fill="#7b2cbf" opacity="0.57"/>
+      <circle cx="772.7" cy="187.6" r="1.0" fill="#7b2cbf" opacity="0.82"/>
+      <circle cx="769.7" cy="186.1" r="0.9" fill="#7b2cbf" opacity="0.37"/>
+      <rect x="757.2" y="187.0" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="757.2" y="202.8" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+    </g>
+    <g opacity="0">
+      <animate attributeName="opacity" dur="15.5s" repeatCount="indefinite" keyTimes="0;0.5543;0.5723;0.9350;0.9850;1" values="0;0;1;1;0;0"/>
+      <rect x="773.0" y="108.0" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="773.0" y="123.8" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="773.0" y="139.6" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="773.0" y="155.4" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="773.0" y="171.2" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="773.0" y="187.0" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <circle cx="779.1" cy="208.9" r="7.5" fill="#7b2cbf" opacity="0.22"/>
+      <rect x="773.0" y="202.8" width="12.2" height="12.2" rx="2.8" fill="#7b2cbf"><title>2026-10-10: 3 contribuciones</title></rect>
+      <line x1="775.2" y1="205.0" x2="782.2" y2="205.0" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="779.3" cy="200.3" r="1.3" fill="#7b2cbf" opacity="0.55"/>
+      <circle cx="770.8" cy="200.3" r="1.0" fill="#7b2cbf" opacity="0.52"/>
+      <circle cx="769.8" cy="199.2" r="0.7" fill="#7b2cbf" opacity="0.46"/>
+    </g>
+    <g opacity="0">
+      <animate attributeName="opacity" dur="15.5s" repeatCount="indefinite" keyTimes="0;0.5667;0.5847;0.9350;0.9850;1" values="0;0;1;1;0;0"/>
+      <rect x="788.8" y="108.0" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="788.8" y="123.8" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="788.8" y="139.6" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="788.8" y="155.4" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="788.8" y="171.2" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="788.8" y="187.0" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <circle cx="794.9" cy="208.9" r="7.5" fill="#7b2cbf" opacity="0.22"/>
+      <rect x="788.8" y="202.8" width="12.2" height="12.2" rx="2.8" fill="#7b2cbf"><title>2026-10-17: 1 contribuciones</title></rect>
+      <line x1="791.0" y1="205.0" x2="798.0" y2="205.0" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="792.9" cy="214.5" r="1.1" fill="#7b2cbf" opacity="0.65"/>
+      <circle cx="791.4" cy="203.8" r="0.7" fill="#7b2cbf" opacity="0.50"/>
+      <circle cx="792.7" cy="205.1" r="0.8" fill="#7b2cbf" opacity="0.38"/>
+    </g>
+    <g opacity="0">
+      <animate attributeName="opacity" dur="15.5s" repeatCount="indefinite" keyTimes="0;0.5791;0.5971;0.9350;0.9850;1" values="0;0;1;1;0;0"/>
+      <circle cx="810.7" cy="114.1" r="7.5" fill="#7b2cbf" opacity="0.22"/>
+      <rect x="804.6" y="108.0" width="12.2" height="12.2" rx="2.8" fill="#7b2cbf"><title>2026-10-18: 4 contribuciones</title></rect>
+      <line x1="806.8" y1="110.2" x2="813.8" y2="110.2" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="818.5" cy="119.3" r="0.7" fill="#7b2cbf" opacity="0.72"/>
+      <circle cx="820.9" cy="104.6" r="0.7" fill="#7b2cbf" opacity="0.79"/>
+      <circle cx="810.4" cy="105.0" r="1.2" fill="#7b2cbf" opacity="0.79"/>
+      <circle cx="810.7" cy="129.9" r="7.5" fill="#7b2cbf" opacity="0.22"/>
+      <rect x="804.6" y="123.8" width="12.2" height="12.2" rx="2.8" fill="#7b2cbf"><title>2026-10-19: 3 contribuciones</title></rect>
+      <line x1="806.8" y1="126.0" x2="813.8" y2="126.0" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="810.2" cy="139.6" r="0.7" fill="#7b2cbf" opacity="0.73"/>
+      <circle cx="818.3" cy="124.1" r="1.1" fill="#7b2cbf" opacity="0.39"/>
+      <circle cx="807.3" cy="127.1" r="1.1" fill="#7b2cbf" opacity="0.63"/>
+      <rect x="804.6" y="139.6" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="804.6" y="155.4" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="804.6" y="171.2" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <circle cx="810.7" cy="193.1" r="7.5" fill="#7b2cbf" opacity="0.22"/>
+      <rect x="804.6" y="187.0" width="12.2" height="12.2" rx="2.8" fill="#7b2cbf"><title>2026-10-23: 6 contribuciones</title></rect>
+      <line x1="806.8" y1="189.2" x2="813.8" y2="189.2" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="808.7" cy="194.1" r="1.2" fill="#7b2cbf" opacity="0.51"/>
+      <circle cx="804.7" cy="190.7" r="0.6" fill="#7b2cbf" opacity="0.81"/>
+      <circle cx="819.9" cy="185.6" r="0.9" fill="#7b2cbf" opacity="0.43"/>
+      <rect x="804.6" y="202.8" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+    </g>
+    <g opacity="0">
+      <animate attributeName="opacity" dur="15.5s" repeatCount="indefinite" keyTimes="0;0.5915;0.6095;0.9350;0.9850;1" values="0;0;1;1;0;0"/>
+      <rect x="820.4" y="108.0" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="820.4" y="123.8" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <circle cx="826.5" cy="145.7" r="7.5" fill="#7b2cbf" opacity="0.22"/>
+      <rect x="820.4" y="139.6" width="12.2" height="12.2" rx="2.8" fill="#7b2cbf"><title>2026-10-27: 3 contribuciones</title></rect>
+      <line x1="822.6" y1="141.8" x2="829.6" y2="141.8" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="823.4" cy="138.5" r="0.9" fill="#7b2cbf" opacity="0.71"/>
+      <circle cx="817.7" cy="146.4" r="0.7" fill="#7b2cbf" opacity="0.68"/>
+      <circle cx="833.3" cy="152.2" r="1.4" fill="#7b2cbf" opacity="0.49"/>
+      <rect x="820.4" y="155.4" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="820.4" y="171.2" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="820.4" y="187.0" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="820.4" y="202.8" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+    </g>
+    <g opacity="0">
+      <animate attributeName="opacity" dur="15.5s" repeatCount="indefinite" keyTimes="0;0.6039;0.6219;0.9350;0.9850;1" values="0;0;1;1;0;0"/>
+      <rect x="836.2" y="108.0" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="836.2" y="123.8" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <circle cx="842.3" cy="145.7" r="7.5" fill="#7b2cbf" opacity="0.22"/>
+      <rect x="836.2" y="139.6" width="12.2" height="12.2" rx="2.8" fill="#7b2cbf"><title>2026-11-03: 6 contribuciones</title></rect>
+      <line x1="838.4" y1="141.8" x2="845.4" y2="141.8" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="843.7" cy="153.4" r="0.7" fill="#7b2cbf" opacity="0.46"/>
+      <circle cx="842.5" cy="150.7" r="0.6" fill="#7b2cbf" opacity="0.46"/>
+      <circle cx="848.7" cy="150.6" r="1.4" fill="#7b2cbf" opacity="0.42"/>
+      <rect x="836.2" y="155.4" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="836.2" y="171.2" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="836.2" y="187.0" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="836.2" y="202.8" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+    </g>
+    <g opacity="0">
+      <animate attributeName="opacity" dur="15.5s" repeatCount="indefinite" keyTimes="0;0.6163;0.6343;0.9350;0.9850;1" values="0;0;1;1;0;0"/>
+      <rect x="852.0" y="108.0" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="852.0" y="123.8" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="852.0" y="139.6" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="852.0" y="155.4" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="852.0" y="171.2" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="852.0" y="187.0" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="852.0" y="202.8" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+    </g>
+    <g opacity="0">
+      <animate attributeName="opacity" dur="15.5s" repeatCount="indefinite" keyTimes="0;0.6288;0.6468;0.9350;0.9850;1" values="0;0;1;1;0;0"/>
+      <rect x="867.8" y="108.0" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="867.8" y="123.8" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="867.8" y="139.6" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="867.8" y="155.4" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="867.8" y="171.2" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="867.8" y="187.0" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+      <rect x="867.8" y="202.8" width="12.2" height="12.2" rx="2.4" fill="#1a1128" opacity="0.82"/>
+    </g>
+    <g opacity="0">
+      <animate attributeName="opacity" dur="15.5s" repeatCount="indefinite" keyTimes="0;0.6412;0.6592;0.9350;0.9850;1" values="0;0;1;1;0;0"/>
+      <circle cx="889.7" cy="114.1" r="7.5" fill="#7b2cbf" opacity="0.22"/>
+      <rect x="883.6" y="108.0" width="12.2" height="12.2" rx="2.8" fill="#7b2cbf"><title>2026-11-22: 1 contribuciones</title></rect>
+      <line x1="885.8" y1="110.2" x2="892.8" y2="110.2" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="882.8" cy="108.1" r="1.3" fill="#7b2cbf" opacity="0.61"/>
+      <circle cx="893.2" cy="111.5" r="1.0" fill="#7b2cbf" opacity="0.80"/>
+      <circle cx="895.8" cy="113.3" r="0.9" fill="#7b2cbf" opacity="0.49"/>
+    </g>
+  </g>
+
+  <!-- ===================== BOTTOM VICE CITY HUD ===================== -->
+  <!-- Aerosol Intensity Legend -->
+  <g transform="translate(62, 256)">
+    <text x="0" y="11" class="ui-mono" font-size="10" fill="#94a3b8" letter-spacing="0.8">SPRAY DENSITY:</text>
+    <rect x="108" y="1" width="11" height="11" rx="2.2" fill="#1a1128" stroke="#2e1d4a"/>
+    <rect x="124" y="1" width="11" height="11" rx="2.2" fill="#7b2cbf"/>
+    <rect x="140" y="1" width="11" height="11" rx="2.2" fill="#e11d74"/>
+    <rect x="156" y="1" width="11" height="11" rx="2.2" fill="#ff6b4a"/>
+    <rect x="172" y="1" width="11" height="11" rx="2.2" fill="#00f0ff" filter="url(#neonGlow)"/>
+    <text x="192" y="11" class="ui-mono" font-size="10" fill="#00f0ff" letter-spacing="0.8">OVERDRIVE</text>
+  </g>
+
+  <!-- Live Aerosol Progress Gauge -->
+  <g transform="translate(645, 258)">
+    <text x="0" y="9" class="ui-mono" font-size="10" fill="#94a3b8" letter-spacing="0.8">COVERAGE:</text>
+    <rect x="72" y="0" width="190" height="10" rx="5" fill="#120b1f" stroke="#2e1d4a"/>
+    <rect x="72" y="0" width="0" height="10" rx="5" fill="url(#viBar)" filter="url(#neonGlow)">
+      <animate attributeName="width" dur="15.5s" repeatCount="indefinite"
+        keyTimes="0;0.6452;0.935;0.985;1"
+        values="0;190;190;0;0"/>
+    </rect>
+  </g>
+
+  <!-- Vice City Mission Passed Neon Graffiti Signature -->
+  <g class="mission-stamp">
+    <text x="470.0" y="306" text-anchor="middle" class="hud-title" font-size="23" fill="url(#viSunset)" stroke="#090512" stroke-width="1" letter-spacing="3.5" filter="url(#neonGlow)">
+      MISSION PASSED  //  RESPECT +
+    </text>
+    <rect x="330.0" y="314" width="280" height="2" fill="url(#viBar)" opacity="0.85"/>
+  </g>
+
+
+  <!-- ===================== REALISTIC ANIMATED AEROSOL SPRAY CAN ===================== -->
+  <g id="aerosol-can-rig">
+    <!-- Horizontal sweep across all 53 weeks -->
+    <animateTransform attributeName="transform" type="translate" dur="15.5s" repeatCount="indefinite"
+      keyTimes="0;0.6452;0.95;1"
+      values="62 108; 895.8 108; 923.8 108; 62 108"/>
+
+    <!-- Visibility envelope (appears on sweep, fades smoothly when finished) -->
+    <animate attributeName="opacity" dur="15.5s" repeatCount="indefinite"
+      keyTimes="0;0.015;0.6352;0.6752;0.98;1"
+      values="0;1;1;0;0;0"/>
+
+    <!-- Fast wrist up-and-down spraying oscillation -->
+    <g>
+      <animateTransform attributeName="transform" type="translate" dur="0.42s" repeatCount="indefinite"
+        values="0 4; 0 88; 0 4"/>
+
+      <!-- Pressurized Atomized Mist Hitting Concrete Wall -->
+      <circle cx="-2" cy="8" r="28" fill="url(#mistOuter)"/>
+      <circle cx="-6" cy="4" r="14" fill="#ff7b54" opacity="0.32" filter="url(#neonGlow)"/>
+      <circle cx="0" cy="8" r="7" fill="#fff1f2" opacity="0.45"/>
+
+      <!-- Dynamic Atomized Droplet Cloud -->
+      <g>
+        <circle cx="-15" cy="-10" r="1.8" fill="#00f0ff" opacity="0.85"/>
+        <circle cx="-11" cy="18" r="1.6" fill="#ff2a85" opacity="0.85"/>
+        <circle cx="6" cy="-13" r="1.4" fill="#ffd166" opacity="0.8"/>
+        <circle cx="-20" cy="4" r="1.2" fill="#ff7b54" opacity="0.85"/>
+        <circle cx="-5" cy="-16" r="1.1" fill="#ff2a85" opacity="0.75"/>
+        <circle cx="4" cy="21" r="1.5" fill="#00f0ff" opacity="0.75"/>
+        <circle cx="-17" cy="14" r="1.0" fill="#ffd166" opacity="0.7"/>
+      </g>
+
+      <!-- High-Pressure Spray Fan Cone -->
+      <polygon points="29,12 -4,-13 -4,26" fill="url(#sprayCone)"/>
+
+      <!-- 3D Detailed Aerosol Can Tilted in Hand Position -->
+      <g transform="translate(28, 12) rotate(-25)">
+        <!-- White Cap & Pressurized Nozzle -->
+        <rect x="6" y="-8.5" width="9" height="6.5" rx="1.2" fill="#f8fafc" stroke="#0f172a" stroke-width="0.9"/>
+        <rect x="5" y="-6.8" width="2.4" height="2.4" rx="0.5" fill="#ff2a85"/>
+        <!-- Nozzle Depression Collar -->
+        <rect x="4" y="-2.2" width="13" height="2.2" rx="0.8" fill="#cbd5e1" stroke="#0f172a" stroke-width="0.6"/>
+        <!-- Brushed Chrome Shoulder Dome -->
+        <path d="M 1.5 3.5 Q 10.5 -4.5 19.5 3.5 Z" fill="url(#canChrome)" stroke="#0f172a" stroke-width="0.9"/>
+        <rect x="0.5" y="2.8" width="20" height="3" rx="1.2" fill="url(#canChrome)" stroke="#0f172a" stroke-width="0.8"/>
+        <!-- Cylindrical Body with Metallic Shading -->
+        <rect x="0.5" y="5.5" width="20" height="40" rx="2" fill="url(#canMetal)" stroke="#ff2a85" stroke-width="1"/>
+        <!-- Glossy Vertical Highlight -->
+        <rect x="4.5" y="6.5" width="3" height="38" fill="#ffffff" opacity="0.16"/>
+        <!-- Vice City VI Label Band -->
+        <rect x="1.5" y="12" width="18" height="22" fill="url(#viSunset)"/>
+        <rect x="1.5" y="12" width="18" height="3" fill="#090512" opacity="0.65"/>
+        <rect x="1.5" y="31" width="18" height="3" fill="#00f0ff" opacity="0.85"/>
+        <text x="10.5" y="27.5" text-anchor="middle" class="hud-title" font-size="13" fill="#090512">VI</text>
+        <!-- Bottom Crimped Metal Rim -->
+        <rect x="0.5" y="45" width="20" height="3.2" rx="1.2" fill="url(#canChrome)" stroke="#0f172a" stroke-width="0.8"/>
+      </g>
+    </g>
+  </g>
+</svg>
