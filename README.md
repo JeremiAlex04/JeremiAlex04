@@ -23,7 +23,7 @@
     <img src="https://img.shields.io/badge/GitHub-010519?style=for-the-badge&logo=github&logoColor=D1E9F9" height="35"/>
   </a>
   <a href="https://jeremialex04.github.io">
-    <img src="https://img.shields.io/badge/Portfolio-546C9F?style=for-the-badge&logo=google-chrome&logoColor=D1E9F9" height="35"/>
+    <img src="https://img.shields.io/badge/Portfolio-546C9F?style=for-the-badge&logo=googlechrome&logoColor=D1E9F9" height="35"/>
   </a>
 </div>
 
@@ -87,53 +87,53 @@
     <table>
       <tr>
         <td align="center" width="110">
-          <img src="https://techstack-generator.vercel.app/react-icon.svg" width="55" height="55" alt="React"/>
+          <img src="https://skillicons.dev/icons?i=react" width="55" height="55" alt="React"/>
           <br/><sub><code>React</code></sub>
         </td>
         <td align="center" width="110">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" width="55" height="55" alt="Next.js"/>
+          <img src="https://skillicons.dev/icons?i=nextjs" width="55" height="55" alt="Next.js"/>
           <br/><sub><code>Next.js</code></sub>
         </td>
         <td align="center" width="110">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg" width="55" height="55" alt="Angular"/>
+          <img src="https://skillicons.dev/icons?i=angular" width="55" height="55" alt="Angular"/>
           <br/><sub><code>Angular</code></sub>
         </td>
         <td align="center" width="110">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" width="55" height="55" alt="Vue"/>
+          <img src="https://skillicons.dev/icons?i=vue" width="55" height="55" alt="Vue"/>
           <br/><sub><code>Vue</code></sub>
         </td>
         <td align="center" width="110">
-          <img src="https://techstack-generator.vercel.app/ts-icon.svg" width="55" height="55" alt="TypeScript"/>
+          <img src="https://skillicons.dev/icons?i=ts" width="55" height="55" alt="TypeScript"/>
           <br/><sub><code>TypeScript</code></sub>
         </td>
         <td align="center" width="110">
-          <img src="https://techstack-generator.vercel.app/js-icon.svg" width="55" height="55" alt="JavaScript"/>
+          <img src="https://skillicons.dev/icons?i=js" width="55" height="55" alt="JavaScript"/>
           <br/><sub><code>JavaScript</code></sub>
         </td>
       </tr>
       <tr>
         <td align="center" width="110">
-          <img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" width="55" height="55" alt="Tailwind"/>
+          <img src="https://skillicons.dev/icons?i=tailwind" width="55" height="55" alt="Tailwind"/>
           <br/><sub><code>Tailwind</code></sub>
         </td>
         <td align="center" width="110">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" width="55" height="55" alt="Bootstrap"/>
+          <img src="https://skillicons.dev/icons?i=bootstrap" width="55" height="55" alt="Bootstrap"/>
           <br/><sub><code>Bootstrap</code></sub>
         </td>
         <td align="center" width="110">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="55" height="55" alt="HTML5"/>
+          <img src="https://skillicons.dev/icons?i=html" width="55" height="55" alt="HTML5"/>
           <br/><sub><code>HTML5</code></sub>
         </td>
         <td align="center" width="110">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="55" height="55" alt="CSS3"/>
+          <img src="https://skillicons.dev/icons?i=css" width="55" height="55" alt="CSS3"/>
           <br/><sub><code>CSS3</code></sub>
         </td>
         <td align="center" width="110">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" width="55" height="55" alt="Sass"/>
+          <img src="https://skillicons.dev/icons?i=sass" width="55" height="55" alt="Sass"/>
           <br/><sub><code>Sass</code></sub>
         </td>
         <td align="center" width="110">
-          <img src="https://www.vectorlogo.zone/logos/figma/figma-icon.svg" width="55" height="55" alt="Figma"/>
+          <img src="https://skillicons.dev/icons?i=figma" width="55" height="55" alt="Figma"/>
           <br/><sub><code>Figma</code></sub>
         </td>
       </tr>
@@ -153,53 +153,53 @@
     <table>
       <tr>
         <td align="center" width="110">
-          <img src="https://techstack-generator.vercel.app/java-icon.svg" width="55" height="55" alt="Java"/>
+          <img src="https://skillicons.dev/icons?i=java" width="55" height="55" alt="Java"/>
           <br/><sub><code>Java</code></sub>
         </td>
         <td align="center" width="110">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" width="55" height="55" alt="Spring"/>
+          <img src="https://skillicons.dev/icons?i=spring" width="55" height="55" alt="Spring"/>
           <br/><sub><code>Spring</code></sub>
         </td>
         <td align="center" width="110">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" width="55" height="55" alt="Node.js"/>
+          <img src="https://skillicons.dev/icons?i=nodejs" width="55" height="55" alt="Node.js"/>
           <br/><sub><code>Node.js</code></sub>
         </td>
         <td align="center" width="110">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" width="55" height="55" alt="Express"/>
+          <img src="https://skillicons.dev/icons?i=express" width="55" height="55" alt="Express"/>
           <br/><sub><code>Express</code></sub>
         </td>
         <td align="center" width="110">
-          <img src="https://techstack-generator.vercel.app/python-icon.svg" width="55" height="55" alt="Python"/>
+          <img src="https://skillicons.dev/icons?i=py" width="55" height="55" alt="Python"/>
           <br/><sub><code>Python</code></sub>
         </td>
         <td align="center" width="110">
-          <img src="https://techstack-generator.vercel.app/csharp-icon.svg" width="55" height="55" alt="C#"/>
+          <img src="https://skillicons.dev/icons?i=cs" width="55" height="55" alt="C#"/>
           <br/><sub><code>C#</code></sub>
         </td>
       </tr>
       <tr>
         <td align="center" width="110">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dot-net/dot-net-original.svg" width="55" height="55" alt=".NET"/>
+          <img src="https://skillicons.dev/icons?i=dotnet" width="55" height="55" alt=".NET"/>
           <br/><sub><code>.NET</code></sub>
         </td>
         <td align="center" width="110">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" width="55" height="55" alt="PHP"/>
+          <img src="https://skillicons.dev/icons?i=php" width="55" height="55" alt="PHP"/>
           <br/><sub><code>PHP</code></sub>
         </td>
         <td align="center" width="110">
-          <img src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" width="55" height="55" alt="Postman"/>
+          <img src="https://skillicons.dev/icons?i=postman" width="55" height="55" alt="Postman"/>
           <br/><sub><code>Postman</code></sub>
         </td>
         <td align="center" width="110">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/intellij/intellij-original.svg" width="55" height="55" alt="IntelliJ"/>
+          <img src="https://skillicons.dev/icons?i=idea" width="55" height="55" alt="IntelliJ"/>
           <br/><sub><code>IntelliJ</code></sub>
         </td>
         <td align="center" width="110">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" width="55" height="55" alt="VS Code"/>
+          <img src="https://skillicons.dev/icons?i=vscode" width="55" height="55" alt="VS Code"/>
           <br/><sub><code>VS Code</code></sub>
         </td>
         <td align="center" width="110">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" width="55" height="55" alt="Git"/>
+          <img src="https://skillicons.dev/icons?i=git" width="55" height="55" alt="Git"/>
           <br/><sub><code>Git</code></sub>
         </td>
       </tr>
@@ -209,63 +209,63 @@
 
 <br/>
 
-<!-- =============== DATABASES =============== -->
+<!-- =============== DATABASES & CLOUD =============== -->
 <details open>
   <summary align="center">
-    <img src="https://img.shields.io/badge/%F0%9F%97%84%EF%B8%8F_Databases-5CA4C5?style=for-the-badge&labelColor=082345" height="28"/>
+    <img src="https://img.shields.io/badge/%F0%9F%97%84%EF%B8%8F_Databases_%26_Cloud-5CA4C5?style=for-the-badge&labelColor=082345" height="28"/>
   </summary>
   <br/>
   <div align="center">
     <table>
       <tr>
         <td align="center" width="110">
-          <img src="https://techstack-generator.vercel.app/mysql-icon.svg" width="55" height="55" alt="MySQL"/>
+          <img src="https://skillicons.dev/icons?i=mysql" width="55" height="55" alt="MySQL"/>
           <br/><sub><code>MySQL</code></sub>
         </td>
         <td align="center" width="110">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" width="55" height="55" alt="PostgreSQL"/>
+          <img src="https://skillicons.dev/icons?i=postgres" width="55" height="55" alt="PostgreSQL"/>
           <br/><sub><code>PostgreSQL</code></sub>
         </td>
         <td align="center" width="110">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" width="55" height="55" alt="MongoDB"/>
+          <img src="https://skillicons.dev/icons?i=mongodb" width="55" height="55" alt="MongoDB"/>
           <br/><sub><code>MongoDB</code></sub>
         </td>
         <td align="center" width="110">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg" width="55" height="55" alt="Oracle"/>
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/oracle/oracle-original.svg" width="55" height="55" alt="Oracle"/>
           <br/><sub><code>Oracle</code></sub>
         </td>
         <td align="center" width="110">
-          <img src="https://www.svgrepo.com/show/303229/microsoft-sql-server-logo.svg" width="55" height="55" alt="SQL Server"/>
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/microsoftsqlserver/microsoftsqlserver-original.svg" width="55" height="55" alt="SQL Server"/>
           <br/><sub><code>SQL Server</code></sub>
         </td>
         <td align="center" width="110">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" width="55" height="55" alt="Redis"/>
+          <img src="https://skillicons.dev/icons?i=redis" width="55" height="55" alt="Redis"/>
           <br/><sub><code>Redis</code></sub>
         </td>
       </tr>
       <tr>
         <td align="center" width="110">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" width="55" height="55" alt="Firebase"/>
+          <img src="https://skillicons.dev/icons?i=firebase" width="55" height="55" alt="Firebase"/>
           <br/><sub><code>Firebase</code></sub>
         </td>
         <td align="center" width="110">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" width="55" height="55" alt="Docker"/>
+          <img src="https://skillicons.dev/icons?i=docker" width="55" height="55" alt="Docker"/>
           <br/><sub><code>Docker</code></sub>
         </td>
         <td align="center" width="110">
-          <img src="https://techstack-generator.vercel.app/kubernetes-icon.svg" width="55" height="55" alt="Kubernetes"/>
+          <img src="https://skillicons.dev/icons?i=kubernetes" width="55" height="55" alt="Kubernetes"/>
           <br/><sub><code>Kubernetes</code></sub>
         </td>
         <td align="center" width="110">
-          <img src="https://techstack-generator.vercel.app/aws-icon.svg" width="55" height="55" alt="AWS"/>
+          <img src="https://skillicons.dev/icons?i=aws" width="55" height="55" alt="AWS"/>
           <br/><sub><code>AWS</code></sub>
         </td>
         <td align="center" width="110">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" width="55" height="55" alt="Azure"/>
+          <img src="https://skillicons.dev/icons?i=azure" width="55" height="55" alt="Azure"/>
           <br/><sub><code>Azure</code></sub>
         </td>
         <td align="center" width="110">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" width="55" height="55" alt="GitHub"/>
+          <img src="https://skillicons.dev/icons?i=github" width="55" height="55" alt="GitHub"/>
           <br/><sub><code>GitHub</code></sub>
         </td>
       </tr>
@@ -290,7 +290,7 @@
 </div>
 
 <div align="center">
-  <img width="90%" src="https://github-readme-streak-stats.herokuapp.com/?user=jeremialex04&hide_border=false&border=082345&stroke=26688E&background=010519&ring=5CA4C5&fire=5CA4C5&currStreakLabel=D1E9F9&sideLabels=5CA4C5&currStreakNum=D1E9F9&sideNums=D1E9F9&dates=546C9F"/>
+  <img width="90%" src="https://streak-stats.demolab.com/?user=jeremialex04&hide_border=false&border=082345&stroke=26688E&background=010519&ring=5CA4C5&fire=5CA4C5&currStreakLabel=D1E9F9&sideLabels=5CA4C5&currStreakNum=D1E9F9&sideNums=D1E9F9&dates=546C9F"/>
 </div>
 
 <!-- ===================== FOOTER ===================== -->
